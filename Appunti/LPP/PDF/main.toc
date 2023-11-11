@@ -1,0 +1,41 @@
+\contentsline {chapter}{\numberline {1}Introduzione}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Tipi di paradigmi di programmazione}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}I linguaggi funzionali}{1}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Il $\mathcal {\lambda }$-calcolo}{1}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}LISP, FP e ML}{1}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}I linguaggi Lazy e Haskell}{2}{subsection.1.2.3}%
+\contentsline {chapter}{\numberline {2}Il $\mathcal {\lambda }$-calcolo}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Perchè studiarlo?}{3}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Le funzioni}{3}{subsection.2.1.1}%
+\contentsline {section}{\numberline {2.2}Sintassi}{3}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Convenzioni sintattiche}{4}{subsection.2.2.1}%
+\contentsline {section}{\numberline {2.3}Semantica}{4}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}$\mathcal {\alpha }$-conversione}{5}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}$\mathcal {\beta }$-riduzione}{5}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}$\mathcal {\eta }$-riduzione}{6}{subsection.2.3.3}%
+\contentsline {section}{\numberline {2.4}Confluenze e strategie di riduzione}{6}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Ordine applicativo}{7}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Ordine normale}{7}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Normalizzazione}{7}{subsection.2.4.3}%
+\contentsline {chapter}{\numberline {3}Programmare nel $\mathcal {\lambda }$-calcolo}{8}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Semantica}{8}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Operazioni sui numeri naturali}{9}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Sintassi delle $\mathcal {\lambda }$-espressioni con booleani}{10}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Regole di tipo}{11}{subsection.3.3.1}%
+\contentsline {chapter}{\numberline {4}Algoritmo di inferenza}{13}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Sommario}{13}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Costruzione dell'albero sintattico}{13}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Annotazione dell'albero e generazione dei vincoli}{14}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Sistemi di equazioni e soluzioni}{16}{subsection.4.1.3}%
+\contentsline {section}{\numberline {4.2}Estensioni dell'algoritmo}{18}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Dimostrazione di proprietà di funzioni su numeri interi}{20}{chapter.5}%
+\contentsline {paragraph}{Test:}{20}{section*.2}%
+\contentsline {paragraph}{Dimostrazione:}{20}{section*.3}%
+\contentsline {section}{\numberline {5.1}Dimostrazioni}{20}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Dimostrazione per casi}{21}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Induzione}{21}{subsection.5.1.2}%
+\contentsline {paragraph}{Prima dimostrazione:}{22}{section*.4}%
+\contentsline {paragraph}{Seconda dimostrazione:}{22}{section*.5}%
+\contentsline {section}{\numberline {5.2}Dimostrazioni sulle liste}{23}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Dimostrazioni sugli alberi}{24}{section.5.3}%
+\contentsfinish 
