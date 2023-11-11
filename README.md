@@ -1,2 +1,0 @@
-# LaTeX
-My LaTeX document
