@@ -1,5 +1,5 @@
 # LaTeX
-<!-- markdownlint-disable MD033 -->
+
 My LaTeX documents.
 
 ## Folder
