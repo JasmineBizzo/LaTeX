@@ -14,6 +14,8 @@ My LaTeX documents. I start to write in LaTeX in my second year of university an
 
 + ***Tesi***: my bachelor thesis.
 
+<!-- markdownlint-disable MD033 -->
 <div align="center">
   <img src="Images/Repo%20struct.png" alt="Repo struct">
 </p>
+<!-- markdownlint-enable MD033 -->
