@@ -9,13 +9,12 @@
 \usepackage{xfrac}
 \usepackage[makeroom]{cancel}
 \usepackage{mathtools}
-\usepackage{utfsym}
 \usepackage{bookmark}
 \usepackage{enumitem}
 \usepackage{hyperref,theoremref}
 \hypersetup{
 	pdftitle={Assignment},
-	colorlinks=true, linkcolor=olive,
+	colorlinks=true, linkcolor=gray,
 	bookmarksnumbered=true,
 	bookmarksopen=true
 }
@@ -36,7 +35,7 @@
 \usepackage{transparent}
 \usepackage{afterpage}
 
-\newcommand\mycommfont[1]{\footnotesize\ttfamily\textcolor{olive}{#1}}
+\newcommand\mycommfont[1]{\footnotesize\ttfamily\textcolor{gray}{#1}}
 \SetCommentSty{mycommfont}
 \newcommand{\incfig}[1]{%
     \def\svgwidth{\columnwidth}
@@ -456,7 +455,7 @@
 %================================
 
 \makeatletter
-\newtcbtheorem{question}{Question}{enhanced,
+\newtcbtheorem{question}{Domanda}{enhanced,
 	breakable,
 	colback=white,
 	colframe=myb!80!black,
@@ -486,12 +485,12 @@
 %================================
 
 \makeatletter
-\newtcolorbox{solution}{enhanced,
+\newtcolorbox{Risposta}{enhanced,
 	breakable,
 	colback=white,
 	colframe=myg!80!black,
 	attach boxed title to top left={yshift*=-\tcboxedtitleheight},
-	title=Solution,
+	title=Risposta,
 	boxed title size=title,
 	boxed title style={%
 			sharp corners,
@@ -760,14 +759,14 @@
 \titlecontents{chapter}[3.7pc]
 {\addvspace{30pt}%
 	\begin{tikzpicture}[remember picture, overlay]%
-		\draw[fill=olive,draw=olive] (-7.3,-.1) rectangle (-0.5,.5);%
+		\draw[fill=gray,draw=gray] (-7.3,-.1) rectangle (-0.5,.5);%
 		\pgftext[left,x=-3.7cm,y=0.2cm]{\color{white}\Large\sc\bfseries Capitolo\ \thecontentslabel};%
-	\end{tikzpicture}\color{olive}\large\sc\bfseries}%
+	\end{tikzpicture}\color{gray}\large\sc\bfseries}%
 {}
 {}
 {\;\titlerule\;\large\sc\bfseries Pagina \thecontentspage
 	\begin{tikzpicture}[remember picture, overlay]
-		\draw[fill=olive,draw=olive] (2pt,0) rectangle (4,0.1pt);
+		\draw[fill=gray,draw=gray] (2pt,0) rectangle (4,0.1pt);
 	\end{tikzpicture}}%
 \titlecontents{section}[3.7pc]
 {\addvspace{2pt}}
@@ -788,8 +787,8 @@
 	\chapter*{%
 	  \vspace*{-20\p@}%
 	  \begin{tikzpicture}[remember picture, overlay]%
-		  \pgftext[right,x=15cm,y=0.2cm]{\color{olive}\Huge\sc\bfseries \contentsname};%
-		  \draw[fill=olive,draw=olive] (13,-.75) rectangle (20,1);%
+		  \pgftext[right,x=15cm,y=0.2cm]{\color{gray}\Huge\sc\bfseries \contentsname};%
+		  \draw[fill=gray,draw=gray] (13,-.75) rectangle (20,1);%
 		  \clip (13,-.75) rectangle (20,1);
 		  \pgftext[right,x=15cm,y=0.2cm]{\color{white}\Huge\sc\bfseries \contentsname};%
 	  \end{tikzpicture}}%
