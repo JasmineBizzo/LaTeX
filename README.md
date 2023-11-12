@@ -4,7 +4,7 @@ My LaTeX documents.
 
 ## Folder
 
-+ <mark>***Appunti***</mark>: my personal notes take in LaTeX.
++ <span style="background-color: yellow;">***Appunti***</span>: my personal notes take in LaTeX.
 
 + <mark>***Consegne***</mark>: type of homeworks for university.
 
