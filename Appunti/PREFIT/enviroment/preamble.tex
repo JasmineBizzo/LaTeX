@@ -2,7 +2,8 @@
 % PACKAGE IMPORTS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
+\usepackage{changepage}
+\usepackage{etoolbox}
 \usepackage[tmargin=2cm,rmargin=1in,lmargin=1in,margin=0.85in,bmargin=2cm,footskip=.2in]{geometry}
 \usepackage{amsmath,amsfonts,amsthm,amssymb,mathtools}
 \usepackage[varbb]{newpxmath}
@@ -14,7 +15,7 @@
 \usepackage{hyperref,theoremref}
 \hypersetup{
 	pdftitle={Assignment},
-	colorlinks=true, linkcolor=blue,
+	colorlinks=true, linkcolor=purple,
 	bookmarksnumbered=true,
 	bookmarksopen=true
 }
@@ -30,12 +31,13 @@
 \usepackage[ruled,vlined,linesnumbered]{algorithm2e}
 \usepackage{comment} % enables the use of multi-line comments (\ifx \fi) 
 \usepackage{import}
+\usepackage{epigraph} 
 \usepackage{xifthen}
 \usepackage{pdfpages}
 \usepackage{transparent}
 \usepackage{afterpage}
 
-\newcommand\mycommfont[1]{\footnotesize\ttfamily\textcolor{blue}{#1}}
+\newcommand\mycommfont[1]{\footnotesize\ttfamily\textcolor{purple}{#1}}
 \SetCommentSty{mycommfont}
 \newcommand{\incfig}[1]{%
     \def\svgwidth{\columnwidth}
@@ -44,6 +46,9 @@
 
 \usepackage{tikzsymbols}
 \renewcommand\qedsymbol{$\Laughey$}
+\hbadness=10000
+\hfuzz=3.5pt
+\sloppy
 
 
 %\usepackage{import}
@@ -67,6 +72,26 @@
     \thispagestyle{empty}%
     \addtocounter{page}{-1}%
     \newpage
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SOME COOL COLORS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\evidence}[1]{%
+    \textcolor{blue}{\textit{#1}}%
+}
+
+\newcommand{\glitter}[1]{%
+    \textcolor{green}{\textit{#1}}%
+}
+
+\newcommand{\fancyglitter}[1]{%
+    \textcolor{red}{\textit{#1}}%
+}
+
+\newcommand{\newfancyglitter}[1]{%
+    \textcolor{violet}{\textit{#1}}%
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -454,30 +479,34 @@
 % Solution BOX
 %================================
 
+\newcounter{question}[chapter] % Define the 'question' counter to reset every chapter
+
 \makeatletter
-\newtcbtheorem{question}{Question}{enhanced,
-	breakable,
-	colback=white,
-	colframe=myb!80!black,
-	attach boxed title to top left={yshift*=-\tcboxedtitleheight},
-	fonttitle=\bfseries,
-	title={#2},
-	boxed title size=title,
-	boxed title style={%
-			sharp corners,
-			rounded corners=northwest,
-			colback=tcbcolframe,
-			boxrule=0pt,
-		},
-	underlay boxed title={%
-			\path[fill=tcbcolframe] (title.south west)--(title.south east)
-			to[out=0, in=180] ([xshift=5mm]title.east)--
-			(title.center-|frame.east)
-			[rounded corners=\kvtcb@arc] |-
-			(frame.north) -| cycle;
-		},
-	#1
-}{def}
+\newtcbtheorem[number within=chapter]{question}{Domanda}{
+    enhanced,
+    breakable,
+    colback=white,
+    colframe=myb!80!black,
+    attach boxed title to top left={yshift*=-\tcboxedtitleheight},
+    fonttitle=\bfseries,
+    title={#2},
+    boxed title size=title,
+    boxed title style={
+        sharp corners,
+        rounded corners=northwest,
+        colback=tcbcolframe,
+        boxrule=0pt,
+    },
+    underlay boxed title={
+        \path[fill=tcbcolframe] (title.south west)--(title.south east)
+        to[out=0, in=180] ([xshift=5mm]title.east)--
+        (title.center-|frame.east)
+        [rounded corners=\kvtcb@arc] |-
+        (frame.north) -| cycle;
+    },
+    #1
+}{question} % 'question' is the counter name
+\@addtoreset{question}{chapter} % Add 'question' to the list of counters reset at each chapter
 \makeatother
 
 %================================
@@ -490,7 +519,7 @@
 	colback=white,
 	colframe=myg!80!black,
 	attach boxed title to top left={yshift*=-\tcboxedtitleheight},
-	title=Solution,
+	title=Risposta,
 	boxed title size=title,
 	boxed title style={%
 			sharp corners,
@@ -759,14 +788,14 @@
 \titlecontents{chapter}[3.7pc]
 {\addvspace{30pt}%
 	\begin{tikzpicture}[remember picture, overlay]%
-		\draw[fill=blue,draw=blue] (-7.3,-.1) rectangle (-0.5,.5);%
+		\draw[fill=purple,draw=purple] (-7.3,-.1) rectangle (-0.5,.5);%
 		\pgftext[left,x=-3.7cm,y=0.2cm]{\color{white}\Large\sc\bfseries Capitolo\ \thecontentslabel};%
-	\end{tikzpicture}\color{blue}\large\sc\bfseries}%
+	\end{tikzpicture}\color{purple}\large\sc\bfseries}%
 {}
 {}
 {\;\titlerule\;\large\sc\bfseries Pagina \thecontentspage
 	\begin{tikzpicture}[remember picture, overlay]
-		\draw[fill=blue,draw=blue] (2pt,0) rectangle (4,0.1pt);
+		\draw[fill=purple,draw=purple] (2pt,0) rectangle (4,0.1pt);
 	\end{tikzpicture}}%
 \titlecontents{section}[3.7pc]
 {\addvspace{2pt}}
@@ -787,8 +816,8 @@
 	\chapter*{%
 	  \vspace*{-20\p@}%
 	  \begin{tikzpicture}[remember picture, overlay]%
-		  \pgftext[right,x=15cm,y=0.2cm]{\color{blue}\Huge\sc\bfseries \contentsname};%
-		  \draw[fill=blue,draw=blue] (13,-.75) rectangle (20,1);%
+		  \pgftext[right,x=15cm,y=0.2cm]{\color{purple}\Huge\sc\bfseries \contentsname};%
+		  \draw[fill=purple,draw=purple] (13,-.75) rectangle (20,1);%
 		  \clip (13,-.75) rectangle (20,1);
 		  \pgftext[right,x=15cm,y=0.2cm]{\color{white}\Huge\sc\bfseries \contentsname};%
 	  \end{tikzpicture}}%
