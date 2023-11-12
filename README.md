@@ -8,6 +8,8 @@ My LaTeX documents. I start to write in LaTeX in my second year of university an
 
 + ***Consegne***: type of homeworks for university.
 
++ ***Images***: some images for better MD document.
+
 + ***Project***: a sample of my university project.
 
-+ **Tesi**: my bachelor thesis.
++ ***Tesi***: my bachelor thesis.
