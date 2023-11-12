@@ -12,6 +12,8 @@ My LaTeX documents. I started to write in LaTeX in my second year of university 
 
 + ***Project***: a sample of my university project.
 
++ ***Template***: a template for LaTeX documents.
+
 + ***Tesi***: my bachelor thesis.
 
 <!-- markdownlint-disable MD033 -->
