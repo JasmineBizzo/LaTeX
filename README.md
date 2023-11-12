@@ -13,3 +13,7 @@ My LaTeX documents. I start to write in LaTeX in my second year of university an
 + ***Project***: a sample of my university project.
 
 + ***Tesi***: my bachelor thesis.
+
+<div align="center">
+  <img src="Images/Repo%20struct.png" alt="Repo struct">
+</p>
