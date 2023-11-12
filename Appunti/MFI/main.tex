@@ -1,0 +1,34 @@
+\documentclass{report}
+
+\input{enviroments/preamble}
+\input{enviroments/macros}
+\input{enviroments/letterfonts}
+
+\renewcommand{\contentsname}{Indice}
+
+\title{\Huge{Metodi formali dell'informatica}}
+\author{\huge{Luca Barra}}
+\date{Anno accademico 2023/2024}
+
+\begin{document}
+
+\maketitle
+\newpage% or \cleardoublepage
+% \pdfbookmark[<level>]{<title>}{<dest>}
+\pdfbookmark[section]{\contentsname}{toc}
+\afterpage{\blankpage}
+\pagenumbering{Roman}
+\tableofcontents
+\cleardoublepage\pagenumbering{arabic}
+\pagebreak
+\afterpage{\blankpage}
+\include{capitoli/Intro}
+\include{capitoli/Riscrittura}
+\include{capitoli/Deduzione}
+\include{capitoli/Lambda calcolo non tipato}
+\include{capitoli/Lambda calcolo tipato}
+\include{capitoli/Logica costruttiva}
+\include{capitoli/IMP}
+\include{capitoli/Logica di Floyd-Hoare}
+
+\end{document}

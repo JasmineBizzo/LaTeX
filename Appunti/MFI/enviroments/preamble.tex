@@ -9,8 +9,6 @@
 \usepackage{xfrac}
 \usepackage[linguistics]{forest}
 \usepackage{forest} 
-\usepackage{blindtext}
-\usepackage{multicol}
 \usepackage[makeroom]{cancel}
 \usepackage{mathtools}
 \usepackage{bookmark}
@@ -259,7 +257,7 @@
 %================================
 
 \tcbuselibrary{theorems,skins,hooks}
-\newtcbtheorem[number within=section]{Prop}{Proposizione}
+\newtcbtheorem[number within=section]{Prop}{Proposition}
 {%
 	enhanced,
 	breakable,
@@ -304,7 +302,7 @@
 %================================
 
 \tcbuselibrary{theorems,skins,hooks}
-\newtcbtheorem[number within=section]{claim}{Claim}
+\newtcbtheorem[number within=section]{claim}{Asserzione}
 {%
 	enhanced
 	,breakable
@@ -459,7 +457,7 @@
 %================================
 
 \makeatletter
-\newtcbtheorem{question}{Domanda}{enhanced,
+\newtcbtheorem{question}{Question}{enhanced,
 	breakable,
 	colback=white,
 	colframe=myb!80!black,
@@ -517,7 +515,7 @@
 %================================
 
 \makeatletter
-\newtcbtheorem{qstion}{Domanda}{enhanced,
+\newtcbtheorem{qstion}{Question}{enhanced,
 	breakable,
 	colback=white,
 	colframe=mygr,
@@ -763,14 +761,14 @@
 \titlecontents{chapter}[3.7pc]
 {\addvspace{30pt}%
 	\begin{tikzpicture}[remember picture, overlay]%
-		\draw[fill=magenta,draw=magenta] (-7.3,-.1) rectangle (-0.5,.5);%
+		\draw[fill=red,draw=red] (-7.3,-.1) rectangle (-0.5,.5);%
 		\pgftext[left,x=-3.7cm,y=0.2cm]{\color{white}\Large\sc\bfseries Capitolo\ \thecontentslabel};%
-	\end{tikzpicture}\color{magenta}\large\sc\bfseries}%
+	\end{tikzpicture}\color{red}\large\sc\bfseries}%
 {}
 {}
 {\;\titlerule\;\large\sc\bfseries Pagina \thecontentspage
 	\begin{tikzpicture}[remember picture, overlay]
-		\draw[fill=magenta,draw=magenta] (2pt,0) rectangle (4,0.1pt);
+		\draw[fill=red,draw=red] (2pt,0) rectangle (4,0.1pt);
 	\end{tikzpicture}}%
 \titlecontents{section}[3.7pc]
 {\addvspace{2pt}}
@@ -790,8 +788,8 @@
 	\chapter*{%
 	  \vspace*{-20\p@}%
 	  \begin{tikzpicture}[remember picture, overlay]%
-		  \pgftext[right,x=15cm,y=0.2cm]{\color{magenta}\Huge\sc\bfseries \contentsname};%
-		  \draw[fill=magenta,draw=magenta] (13,-.75) rectangle (20,1);%
+		  \pgftext[right,x=15cm,y=0.2cm]{\color{red}\Huge\sc\bfseries \contentsname};%
+		  \draw[fill=red,draw=red] (13,-.75) rectangle (20,1);%
 		  \clip (13,-.75) rectangle (20,1);
 		  \pgftext[right,x=15cm,y=0.2cm]{\color{white}\Huge\sc\bfseries \contentsname};%
 	  \end{tikzpicture}}%

@@ -1,0 +1,39 @@
+\chapter{Il \texorpdfstring{$\mathcal{\lambda}$}--calcolo tipato}
+
+\section{Tipi}
+
+\qs{}{Come si interpreta un termine $X\:\:X$?}
+
+\paragraph{Risposta:} nel $\lambda$-calcolo non tipato si può anche scrivere una cosa come l'autoapplicazione. Ma in generale una funzione non dovrebbe appartenere al proprio dominio.
+
+\ex{}{
+Se il primo $X \:\in\:A\rightarrow A$ e il secondo $X\rightarrow A$ non esiste alcun $A \not= \{*\}$ tale che $A \simeq A \rightarrow A$ in Set\footnote{Categoria degli insiemi}
+}
+
+\dfn{Tipi semplici}{
+$$A,\:\:B ::= \alpha | A\rightarrow B$$
+dove $\alpha \in \{\text{bool, nat, ...}\}$ è \underline{atomico} fissate l'interpretazione $[\alpha]$ (es. [nat] = $\bbN$)
+
+$$[A \rightarrow B] = [B]^{[A]}$$ 
+
+dove il dominio è $[A]$ e il codominio è $[B]$
+}
+
+\dfn{Sistema di tipo}{
+$$\Gamma \vdash M : A \text{ "$M$ ha tipo $A$ in $\Gamma$"}$$
+}
+
+\dfn{Contesto}{
+Un contesto è un insieme finito di giudizi di tipo ($x_i : A_i$):
+$$\Gamma = x_1 : A_1,\:\:...,x_n : A_n, \text{con $x_i \not = x_j$ se $i\not=j$}$$
+}
+
+\cor{}{
+Valgono le seguenti proprietà:
+\begin{itemize}
+    \item ax$\frac{}{\Gamma,\:\:x : A \vdash x : A}$;
+    \item $\rightarrow E \frac{\Gamma \vdash M : A\rightarrow B \:\:\:\:\:\Gamma\vdash N : A}{\Gamma \vdash M\:\:N : B}$;
+    \item $\rightarrow I\frac{\Gamma, \:\: x : A \vdash M : B}{\Gamma \vdash \lambda x: A.M : A \rightarrow B}$
+\end{itemize}
+Dove $\Gamma,\:\:x\:\:\in\:\:A = \Gamma \cup \{x : A\}$ e $x\:\: \not\in$ Dom($\Gamma$)
+}

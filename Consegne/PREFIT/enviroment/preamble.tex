@@ -2,15 +2,12 @@
 % PACKAGE IMPORTS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
+\usepackage{showexpl}
 \usepackage[tmargin=2cm,rmargin=1in,lmargin=1in,margin=0.85in,bmargin=2cm,footskip=.2in]{geometry}
 \usepackage{amsmath,amsfonts,amsthm,amssymb,mathtools}
 \usepackage[varbb]{newpxmath}
 \usepackage{xfrac}
-\usepackage[linguistics]{forest}
-\usepackage{forest} 
-\usepackage{blindtext}
-\usepackage{multicol}
+\usepackage{ tipa }
 \usepackage[makeroom]{cancel}
 \usepackage{mathtools}
 \usepackage{bookmark}
@@ -18,7 +15,7 @@
 \usepackage{hyperref,theoremref}
 \hypersetup{
 	pdftitle={Assignment},
-	colorlinks=true, linkcolor=black,
+	colorlinks=true, linkcolor=blue,
 	bookmarksnumbered=true,
 	bookmarksopen=true
 }
@@ -170,7 +167,7 @@
 % Corollery
 %================================
 \tcbuselibrary{theorems,skins,hooks}
-\newtcbtheorem[number within=section]{Corollary}{Corollario}
+\newtcbtheorem[number within=section]{Corollary}{Corollary}
 {%
 	enhanced
 	,breakable
@@ -259,7 +256,7 @@
 %================================
 
 \tcbuselibrary{theorems,skins,hooks}
-\newtcbtheorem[number within=section]{Prop}{Proposizione}
+\newtcbtheorem[number within=section]{Prop}{Proposition}
 {%
 	enhanced,
 	breakable,
@@ -459,7 +456,7 @@
 %================================
 
 \makeatletter
-\newtcbtheorem{question}{Domanda}{enhanced,
+\newtcbtheorem{question}{Question}{enhanced,
 	breakable,
 	colback=white,
 	colframe=myb!80!black,
@@ -517,7 +514,7 @@
 %================================
 
 \makeatletter
-\newtcbtheorem{qstion}{Domanda}{enhanced,
+\newtcbtheorem{qstion}{Question}{enhanced,
 	breakable,
 	colback=white,
 	colframe=mygr,
@@ -763,14 +760,14 @@
 \titlecontents{chapter}[3.7pc]
 {\addvspace{30pt}%
 	\begin{tikzpicture}[remember picture, overlay]%
-		\draw[fill=magenta,draw=magenta] (-7.3,-.1) rectangle (-0.5,.5);%
+		\draw[fill=blue,draw=blue] (-7.3,-.1) rectangle (-0.5,.5);%
 		\pgftext[left,x=-3.7cm,y=0.2cm]{\color{white}\Large\sc\bfseries Capitolo\ \thecontentslabel};%
-	\end{tikzpicture}\color{magenta}\large\sc\bfseries}%
+	\end{tikzpicture}\color{blue}\large\sc\bfseries}%
 {}
 {}
 {\;\titlerule\;\large\sc\bfseries Pagina \thecontentspage
 	\begin{tikzpicture}[remember picture, overlay]
-		\draw[fill=magenta,draw=magenta] (2pt,0) rectangle (4,0.1pt);
+		\draw[fill=blue,draw=blue] (2pt,0) rectangle (4,0.1pt);
 	\end{tikzpicture}}%
 \titlecontents{section}[3.7pc]
 {\addvspace{2pt}}
@@ -786,16 +783,33 @@
 [ \textbullet\ ][]
 
 \makeatletter
+\renewcommand{\chaptername}{Capitolo}
 \renewcommand{\tableofcontents}{%
 	\chapter*{%
 	  \vspace*{-20\p@}%
 	  \begin{tikzpicture}[remember picture, overlay]%
-		  \pgftext[right,x=15cm,y=0.2cm]{\color{magenta}\Huge\sc\bfseries \contentsname};%
-		  \draw[fill=magenta,draw=magenta] (13,-.75) rectangle (20,1);%
+		  \pgftext[right,x=15cm,y=0.2cm]{\color{blue}\Huge\sc\bfseries \contentsname};%
+		  \draw[fill=blue,draw=blue] (13,-.75) rectangle (20,1);%
 		  \clip (13,-.75) rectangle (20,1);
 		  \pgftext[right,x=15cm,y=0.2cm]{\color{white}\Huge\sc\bfseries \contentsname};%
 	  \end{tikzpicture}}%
 	\@starttoc{toc}}
 \makeatother
-\renewcommand{\chaptername}{Capitolo}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% HYPERLINK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CUSTOM COLOR
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\definecolor{customgreen}{RGB}{0,128,0} 
