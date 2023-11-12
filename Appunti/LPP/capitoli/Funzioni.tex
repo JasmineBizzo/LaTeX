@@ -1,4 +1,4 @@
-\chapter{Dimostrazione di proprietà di funzioni su numeri interi}
+\chapter{Dimostrazione di proprietà di funzioni}
 
 \qs{}{Date una funzione e una specifica di ciò che la funzione dovrebbe calcolare, la funzione è corretta rispetto alla specifica?}
 
@@ -18,7 +18,7 @@
     \item è esaustiva.
 \end{itemize}
 
-\section{Dimostrazioni}
+\section{Dimostrazioni su numeri interi}
 
 \begin{lstlisting}
 foo :: Int -> Int -> Int -> Int
@@ -108,7 +108,44 @@ Allora $P(xs)$ per ogni lista finita $xs$.
 Data una proprietà $P(t)$, se:
 \begin{itemize}
     \item $P(Leaf)$;
-    \item $P(t_1) \and P(t_2)$ implica $P(Branch\:\:t_1 t_2)$ per ogni $x$, $t_1$ e $t_2$.
+    \item $P(t_1) \wedge P(t_2)$ implica $P(Branch\:\:t_1 t_2)$ per ogni $x$, $t_1$ e $t_2$.
 \end{itemize}
 Allora  $P(t)$ per ogni albero (finito) $t$.
 }
+
+\ex{Trees}{
+    \begin{center}
+        \includegraphics[scale = 0.7]{images/funzioni/Dim2.png}    
+    \end{center}
+}
+
+\section{Dimostrazioni sulle funzioni di ordine superiore}
+
+\dfn{Principio di estensionabilità}{
+Due funzioni $f$ e $g$ sono uguali se producono lo stesso risultato
+quando sono applicate allo stesso argomento. Formalmente:
+$$(\forall x\: :\: f\: g = g\: x) \Leftrightarrow f = g$$
+}
+
+\nt{
+È il principio che giustifica la regola di $\eta$-riduzione.    
+}
+
+\cor{proprietà della composizione funzionale}{
+    \begin{center}
+        \includegraphics[scale = 0.7]{images/funzioni/Proprietà.png}    
+    \end{center}
+}
+
+\thm{Legge di fusione}{
+Se:
+\begin{itemize}
+    \item $f\:a = b$;
+    \item $f\:(g\:x\:y) = h\:x\:(f\:y)$;
+\end{itemize}
+allora
+\begin{itemize}
+    \item $f\:.\:\text{foldr}\:g\:a = \text{foldr}\:h\:b$.
+\end{itemize}
+}
+

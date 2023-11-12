@@ -1,0 +1,50 @@
+\chapter{Java 8}
+
+A un certo punto, nella storia di Java, si è deciso di effettuare un 
+"\textit{restiling}" delle collection\footnote{Implementazioni delle
+strutture dati più comuni, come liste, insiemi, mappe, etc.}. Per cui si
+sono introdotti:
+\begin{itemize}
+    \item i metodi di default;
+    \item lambda-espressioni: rendono il codice più compatto, modulare e
+    leggibile.
+\end{itemize}
+
+\section{Lambda-espressioni}
+
+\dfn{Lambda-espressione}{Una lambda-espressione è una funzione anonima
+che può essere passata come parametro ad un metodo o ad un costruttore.
+La sintassi è la seguente:
+\begin{itemize}
+    \item (parameters) $\rightarrow$ expression;
+    \item (parameters) $\rightarrow$ \{ statements; \}.
+\end{itemize}
+}
+
+\cor{Identità}{
+L'Identità $\lambda x\: : \: \text{int}.x$ è:
+\begin{itemize}
+    \item $(x\: : \: \text{int}) \rightarrow x$;
+    \item $(x\: : \: \text{int}) \rightarrow \{ \text{return}\: x; \}$.
+\end{itemize}
+}
+
+\nt{In alcuni casi si può omettere il tipo dei parametri, in quanto
+Java è in grado di inferirlo (raramente)}
+
+\qs{}{Qual è il tipo dell'Identità?}
+
+\dfn{Interfacce funzionali}{In Java 8 sono state introdotte le interfacce
+funzionali, ovvero interfacce che hanno un solo metodo astratto. Esse
+rappresentano il tipo delle lambda-espressioni. Per esempio, l'Identità
+ha tipo Int che ritorna Int (quindi Int $\rightarrow$ Int, in Haskell)
+}
+
+\nt{Esistono interfacce funzionali già pronto, come per esempio
+\textit{Predicate}, \textit{Consumer}, \textit{Function}, etc.}
+
+\dfn{Method reference}{
+Un method reference è un modo per riferirsi a un metodo. Aumenta la leggibilità
+del codice.
+La sintassi è la seguente: Type::methodName
+}
