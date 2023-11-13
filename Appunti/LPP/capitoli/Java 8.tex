@@ -48,3 +48,57 @@ Un method reference è un modo per riferirsi a un metodo. Aumenta la leggibilit�
 del codice.
 La sintassi è la seguente: Type::methodName
 }
+
+\section{Compatibilità e metodi di default}
+
+\dfn{Binary compatibility}{
+Due versioni di una libreria sono binariamente compatibili se i file
+binari continuano a funzionare anche con la nuova versione
+}
+
+\nt{
+Se si modifica un software bisogna tener conto della backward compatibility,
+ovvero la compatibilità con le versioni precedenti
+}
+
+\dfn{Source compatibility}{
+Due versioni di una libreria sono sorgente compatibili se un programma esistente
+continua a funzionare anche dopo essere stato ricompilato con la nuova versione
+}
+
+\dfn{Behavioural compatibility}{
+Due versioni di una libreria sono behavioural compatibili se un programma
+esistente continua a produrre lo stesso output con lo stesso input
+}
+
+\nt{Per mantenere la source compatibility tra Java 7 e Java 8, si è deciso
+di introdurre i metodi di default}
+
+\dfn{Metodi di default}{
+I metodi di default sono metodi che possono essere implementati all'interno
+di un'interfaccia. Essi permettono di aggiungere nuove funzionalità alle
+interfacce senza rompere la compatibilità con le versioni precedenti. Per
+fare ciò vengono aggiunti metodi opzionali (che possono essere implementati o meno).
+Se non vengono implementati, viene usata l'implementazione di default
+}
+
+\nt{
+I metodi di default vengono usati per modificare molte interfacce di Java collections
+per rendere più semplice l'uso delle lambda-espressioni e mantenere la backward compatibility
+}
+
+\section{L'interfaccia Function}
+
+\dfn{Function$\langle$T, R$\rangle$}{
+L'interfaccia Function$\langle$T, R$\rangle$ è un'interfaccia funzionale
+che rappresenta una funzione che prende un parametro di tipo T e ritorna
+un parametro di tipo R. Essa ha un solo metodo astratto:
+\begin{itemize}
+    \item R apply(T t).
+\end{itemize}
+Oltre a questo presenta il metodo di default:
+\begin{itemize}
+    \item Function$\langle$T, R$\rangle$ andThen(Function$\langle$? super R, ? extends V$\rangle$ after) che 
+    ritorna una funzione che prima applica la funzione corrente e poi la funzione after.
+\end{itemize}   
+}
