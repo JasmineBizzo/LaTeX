@@ -1,4 +1,4 @@
-\chapter{Consegna 1}
+\chapter{Prima consegna}
 
 \section{Punti su cui sono d'accordo}
 \subsection{Frasi}
@@ -19,16 +19,39 @@ e l‘inclusione. }", \textbf{Manifesto di Vienna per l'umanesimo digitale}.
 \section{Punti su cui non sono d'accordo}
 \subsection{Frasi}
 \begin{enumerate}
-    \item
+    \item "I professionisti di tutto il mondo dovrebbero riconoscere la loro corresponsabilità
+    nell‘impatto sociale delle tecnologie digitali. Devono capire che nessuna tecnologia è
+    neutrale ed essere sensibilizzati a considerare sia i potenziali benefici sia i possibili aspetti
+    negativi.", \textbf{Manifesto di Vienna per l'umanesimo digitale};
+    \item "Per preparare i cittadini alla società industriale, nei due secoli passati, non sono state date agli studenti competenze operative sui macchinari industriali, ma sono state inserite nelle scuole le discipline scientifiche che ne spiegavano i princìpi scientifici alla base.", \textbf{Informatica e competenze digitali: cosa insegnare?}. 
 \end{enumerate}
 
 \subsection{Motivazioni}
 \begin{enumerate}
-    \item 
+    \item Nonostante io concordi con l'esaminare sia i beneficiche gli aspetti negativi non posso
+    essere d'accordo con la parte della frase in cui si afferma che "nessuna tecnologia è neutrale".
+    Questo perchè è l'uso che se ne fa a essere negativo o positivo. Spesso, negli ultimi anni, si sentono
+    studiosi parlare del fatto che la tecnologia non è neutra, ma io lo vedo come un tentativo di deresponsabilizzarsi.
+    Basta immaginarsi un mondo senza esseri umani: in tal mondo la tecnologia non potrebbe essere usata dato che non ci
+    sarebbe nessuno capace di usarla. E se è la presenza dell'uomo a rendere una tecnologia negativa o positiva allora 
+    non è forse vero che la tecnologia è neutra?
+    \item Questa frase è molto interessante perchè, in un certo senso, è vero che non si è insegnato l'utilizzo dei macchinari 
+    industriali nella società industriale, ma bisogna tener presente che, all'epoca, la scuola non era ancora così accessibile.
+    Solitamente a scuola andavano persone con un certo livello economico che raramente sarebbero diventate operai, quindi non 
+    serviva loro una formazione specifica sull'utilizzo dei macchinari. Questo tipo di formazione veniva invece fatta fare agli
+    operai che, spesso, non avevano nemmeno la licenza elementare.
 \end{enumerate}
 
 \section{Considerazioni sui 3 paradigmi}
 \subsection{Analisi dei 3 paradigmi}
+
+\dfn{Paradigma matematico}{Per il \newfancyglitter{paradigma matematico} si  formalizza un linguaggio che garantisce certe proprietà (il tutto prima dell'esecuzione).}
+
+\dfn{Paradigma ingegneristico}{Per il \newfancyglitter{paradigma ingegneristico} si devono fare molti test di affidabilità con diversi input (unit test, a run time).}
+
+\dfn{Paradigma scientifico}{Per il \newfancyglitter{paradigma scientifico} si deve validare empiricamente la correttezza di un programma.}
+\qs{}{Dove si trovano, nell'informatica, questi paradigmi?}
+
 \begin{itemize}
     \item \textbf{Paradigma matematico:} questo paradigma trova la sua massima espressione nei linguaggi funzionali. Per esempio, in Haskell\footnote{Linguaggio funzionale puro} ogni cosa è una funzione matematica. Il punto di forza dei linguaggi funzionali (lazy) è che la loro correttezza è vera a priori per cui, se un programma viene eseguito allora è corretto. Inoltre esistono linguaggi come Agda, Coq, etc. che servono per dimostrare matematicamente la correttezza formale di alcuni programmi (purtroppo non sono Turing completi);
     \item \textbf{Paradigma ingegneristico:} si basa su un intenso uso di Unit test e testing generici per assicurare una "correttezza" su un ampio insieme di casi (spesso nei casi limite). Questo implica una correttezza a posteriori per cui, il programma deve prima essere eseguito;
@@ -46,5 +69,15 @@ Tutti e tre i paradigmi mostrano un differente modo di osservare la realtà. É 
 \begin{itemize}
     \item Organizzati per comprendere, sfruttare e far fronte a un fenomeno pervasivo: esiste un intero campo di applicazione dell'informatica a questo livello ossia la \textbf{data science};
     \item Comprende i processi naturali e artificiali del fenomeno: l'informatica vuole comprendere e replicare in modo automatico dei fenomeni sia naturali che artificiali. Basti vedere alcune strutture chiaramente ispirate alla natura come gli \textbf{alberi}; 
-    \item
+    \item Corpo di conoscenza strutturato e codificato: l'informatica ha un compendio di conoscenze ben identificabile e strutturato in vari argomenti. Per esempio: le \textbf{basi di dati}, gli \textbf{algoritmi}, etc.;
+    \item Impegno verso metodi sperimentali per la scoperta e la validazione: ci sono parti dell'informatica con carattere prevalentemente sperimentale. Si è parlato nel capitolo precedente del paradigma ingegneristico che ha come oggetto il testing per validare i programmi;
+    \item Riproducibilità dei risultati: i risultati dei programmi sono riproducibili se si possiede un interprete per un dato linguaggio e una macchina su cui eseguirli;
+    \item Falsificabilità di ipotesi e modelli: usando il \textbf{moduls tollens}\footnote{Se A $\rightarrow$ B, $\neg$B $\rightarrow$ $\neg$A} si può falsificare un programma. Per esempio, se un programma non termina allora non è corretto;
+    \item Abilità di fare predizioni: l'informatica è in grado di predire il comportamento di un programma. Per esempio, se un programma è corretto allora termina;
 \end{itemize}
+
+\subsection{Conclusioni}
+
+In conclusione si può ritenere l'informatica una scienza dato che soddisfa tutti i requisiti. Inoltre, come mostrato nella sezione precedente, l'informatica è un campo molto vasto che include molti altri campi. Per esempio, l'informatica è strettamente 
+legata alla matematica e alla logica. Inoltre, l'informatica è strettamente legata alla fisica e alla chimica poichè, per esempio, un computer è un dispositivo fisico che sfrutta la chimica per funzionare. Infine, l'informatica è strettamente legata alla 
+biologia poichè, per esempio, l'informatica è usata per studiare il DNA e per simulare la vita (si veda il Game of Life di Conway, gli automi cellulari e la vita artificiale).
