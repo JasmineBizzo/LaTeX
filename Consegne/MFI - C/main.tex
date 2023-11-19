@@ -130,7 +130,7 @@ dove con $A[x]$ si intende una formula del calcolo dei predicati in cui $x$ poss
 Si derivino i seguenti giudizi di tipo utilizzando le regole e l'assioma del $\lambda$-calcolo con tipi semplici:
 \begin{enumerate}
 \item $x : A, y : A \to B \vdash yx : B$
-\item $\vdash \lambda x : A \to B\, \lambda y: B \to C\, \lambda z : A .\, y (xz): C$
+\item $\vdash \lambda x : A \to B\, \lambda y: B \to C\, \lambda z : A .\, y (xz):  (A \to B) \to (B \to C) \to A \to C$
 \end{enumerate}
 \end{exercise}
 
@@ -270,14 +270,26 @@ D_X(X + 0) & \to & D_X(X) + D_X(0) & \mbox{per $R3$} \\
 \prooftree
 	\prooftree
 		\prooftree
-                       [A \wedge B \to C]^1
+			\prooftree
+				[A \wedge B \to C]^1
+				\quad 
+				\prooftree
+				[A]^2 \quad [B]^3
+				\justifies
+				A \wedge B
+				\using \wedge I
+				\endprooftree
+					\justifies
+                       C
+					   \using \to E
+					   \endprooftree
 			\justifies
 				B \to C
-			\using \wedge E_2
+			\using \to I, -3
 			\endprooftree
 	\justifies
 		A \to (B \to C)
-	\using \to I
+	\using \to I, -2
 \endprooftree
 \justifies
 	(A \wedge B \to C) \to (A \to (B \to C))
@@ -287,11 +299,46 @@ D_X(X + 0) & \to & D_X(X) + D_X(0) & \mbox{per $R3$} \\
 
 \paragraph{5) $\forall x(A[x] \to B) \to (\exists x A[x] \to B)$ se $x \not \in \textit{FV}(B)$}
 
+\[
+\prooftree
+	\prooftree
+		\prooftree
+				[\exists x A[x]]^2
+				\quad 
+				\prooftree
+				\prooftree
+					[\forall x(A[x] \to B)]^1
+					\justifies
+					A [\alpha] \to B
+	        		\using \forall E
+				\endprooftree
+					\quad 
+				[A [\alpha]]^3
+				\justifies
+				B
+				\using \wedge I
+				\endprooftree
+			\justifies
+				B
+			\using \exists E, -3
+			\endprooftree
+	\justifies
+		(\exists x A[x] \to B)
+	\using \to I, -2
+\endprooftree
+\justifies
+	\forall x(A[x] \to B) \to (\exists x A[x] \to B)
+\using \to I, -1
+\endprooftree
+\]
+
 \subsection{Svolgimento}
 
 \paragraph{1) $x : A, y : A \to B \vdash yx : B$.}
 \paragraph{$\Gamma$ = $x : A, y : A \to B$ }
 \[
+\prooftree
+\prooftree
 \prooftree
     \prooftree
     \justifies
@@ -308,6 +355,14 @@ D_X(X + 0) & \to & D_X(X) + D_X(0) & \mbox{per $R3$} \\
         \Gamma \vdash y\:x \: : B
         \using
         \to E
+\endprooftree
+\justifies
+\Gamma \vdash \lambda y: A \to B .y\:x\: : (A \to B) \to B
+\using \to I
+\endprooftree
+\justifies
+\Gamma \vdash \lambda x: A \lambda y: A \to B .y\:x\: : A \to (A \to B) \to B
+\using \to I
 \endprooftree
 \]
 
