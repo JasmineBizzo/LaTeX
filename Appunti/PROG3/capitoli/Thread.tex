@@ -1,0 +1,53 @@
+\chapter{Thread}
+
+\section{Introduzione}
+
+\section{Thread in Java}
+
+\dfn{Semaphore}{La classe Semaphore è stata introdotta per aiutare chi aveva programmato in C.
+Semaphore(int n) è un semaforo con n permessi. Possiede i metodi:
+\begin{itemize}
+    \item acquire() - prende un permesso;
+    \item release() - rilascia un permesso.
+\end{itemize}
+}
+
+\nt{Ogni oggetto ha un proprio lock: un semaforo binario con una lista che, se utilizzato, blocca gli accessi
+concorrenti garantendo la mutua esclusione. Lo scheduler del lock ha una propria politica di gestione.}
+
+\dfn{Sincronizzazione}{
+Per ogni classe Java è possibile definire dei metodi synchronized. Quando un thread invoca un metodo
+synchronized, il thread acquisisce il lock dell'oggetto su cui è invocato il metodo. La sintassi è:
+public synchronized void metodo() \{...sezione critica...\}
+
+}
+
+\section{Sincronizzazione lato server e lato client}
+
+\dfn{Sincronizzazione lato server}{
+\begin{itemize}
+    \item [$\Rightarrow$] L'oggetto protegge le variabili condivise e offre metodi
+    synchronized per operare su di esse per cui si auto-
+    protegge dagli accessi esterni;
+    \item [$\Rightarrow$] I client, invocando metodi synchronized sull'oggetto
+    condiviso, automaticamente si sincronizzano
+    nell'accesso all'oggetto stesso;
+    \item [$\Rightarrow$] imitazioni: definire synchronized i metodi dell'oggetto
+    potrebbe non essere sufficiente per sincronizzare le
+    attività dei thread.
+\end{itemize}
+}
+
+\dfn{Sincronizzazione lato client}{
+\begin{itemize}
+    \item [$\Rightarrow$] L'oggetto non viene protetto da accessi paralleli;
+    \item [$\Rightarrow$] Tutti i client di un oggetto condiviso accedono all'oggetto
+    attraverso blocchi sincronizzati sul lock dell'oggetto
+    stesso;
+    \item [$\Rightarrow$] Limitazioni: se un client non implementa correttamente
+    gli accessi all'oggetto condiviso si ottiene un
+    malfunzionamento;
+    \item [$\Rightarrow$] Ma talvolta è necessario implementare la mutua
+    esclusione in questo modo.
+\end{itemize}
+}

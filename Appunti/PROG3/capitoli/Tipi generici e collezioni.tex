@@ -39,13 +39,37 @@ hanno lo stesso tipo ArrayList.
 
 \nt{Non si possono avere metodi statici con tipi generici all'interno delle classi che usano quei tipi.}
 
+\section{Collezioni}
 
+\dfn{Collezioni}{
+Java fornisce un insieme di classi che realizzano strutture dati utili (le collezioni), come 
+liste o insiemi.
+}
 
+\begin{figure}[h]
+    \caption{Le collezioni}
+    \begin{center}
+        \includegraphics[scale=0.35]{images/Tipi generici e collezioni/Collezioni.png}
+    \end{center}
+\end{figure}
 
+\nt{Queste sono tutte interfacce:
+    \begin{itemize}
+    \item \textbf{Collection}: un arbitrario gruppo di oggetti;
+    \item \textbf{List}: un gruppo ordinato di oggetti;
+    \item \textbf{Set}: un gruppo di oggetti senza duplicati;
+    \item \textbf{Map}: una collezione di coppie chiave-valore.
+\end{itemize}}
 
+\dfn{Iteratori}{
+Un iteratore è un oggetto che permette di scorrere una collezione, ottenendo gli elementi uno alla volta.
+Il metodo iterator<> della classe Collection restituisce un iteratore per la collezione.
+Si può "ciclare" su una collezione usando un iteratore con next() o con il for each.
+}
 
+\nt{Gli array mantengono sempre il loro tipo (a runtime), mentre le collezioni no.}
 
-
-
-
-
+\dfn{Il tipo jolly (wildcard)}{
+Per definire una collection di qualunque generico su usa la notazione collection$<$?$>$.
+In una collezione di ? non si può aggiungere nulla, ma si può rimuovere.
+}
