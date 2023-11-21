@@ -140,8 +140,6 @@ tuttavia sono deprecate.
     \caption{Pattern MVC}
 \end{figure}
 
-\section{XML}
-
 \section{JavaFX}
 
 \dfn{JavaFX}{
@@ -205,9 +203,51 @@ tuttavia sono deprecate.
 
 \subsection{Properties}
 
+\dfn{Java beans}{
+    Un Java bean è una classe che:
+    \begin{itemize}
+        \item Ha un costruttore senza argomenti;
+        \item Ha metodi getter e setter per ogni attributo;
+        \item Implementa Serializable.
+    \end{itemize}
+}
 
+\dfn{Properties}{
+    Una property è un attributo di un Java bean.
+    Le properties di libreria servono per:
+    \begin{itemize}
+        \item Binding: permette di collegare due properties;
+        \item Listener: permette di associare un listener ad una property.
+    \end{itemize}
+    
+}
 
+\ex{ObservableValue<T>}{
+    L'interfaccia \texttt{ObservableValue<T>} è un'interfaccia generica
+    che rappresenta una property. Ha i seguenti metodi:
+    \begin{itemize}
+        \item \texttt{getValue()}: ritorna il valore della property;
+        \item \texttt{addListener(ChangeListener<? super T> listener)}: aggiunge un listener;
+        \item \texttt{removeListener(ChangeListener<? super T> listener)}: rimuove un listener;
+        \item \texttt{addListener(InvalidationListener listener)}: aggiunge un listener;
+        \item \texttt{removeListener(InvalidationListener listener)}: rimuove un listener.
+    \end{itemize}
+}
 
+\ex{ChangeListener}{
+    L'interfaccia \texttt{ChangeListener<T>} è un'interfaccia generica
+    che rappresenta un listener per una property. Ha il seguente metodo:
+    \begin{itemize}
+        \item \texttt{changed(ObservableValue<? extends T> observable, T oldValue, T newValue)}: viene invocato quando il valore della property cambia.
+    \end{itemize}
+}
 
-
-
+\dfn{Properties in JavaFX}{
+    In JavaFX esistono le seguenti properties:
+    \begin{itemize}
+        \item \texttt{SimpleStringProperty}: rappresenta una property di tipo String;
+        \item \texttt{SimpleIntegerProperty}: rappresenta una property di tipo Integer;
+        \item \texttt{SimpleDoubleProperty}: rappresenta una property di tipo Double;
+        \item \texttt{SimpleBooleanProperty}: rappresenta una property di tipo Boolean.
+    \end{itemize}
+}
