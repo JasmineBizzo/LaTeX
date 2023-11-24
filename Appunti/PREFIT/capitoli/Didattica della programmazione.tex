@@ -99,6 +99,21 @@ Questo programma è stato scritto da uno studente che aveva intenzione di usare 
 
 }
 
+\cor{Tipi di pattern}{
+    \begin{itemize}
+        \item [$\Rightarrow$] \textbf{Soluzione a un problema specifico:}
+        non costituisce un vero pattern;
+        \item [$\Rightarrow$] \textbf{Mezza soluzione - Mezzo pattern:}
+        in parte rappresenta un pattern, ma è ancora troppo specifico;
+        \item [$\Rightarrow$] \textbf{Quasi pattern:} si può generalizzare,
+        ma lo pseudocodice è specifico;
+        \item [$\Rightarrow$] \textbf{Pattern:} è generalizzato e lo
+        pseudocodice è generico;
+        \item [$\Rightarrow$] \textbf{Meta-pattern:} è un pattern che
+        descrive un pattern\footnote{Troppo generico.}.
+    \end{itemize}
+}
+
 \section{Il ruolo delle variabili}
 
 \qs{}{Come viene usata una specifica variabile in un programma? Qual è
@@ -147,3 +162,82 @@ utilizzare in un programma.}
 }
 
 \nt{Ricorda l'effetto Dunning-Kruger.}
+
+\section{Comprensione del codice}
+
+Ricapitolando, programmare vuol dire:
+
+\begin{enumerate}
+    \item formalizzare un problema e la sua soluzione;
+    \item individuare un procedimento risolutivo;
+    \item implementare il procedimento in un linguaggio di programmazione
+    in modo che sia eseguibile.
+\end{enumerate}
+
+\dfn{Conoscenze}{
+    \begin{itemize}
+        \item [$\Rightarrow$] \textbf{Conoscenza sintattica:} conoscenza della
+        sintassi del linguaggio di programmazione;
+        \item [$\Rightarrow$] \textbf{Conoscenza concettuale:} conoscenza di come
+        funzionano i costrutti del linguaggio di programmazione;
+        \item [$\Rightarrow$] \textbf{Conoscenza strategica:} rappresenta la
+        capacità di applicare le precedenti conoscenza per risolvere nuovi
+        problemi.  
+    \end{itemize}
+}
+
+\qs{}{Perchè nei corsi di introduzione alla programmazione si hanno spesso episodi di 
+scarsa performance (big failure)?}
+
+\begin{itemize}
+    \item [$\Rightarrow$] Scarse competenze di problem solving;
+    \item [$\Rightarrow$] Scarsa comprensione dei costrutti necessari per
+    programmare;
+    \item [$\Rightarrow$] Scarsa capacità di applicare le conoscenze assimilate.
+\end{itemize}
+
+\nt{Comprendere il codice e scrivere programmi sono due attività diverse.}
+
+\dfn{Comprensione del codice}{
+    La comprensione del codice è il processo cognitivo in cui un individuo costruisce
+    una rappresentazione mentale di un programma.
+}
+
+\cor{Compito di comprensione del codice}{
+    Il compito di comprensione del codice è un'attività tramite la quale si propone
+    l'interazione con un pezzo di codice. Tramite questa interazione si costruisce
+    una rappresentazione mentale del codice.
+}
+
+\mprop{Strategie nella didattica della programmazione}{
+    \begin{itemize}
+        \item [$\Rightarrow$] Insegnamento esplicito della conoscenza
+        strategica;
+        \item [$\Rightarrow$] Analisi delle specifiche;
+        \item [$\Rightarrow$] Analisi del comportamento del codice; 
+        \item [$\Rightarrow$] Tracciatura (simulazione del comportamento del
+        programma);
+        \item [$\Rightarrow$] Comprensione del codice ("spiega con parole tue");
+        \item [$\Rightarrow$] Parsons problems (riordinare le righe di codice);
+        \item [$\Rightarrow$] Refactoring di codice;
+        \item [$\Rightarrow$] Adattamento di un programma a un compito simile;
+        \item [$\Rightarrow$] Completamento di un programma;
+        \item [$\Rightarrow$] Debugging;
+        \item [$\Rightarrow$] Scrittura di codice.
+    \end{itemize}
+}
+
+\subsection{Block Model}
+
+\dfn{Block Model}{
+    Il Block Model è un framework usato per classificare e analizzare vari aspetti
+    della comprensione del codice.
+}
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale = 0.4]{images/didattica della programmazione/Block Model.png}
+    \caption{Block Model}
+    \label{fig:my_label}
+\end{figure}
+
