@@ -131,9 +131,9 @@ cui non si pensava che il FORTRAN potesse avere successo.}
 \paragraph{Specifiche:}
 
 \begin{itemize}
-    \item Sarebbe dovuto essere facile scrivere programmi in FORTRAN e sarebbe dovuto essere
+    \item Avrebbe dovuto essere facile scrivere programmi in FORTRAN e sarebbe dovuto essere
     efficiente;
-    \item Sarebbe dovuto essere facile da imparare;
+    \item Avrebbe dovuto essere facile da imparare;
     \item Non doveva essere svincolato dall'hardware (in quanto linguaggio di IBM).
 \end{itemize}
 
@@ -159,4 +159,199 @@ dei dati.
 
 \subsection{COBOL}
 
-\dfn{COBOL}{}
+\dfn{COBOL}{
+    Il COBOL (COmmon Business Oriented Language) fu concepito per applicazioni di tipo
+    amministrativo e commerciale. Il COBOL aveva una sintassi "english-like", ciò lo rendeva
+    facilmente comprensibile. Esempio:
+    \begin{center}
+        ADD A TO B GIVING C
+    \end{center}
+    Il COBOL venne sviluppato dal CODASYL (Conference on Data Systems Languages) e il DoD (Department of Defense)
+    USA obbligo le compagnie produttrici di computer a fornire il COBOL nelle loro installazioni.
+}
+
+\cor{La sintassi del COBOL}{
+    La sintassi del COBOL fu il risultato di un processo decisionale influenzato da 
+    FLOW-MATIC (di Grace Hopper) e dall'IBM COMTRAN (di Bob Bemer)\footnote{Molto marginalmente.}.
+}
+
+\paragraph{Gli obiettivi:}
+
+\begin{itemize}
+    \item doveva essere portatile;
+    \item doveva essere efficiente;
+    \item doveva essere facilmente comprensibile e utilizzabile.
+\end{itemize}
+
+Ma il COBOL non fu recepito bene dalla comunità informatica: non si consideravano i programmatori
+COBOL dei veri programmatori. Inoltre il COBOL non era adatto per applicazioni scientifiche.
+Ai giorni nostri il COBOL è quasi del tutto scomparso.
+
+\section{Gli anni '60}
+
+\subsection{ALGOL 60}
+
+\dfn{L'ALGOL 60}{
+    L'ALGOL 60 (ALGOrithmic Language 1960) fu frutto di una collaborazione tra l'ACM (Association for Computing Machinery)
+    e l'IFIP (International Federation for Information Processing). L'ALGOL 60 era molto legato
+    all'hardware sottostante.
+}
+
+\nt{Tony Hoare\footnote{Inventore del Quicksort e del puntatore NULL} noto che l'ALGOL 60
+era molto più avanti rispetto ai linguaggi dell'epoca.}
+
+\paragraph{ALGOL 60 introduce:}
+
+\begin{itemize}
+    \item \textbf{call by value} (per i parametri);
+    \item \textbf{call by name} (per le variabili);
+    \item \textbf{call by reference} (per i parametri, passaggio di un puntatore);
+\end{itemize}
+
+L'ALGOL è il primo linguaggio a richiedere esplicitamente il tipo delle variabili, Inoltre
+viene introdotta la distinzione tra assegnamento e uguaglianza. Oltre a qeusto si introducono
+le prime primitive di controllo strutturate: if then else, while loop e for. Si introducono anche i blocchi di istruzioni:
+\begin{center}
+    BEGIN ... END
+\end{center}
+
+L'ALGOL per via del pesante utilizzo di GOTO consentiva programmazione non strutturata. Ciò
+rende il codice meno leggibile.
+
+\dfn{Spaghetti code}{
+    Spaghetti code indica codice non strutturato e "ingarbugliato", difficilmente leggibile.   
+}
+
+\subsection{La Backus-Naur Form (BNF)}
+
+\dfn{Backus-Naur Form (BNF)}{
+    La BNF è una notazione per grammatiche context free. Viene usata per descrivere la
+    sintassi dei linguaggi di programmazione e, essendo un metà linguaggio, può essere
+    usata per descrivere se stessa.
+}
+
+\nt{Tutto ciò viene spiegato nel corso "Linguaggi formali e traduttori"}
+
+\dfn{Panini Backus Form}{
+    La Panini Backus Form è una versione ridotta della BNF. 
+}
+
+\cor{I parsificatori}{
+    I parsificatori sono programmi che leggono un testo e lo analizzano per determinare
+    la sua struttura grammaticale. ALGOL porto alla creazione di un parsificatore (LL). 
+    Nel 1965, Donald Knuth sviluppa un altro parsificatore (LR), ma solo alla fine degli anni '60
+    verranno messi a punto dei parsificatori efficienti.
+}
+
+\subsection{BASIC}
+
+\dfn{Basic (Beginner's All-purpose Symbolic Instruction Code)}{
+    Il BASIC nasce nel 1964 da un progetto di John Kemeny e Thomas Kurtz. Il BASIC era
+    un linguaggio di programmazione semplice e facile da imparare. Il suo obiettivo era
+    quello di consentire a studenti, non di informatica, di scrivere programmi.
+}
+
+\nt{Il BASIC inizia a diffondersi negli anni '70 con la diffusione dei "micro-computers".
+In alcuni casi il BASIC diventava l'ambiente di lavoro del PC (un po' come la shell).}
+
+Il BASIC era sufficientemente ad alto livello da poter essere utilizzato da chiunque ed
+ebbe diffusione come linguaggio didattico. Ma anche il BASIC fu guardato con sufficienza
+da molti informatici: Dijstra sosteneva che fosse inutile insegnare a programmare a gente 
+che era stata esposta al COBOL o al BASIC.
+
+\dfn{Visual BASIC}{
+    Il visual BASIC fu introdotto da Microsoft nel 1991 sebbene fu utilizzato molto poc
+    a causa della diffusione di linguaggi più potenti.
+}
+
+Altre varianti furono:
+\begin{itemize}
+    \item Altair BASIC;
+    \item Game BASIC (poi ridenominato Integer BASIC);
+    \item Applesoft BASIC.
+\end{itemize}
+
+\subsection{La questione del GOTO}
+
+\thm{Bohm-Jacopini}{
+    Il teorema ha diverse formulazioni equivalenti, ma sostanzialmente
+asserisce che qualsiasi funzione computabile può essere calcolata da
+un programma costituito esclusivamente da una combinazione di:
+\begin{itemize}
+    \item Sequenze di istruzioni eseguite una dopo l’altra;
+    \item Istruzioni di selezione (del tipo if then else);
+    \item Istruzioni di iterazione (del tipo while do).
+\end{itemize}
+
+}
+
+\nt{In sostanza il teorema dimostrava che il GOTO poteva essere messo da parte.}
+
+Nel 1968, Dijstra critica l'uso del GOTO in una lettera alle Communication of the ACM. 
+Successivamente, nel 1974, Knuth mostra che in alcuni casi il GOTO era la scelta migliore.
+Ne manuale di Brian Kernigham e Dennis Ritchie osservano che il GOTO era necessario per 
+gestire alcuni casi di errore.
+
+\subsection{Il Simula}
+
+\dfn{Simula I}{
+    Il Simula I nasce nel 1966 da un progetto di Kristen Nygaard e Ole-Johan Dahl. Il Simula I
+    è il primo linguaggio ad oggetti. Il suo scopo principale era quello di gestire simulazioni.
+}
+
+\nt{Dahl e Nygaard si ispirarono al concetto di record class introdotto da Hoare nell'ALGOL 60.}
+
+\dfn{Simula 67}{
+    Il Simula 67 è la seconda versione del Simula. Il Simula 67 è il primo linguaggio ad oggetti
+    a essere usato in ambito commerciale. Il Simula 67 introduce il concetto di classe e di
+    sottoclasse. Le istanzee di una classe sono dette oggetti e l'operazione new permette di
+    creare un oggetto. In Simula 67 erano anche presenti i puntatori (chiamati ref) ai record di attivazione (oggetti).
+}
+
+\nt{Per questi motivi si introduce un meccanismo di garbage collection.}
+
+Il Simula 67 introduce anche la data abstraction e l'ereditarietà. Uno degli utilizzi del simula
+era la modellazione di sistemi concorrenti.
+
+\section{Gli anni '70}
+
+\subsection{Pascal}
+
+\dfn{Pascal}{
+    Il Pascal nasce nel 1970 da un progetto di Niklaus Wirth. Può essere considerato un successore
+    dell'ALGOL. Vengono introdotti i puntatori e il tipo CHAR. Il Pascal incoraggia la costruzione
+    di procedure chiare, usa strutture dati dinamiche, call by value e call b reference.
+    Un'altra caratteristica era il suo sistema di tipi molto ricco, ma molto rigido\footnote{Con type
+    checking in fase di compilazione}.
+}
+
+\paragraph{Obiettivi:}
+
+\begin{itemize}
+    \item Semplicità;
+    \item Chiarezza;
+    \item Efficienza;
+    \item Scrittura di programmi complessi.
+\end{itemize}
+
+Il compilatore del Pascal non generava direttamente codice macchina, ma generava un codice intermedio:
+il P-Code. Il P-Code era un linguaggio assembly portabile. Il P-Code veniva interpretato da una
+macchina virtuale. Verso la fine degli anni '70 il Pascal era ormai in uso e insegnato nelle università.
+
+L'Educational Testing Service (ETS), rese il Pascal il linguaggio standard per i test AP (Advanced Placement).
+Nel 1983 Hejlsberf sviluppa il Turbo Pascal, un compilatore per PC. Il Turbo Pascal era un compilatore
+molto efficiente e permetteva di scrivere programmi in Pascal in modo molto veloce (diventò lo standard dei PC).
+
+Apple utilizzo il Pascal come linguaggio di riferimetno per il suo sistema operativo così come Microsoft.
+Tuttavia il Pascal declino in favore di C e di UNIX.
+
+\subsection{Il Prolog}
+
+\dfn{Il Prolog}{
+    Il Prolog (PROgrammation en LOGique) nasce nel 1972 da un progetto di Alain Colmerauer e Philippe Roussel. Il Prolog è un linguaggio
+    dichiarativo basato sulla logica del primo ordine. Il Prolog è un dimostratore automatico di teoremi. 
+}
+
+\nt{I dimostratori automatici di teoremi sono utilizzati nel corso di "Metodi formali per l'informatica" e
+nella parte da +3 CFU del corso di "Linguaggi e paradigmi".}
+
