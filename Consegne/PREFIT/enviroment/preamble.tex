@@ -2,6 +2,7 @@
 % PACKAGE IMPORTS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
 \usepackage{showexpl}
 \usepackage[tmargin=2cm,rmargin=1in,lmargin=1in,margin=0.85in,bmargin=2cm,footskip=.2in]{geometry}
 \usepackage{amsmath,amsfonts,amsthm,amssymb,mathtools}
@@ -15,7 +16,7 @@
 \usepackage{hyperref,theoremref}
 \hypersetup{
 	pdftitle={Assignment},
-	colorlinks=true, linkcolor=blue,
+	colorlinks=true, linkcolor=cyan,
 	bookmarksnumbered=true,
 	bookmarksopen=true
 }
@@ -36,7 +37,7 @@
 \usepackage{transparent}
 \usepackage{afterpage}
 
-\newcommand\mycommfont[1]{\footnotesize\ttfamily\textcolor{blue}{#1}}
+\newcommand\mycommfont[1]{\footnotesize\ttfamily\textcolor{cyan}{#1}}
 \SetCommentSty{mycommfont}
 \newcommand{\incfig}[1]{%
     \def\svgwidth{\columnwidth}
@@ -75,7 +76,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\evidence}[1]{%
-    \textcolor{blue}{\textit{#1}}%
+    \textcolor{cyan}{\textit{#1}}%
 }
 
 \newcommand{\glitter}[1]{%
@@ -780,14 +781,14 @@
 \titlecontents{chapter}[3.7pc]
 {\addvspace{30pt}%
 	\begin{tikzpicture}[remember picture, overlay]%
-		\draw[fill=blue,draw=blue] (-7.3,-.1) rectangle (-0.5,.5);%
+		\draw[fill=cyan,draw=cyan] (-7.3,-.1) rectangle (-0.5,.5);%
 		\pgftext[left,x=-3.7cm,y=0.2cm]{\color{white}\Large\sc\bfseries Capitolo\ \thecontentslabel};%
-	\end{tikzpicture}\color{blue}\large\sc\bfseries}%
+	\end{tikzpicture}\color{cyan}\large\sc\bfseries}%
 {}
 {}
 {\;\titlerule\;\large\sc\bfseries Pagina \thecontentspage
 	\begin{tikzpicture}[remember picture, overlay]
-		\draw[fill=blue,draw=blue] (2pt,0) rectangle (4,0.1pt);
+		\draw[fill=cyan,draw=cyan] (2pt,0) rectangle (4,0.1pt);
 	\end{tikzpicture}}%
 \titlecontents{section}[3.7pc]
 {\addvspace{2pt}}
@@ -808,8 +809,8 @@
 	\chapter*{%
 	  \vspace*{-20\p@}%
 	  \begin{tikzpicture}[remember picture, overlay]%
-		  \pgftext[right,x=15cm,y=0.2cm]{\color{blue}\Huge\sc\bfseries \contentsname};%
-		  \draw[fill=blue,draw=blue] (13,-.75) rectangle (20,1);%
+		  \pgftext[right,x=15cm,y=0.2cm]{\color{cyan}\Huge\sc\bfseries \contentsname};%
+		  \draw[fill=cyan,draw=cyan] (13,-.75) rectangle (20,1);%
 		  \clip (13,-.75) rectangle (20,1);
 		  \pgftext[right,x=15cm,y=0.2cm]{\color{white}\Huge\sc\bfseries \contentsname};%
 	  \end{tikzpicture}}%
