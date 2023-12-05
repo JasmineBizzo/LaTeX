@@ -45,5 +45,145 @@ memoria virtuale, etc.) nascono dalla scarsità di risorse dei primi computer.
 \section{Fase 2 : Sistemi batch}
 
 \begin{itemize}
-    \item 
+    \item Bisogna permettere al computer di pianificare 
+    il lavoro da svolgere in modo da sfruttare al meglio le risorse;
+    \item \textbf{Resident monitor}: programma che rimane in memoria 
+    e gestisce l'input e l'output. Si occupa anche di far partire i programmi;
+    \item Per esempio se si voleva eseguire un programma in FORTRAN:
+    \begin{enumerate}
+        \item \$FORTRAN: carica il compilatore e compila il sorgente;
+        \item \$LOAD: carica il programma utente;
+        \item \$RUN: esegue il programma utente fino a \$END.
+    \end{enumerate}
+    \item Rispetto alla fase 1 emerge la distinzione tra programma e
+    dati, ma non c'era nessuna protezione della memoria;
+    \item \textbf{Batch processing}: il lavoro del Resident monitor per 
+    eseguire tutti i programmi di un certo batch;
+    \item Se erano presenti nastri magnetici si poteva parallelizzare
+    parte del lavoro;
+    \item La produttività aumentava a scapito dei tempi del singolo
+    utente
 \end{itemize}
+
+\nt{Un esempio di sistema Batch è il BKS per il Philco 2000 che
+aveva più lettori di nastro che funzionavano come diverse aree di
+un file system.}
+
+Però per i processori di quegli anni si raccomandava di scrivere programmi che:
+\begin{itemize}
+    \item Non contenesserò istruzioni di halt;
+    \item Non riavvolgesserò i nastri;
+    \item Non indirizzasserò indirizzi di memoria riservati al sistema.
+\end{itemize}
+
+\section{Fase 3 : Multiprogrammazione}
+
+\begin{itemize}
+    \item Si introdusserò dispositivi di memoria di massa ad accesso
+    diretto;
+    \item Si diffuserò transistor più potenti che implementasserò
+    un sistema di interrupt;
+    \item Così si poteva simulare un'esecuzione contemporanea di più programmi;
+    \item Il termine Multiprogrammazione fu coniato nel 1959 da Christopher Strachey;
+    \item \textbf{Spooling}: Simultaneous Peripheral Operation On Line, 
+    permetteva di eseguire più programmi in parallelo asincronicamente;
+    \item \textbf{Multitasking cooperativo}: un programma può girare perchè un
+    altro programma lascia \textit{volontariamente} la CPU.
+\end{itemize}
+
+\dfn{Il sistema Atlas}{
+    Il sistema Atlas era un sistema operativo che permetteva di eseguire
+    più programmi in parallelo. Fu sviluppato da Tom Kilburn, Bruce
+    Payne e David Howarth. Nell'Atlas compaiono per la prima volta
+    le system call (o extracode) e l'implementazione di memoria virtuale 
+    con paginazione su richiesta.
+    \begin{itemize}
+        \item La memoria dell'Atlas era suddivisa in pagine (blocks);
+        \item Fixed store: una memoria a nuclep magnetico (MCM) da
+        8192 words per il codice del supervisor;
+        \item Subsidiary store: una MCM da 1024 words per i dati del
+        supervisor;
+        \item Core store\footnote{Una memoria cache}: una MCM da 16384 words per il processo utente;
+        \item Drum store\footnote{Una RAM}: memoria a tamburo rotante per i processi non in
+        esecuzione.
+    \end{itemize}
+
+    Il sistema Atlas prevedeva anche un system input tape, ossia una sorta
+    di memoria di Swap. Il supervisor si assicurava di avere sempre
+    un programma in esecuzione, se non ce n'era ne caricava uno dalla   
+    memoria di Swap.
+    
+    }
+
+\dfn{Il sistema B5000}{
+    Il sistema B5000 era un computer della Burroughs Corporation    
+    in grado di gestire uno stack. Nel Master Control Program (MCP)
+    compare il "trashing". Inoltre MCP era scritto in un linguaggio
+    ad alto livello.
+    Nel MCV compare per la prima volta un timer hardware.
+}
+
+\section{Fase 4 : Timesharing}
+
+\begin{itemize}
+    \item Nel 1959 John McCarthy conia il termine \textbf{Timesharing};
+    \item Nel 1961 McCarthy specifica che il Timesharing deve permettere
+    a più utenti di usare la stessa macchina contemporaneamente;
+    \item Il primo sistema Timesharing fu il CTSS (Compatible Time Sharing System)
+    sviluppato da Fernando Corbato al MIT;
+    \item Il suo obiettivo era quello di permettere a più utenti di usare
+    la stessa macchina contemporaneamente attraverso un supervisor;
+    \item Il CTSS doveva:
+    \begin{enumerate}
+        \item Tenere traccia delle aree di memoria occupate da ogni programma;
+        \item Poter spostare i programmi da una memoria all'altra;
+        \item Il programma in esecuzione deve poter essere interrotto dopo un certo lasso di tempo;
+        \item Le operazioni di I/O devono essere asincrone;
+        \item Se le operazioni I/O erano lente il programma doveva essere spostato in memoria secondaria;
+        \item Gli utenti dovevano poter interrompere un programma non funzionante;
+        \item Gli utenti dovevano poter interrogare il sistema.
+    \end{enumerate}
+    \item Il CTSS era dotato di accesso controllato dagli utenti attraverso
+    login e password;
+    \item Si potevano sviluppare nuovi comandi;
+    \item Nel 1965  fu scritto un programma MAIL per automatizzare lo scambio di MAIL
+    e nel 1971 fu inviato il primo SPAM;
+    \item Il CTSS fu l'antecedente del MULTICS diretto da Robert Fano;
+    \item Il MULTICS fu un fallimento commerciale ma un successo tecnologico
+    dato che porto involontariamente alla nascita di UNIX;
+    \item Nel 1965 Robert Daley e Peter Neumann svilupparono, in un 
+    articolo, il concetto di file system gerarchico;
+    \item Il file system doveva essere uno standard per cui tutti i suoi 
+    processi dovevano essere invisibili all'utente;
+    \item Nasce anche il termine "pathname" e il termine "link";
+    \item Gli utenti hanno a disposizione comandi per manipolare i file;
+    \item Il sistema Titan venne dotato di una file allocation table (FAT);
+    \item Il sistema Titan aveva anche un sistema di protezione dei file in maniera criptata;
+    \item Un altro sistema operativo diffuso in quegli anni era OS/360,
+    il SO di IBM;
+    \item OS/360 serviva a facilitare il passaggio a hardware più potenti.
+\end{itemize}
+
+\dfn{UNIX}{
+    Inizialmente il nome UNIX era UNICS, ossia UNiplexed Information
+    and Computing Service. Il nome fu cambiato in UNIX perchè UNICS
+    era già stato registrato. Il nome UNIX è un gioco di parole
+    con MULTICS.
+    
+    A metà degli anni '80 UNIX era il sistema operativo Timesharing 
+    di riferimento. Lo UNIX ebbe la fortuna di comparire al momento
+    giusto, quando i computer erano abbastanza potenti da poter
+    supportare un sistema operativo Timesharing. Dennis Ritchie notò
+    che il successo dello UNIX dipese anche dalla capacità di migliorare
+    idee già utilizzate.
+
+}
+
+\nt{Nel MULTICS nascono directory e subdirectory, ma la soluzione
+proposta aveva molti difetti risolti da UNIX.}
+
+\section{Fase 5 : }
+
+
+
+

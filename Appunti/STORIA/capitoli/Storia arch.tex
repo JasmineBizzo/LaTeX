@@ -345,6 +345,281 @@ avevano la forma xx yyyy zzzz:
     \item zzzz: indirizzo della prossima istruzione.
 \end{itemize}
 
+Il 650 aveva 3 registri:
+\begin{itemize}
+    \item l'istruzione in esecuzione (program register);
+    \item il dato indirizzato (distributor);
+    \item il risultato (accumulator).
+\end{itemize}
+
+\nt{Donald Knuth\footnote{Tra le altre cose inventore del TeX.}, uno dei più grandi informatici, ha scritto un libro su questo computer.
+The Art of Computer Programming (TAOCP) in cui furono trattati praticamente tutti gli aspetti teorici.} 
+
+\dfn{Bit e Byte}{
+    Nel 1948, Claude Shannon, definì il bit come la quantità di informazione necessaria per scegliere tra due alternative equiprobabili. Inoltre, nel 1956, il byte fu definito come la quantità di bit
+     necessari per rappresentare un carattere. Nel 1956 Werner Buchholz, un ingegnere di IBM,
+        propose di usare il byte per rappresentare un carattere. All'inizio la dimensione non era di 8 bit, ma di 4 o 6.
+}
+
+\subsection{Memorie a tamburo rotante}
+
+\dfn{Memorie a tamburo rotante}{
+    Le memorie a tamburo rotante sono un tipo di memoria a accesso diretto.
+    Esse furono disponibili fin dagli anni '30, ma furono usate solo negli anni '50.
+    Esse erano costituite da un tamburo rotante con una serie di tracce concentriche.
+}
+
+\nt{Ma in pochi anni furono soppiantate dagli hard disk.}
+
+Inoltre alla fine degli anni '50 fu sviluppato il primo circuito integrato (IC) da Jack Kilby
+di Texas Instruments. Questo IC era costituito da un transistor e da altri componenti
+elettronici. 
+
+\dfn{Legge di Moore}{
+    La legge di Moore afferma che il numero di transistor in un IC raddoppia ogni 18/24 mesi.
+    È stata storicamente abbastanza precisa, ma non si può sapere per quanto resterà valida.
+}
+
+\section{Le innovazioni degli anni '60}
+
+Nel 1960 viene commercializzato, dalla Digital Equipment Corporation (DEC),
+ il PDP-1 (Programmed Data Processor):
+
+ \begin{itemize}
+    \item Primo computer a usare un monitor;
+    \item Primo computer a ospitare un videogioco (Spacewar!);
+    \item Primo computer in cui si fu sviluppato un editor, un word processor
+    e un debugger.
+ \end{itemize}
+
+Inoltre è con il PDP-1 che inizia a diffondersi la cultura hacker: persone
+che usano il computer per divertimento e per sperimentare.
+\paragraph{Ulteriori innovazioni:}
+\begin{itemize}
+    \item nel 1962 fu operativo l'ILIAC II in cui compare, per la prima volta,
+    la pipeline;
+    \item nell'IBM 7030 (strech) vengono implementate protezioni della memoria,
+    il byte da 8 bit e la memoria interlacciata;
+    \item nel 1961 nell'ATLAS vengono implementatae la memoria virtuale e la paginazione.
+\end{itemize}
+
+\subsection{La terza generazione di computer}
+
+A partire dal 1964 si inaugura la terza generazione di computer,
+basati su circuiti integrati (con la IBM 360).
+Questa serie di mainframe fu molto usata sui posti di lavoro perchè
+potevano essere usate in molti ambiti diversi. Erano relativamente
+veloci e utilizzavano una memoria a nastro magnetico o un hard disk.
+
+\begin{itemize}
+    \item Si adotta la dimensione di byte fissa a 8 bit;
+    \item La memoria principale era indirizzabile a byte;
+    \item Word di dati da 32 bit;
+    \item Si utilizza microcodice in tutti i processori;
+    \item Le istruzioni avevano lunghezza variabile di 2, 4 o 6 byte;
+    \item Vennero introdotte istruzioni macchina complesse con 2 operandi in memoria;
+    \item Fu introdotta la Direct Memory Access (DMA);
+    \item Nel 1964 Douglas Engelbart inventa il mouse.
+\end{itemize}
+
+\paragraph{L'Olivetti Programma 101 (Perottina):} fu sviluppato da
+Pier Giorgio Perotto e fu il primo computer da tavolo. Vendette circa
+40.000 unità. Anche se venne venduta come calcolatrice, era un computer
+completo. Era programmabile in linguaggio macchina e in linguaggio
+assembler.
+
+\nt{Viene considerato da alcuni il primo personal computer (PC),
+ma in realtà nessuno penso mai di utilizzarlo come tale.}
+
+\paragraph{Il CDC 6600:} fu il primo supercomputer. Raggiungeva circa 
+1 milione di istruzioni floating point al secondo, cioè 1 MFLOPS. Nel 1969
+fu sviluppato il CDC 7600 che raggiungeva 40 MFLOPS.
+L'idea di Seymour Cray era quella di affiancare al processore principale
+un processore ausiliario. Ciò riduceva i cicli di clock utilizzando istruzioni
+macchina semplici. Il 6600 fu anche il primo computer a usare un'architettura
+superscalare, in grado di sfruttare il parallelismo a livello di istruzione.
+
+\nt{Il FLOPS è un'unità di misura della potenza di calcolo.}
+
+\paragraph{I minicomputer:} nel 1965 la DEC sviluppa il PDP-8, il primo
+minicomputer. Era un computer "economico" e piccolo. Questa categoria di 
+computer decadde con l'avvento dei microprocessori e dei PC.
+
+\paragraph{Le cache:} nascono da una necessità di velocizzare l'accesso
+alla memoria. La cache è una memoria molto veloce, ma molto piccola. vengono
+teorizzate da Maurice Wilkes nel 1965. Il primo computer commerciale a utilizzare
+la cache fu l'IBM 360/85, nel 1968. Al giorno d'oggi tutti i computer hanno una
+cache a tre livelli.
+
+\paragraph{Lo schema di Tomasulo:} nel 1967 Robert Tomasulo sviluppa uno schema
+per l'esecuzione fuori ordine delle istruzioni. Questo schema permette di eseguire
+istruzioni in parallelo, anche se dipendenti tra loro. 
+
+\paragraph{The mother of all demos:} nel 1968 Douglas Engelbart presenta il suo
+sistema NLS (o oNLine System) che introduce il concetto di ipertesto e di mouse.
+Questo sistema introduce anche il concetto di finestre e di grafica.
+
+\subsection{Gli anni '70}
+
+Gli anni '70 si aprono con la commercializzazione del PDP-11, un minicomputer
+della DEC. Sul PDP-11 venne sviluppato il primo sistema operativo UNIX. Ed era
+pensato per essere assemblato da chiunque. Aveva solo 8 registri e una memoria
+di 64 KB. Una sua particolarità era l'ortogonalità delle istruzioni, ossia
+ogni istruzione poteva essere usata con qualsiasi registro. Ma questo rendeva
+il tutto molto più lento.
+
+\paragraph{Floppy Disk:} nel 1971 Alan Shugart sviluppa il floppy disk.
+Erano dischi magnetici da 8 pollici e avevano una capacità da 360 KB a 1440 KB.
+Negli anni '80 e '90 saranno utilizzati come memoria di massa per PC economici.
+
+\section{La vera storia dell'Intel}
+
+Nel 1968 Robert Noyce e Gordon Moore fondano la NM Electronics, che diventerà
+la Integrated Electronics (Intel). Poco dopo venne assunto Andy Grove, che
+diventerà il CEO dell'Intel. Inizialmente, la Intel, produceva memorie RAM a semiconduttori.
+Nel 1969 la Intel produce un innovativo chip di SRAM ad alta velocità da 64 bit.
+Nel 1971 la prima Eprom (memoria non volatile) da 2 KB e un chip di DRAM da 1 KB,
+l'Intel 1103 o "Magnetic Core Memory Killer". 
+Nel 1969 la Intel firma un contratto con la Busicom, un'azienda giapponese, per
+sviluppare un chip per una calcolatrice elettronica. Ted Hoff e Stan Mazor ristrutturarono
+il progetto e svilupparono il primo microprocessore, l'Intel 4004 che raccoglieva
+12 circuiti integrati su un unico chip. Nel 1970 fu assunto Federico Faggin per
+guidare lo sviluppo di questo progetto. Tuttavia Busicom si ritirò dall'affare,
+cedendo i diritti alla Intel. Il 4004 fu il primo microprocessore a 4 bit con tecnologia
+a 10 micron. Il secondo microprocessore fu l'Intel 8008 (capostipite degli x86).
 
 
+\paragraph{Computer Terminal Corporation:} 
 
+\begin{itemize}
+    \item Nel 1968 fu fondata la CTC da Phil Ray e Gus Roche;
+    \item A quei tempi i computer si usavano tramite terminali;
+    \item I caratteri venivano stampati su carta e inviati al computer;
+    \item L'output veniva stampato su carta;
+    \item Si ebbe l'idea di produrre terminali silenziosi e veloci, 
+    questo porto alla produzione del Datapoint 3300;
+    \item Il Datapoint 3300 ebbe successo, ma la produzione fu affidata a
+    Texas Instruments e Intel;
+    \item In poco tempo le azioni della CTC moltiplicarono il loro valore;
+    \item La Intel fu convinta (minacciata) da Ray a sviluppare un microprocessore
+    per il Datapoint 2200.
+\end{itemize}
+
+\paragraph{Il Datapoint 2200:}
+
+\begin{itemize}
+    \item Era un terminale intelligente;
+    \item Funzionava caricando da nastro magnetico ed eseguendo
+    un programma di emulazione di terminale del mainframe a cui era collegato;
+    \item Si voleva utilizzare come stand-alone, progettando il resto dei componenti
+    in proprio;
+    \item Per questo fu utilizzato come PC.
+\end{itemize}
+
+Inoltre, negli anni '70, iniziò l'era dei microprocessori, sempre più
+veloci, sofisticati e con più memoria. Fu ulteriolmente aumentata la frequenza
+di clock e la dimensione dei registri. La dimensione dei dati manipolati passa
+da 8 a 64 bit. Nascono anche varie sigle per quanto riguarda la dimensione
+del numero di transistor su un'unica fetta di silicio: MSI, LSI, VLSI, ULSI.
+
+\section{Innovazioni architetturali}
+
+\begin{itemize}
+    \item Negli anni '80 si verifica la rivoluzione RISC che permise di
+    costruire macchine più semplici e veloci;
+    \item Negli anni '90 si sfrutta l'Instruction Level Parallelism (ILP);
+    \item Alla fine degli anni '90 e all'inizio degli anni '00 si introducono
+    i multithread e i multicore;
+    \item A partire dagli anni 2000 si usano processori grafici per l'elaborazione non grafica.
+\end{itemize}
+
+Nel 1973 la Xerox Palo Alto Research Center (PARC) sviluppa il primo personal computer
+dotato di interfaccia grafica e mouse. Ebbe una limitata commercializzazione ma fu usato
+a livello universitario. 
+
+\subsection{La Apple}
+
+Nel 1976 Steve Jobs e Steve Wozniak fondano la Apple. Jobs riusci a convincere il Byte
+Shop a vendere il suo computer, l'Apple I. Il Byte Shop vendette 50 unità a 500 dollari.
+Jobs e Wozniak iniziarono a costruirli in un garage. Ma bisognava convincere Mike
+Markkula a finanziare la produzione. Markkula era un imprenditore che aveva lavorato
+per Intel e Fairchild. 
+Nel 1977 fu commercializzato l'Apple II che doveva funzionare out of the box.
+Nel 1980 l'Apple III fu un fallimento per via dei problemi di surriscaldamento.
+
+\subsection{Il PC IBM}
+
+Nel 1981 IBM decise di entrare nel mercato dei PC. 
+Il progetto di debutto fu il 5150: utilizzava un 
+processore Intel 8088 a 4.77 MHz, 16-256 KB di RAM e 
+floppy disk.
+Questo porto al fenomeno dell'IBM compatibile:
+tutti i produttori di PC cercavano di essere compatibili
+con l'IBM 5150. Solo la Apple non era compatibile.
+A fine agosto 1981 la Apple diede il benvenuto a IBM
+nel mercato dei PC con un annuncio pubblicitario:
+\textit{Welcome, IBM. Seriously.}. Tuttavia IBM 
+conquisto la maggior parte del mercato.
+
+Nel frattempo alla Apple erano in sviluppo il LISA e il Macintosh:
+LISA fu considerato tropo costoso e il Macintosh 128k fu
+commercializzato nel 1984 ed ebbe grande successo. Famosa è 
+la pubblicità del Macintosh 128k, diretta da Ridley Scott,
+trasmessa durante il Super Bowl e ispirata a \textit{1984} di Orwell.
+
+\subsection{The RISC revolution}
+
+David Patterson e John Hennessy, nel 1980, condussero esperimenti
+su un nuovo modello architetturale. Negli anni '80 nasce RISC in opposizione
+a CISC.
+
+\paragraph{CISC:}
+
+\begin{itemize}
+    \item Molte istruzioni macchina;
+    \item Istruzioni complesse;
+    \item Molteplici modalità di indirizzamento;
+    \item Permetteva di generare eseguibili corti;
+    \item I tempi di accesso alla memoria erano lunghi.
+\end{itemize}
+
+\nt{Per esempio l'IBM 360 permetteva di spostare fino a 256 byte di dati
+in un'unica istruzione.}
+
+\paragraph{RISC:}
+
+\begin{itemize}
+    \item Poche istruzioni macchina;
+    \item Istruzioni semplici;
+    \item Istruzioni di lunghezza fissa;
+    \item Istruzioni con struttura regolare;
+    \item Solo LOAD e STORE accedevano alla memoria.
+\end{itemize}
+
+\nt{Una macchina RISC aveva 32 registri, mentre una CISC ne aveva 8 o 16.}
+
+\subsection{Instruction Level Parallelism}
+
+Negli anni '90 si sviluppa l'Instruction Level Parallelism (ILP) che garantisce:
+
+\begin{itemize}
+    \item Scheduling dinamico della pipeline;
+    \item Branch prediction dinamico;
+    \item Speculazione hardware: venivano eseguite istruzioni
+    anche se non si sapeva se erano necessarie;
+    \item Multiple issue: venivano eseguite più istruzioni
+    in parallelo;
+    \item Ottimizzazione del compilatore.
+\end{itemize}
+
+\subsection{Multithreading e multicore}
+
+Negli anni 2000 si sviluppano ulteriori tecnologie per aumentare
+le prestazioni dei processori:
+
+\begin{itemize}
+    \item Multithreading: permette di eseguire più thread in parallelo;
+    \item Multicore: permette di eseguire codice parallelo su più core;
+    \item La tecnologia grafica viene usata per l'elaborazione non grafica;
+    \item Attualmente si usano in combinazione.
+\end{itemize}
