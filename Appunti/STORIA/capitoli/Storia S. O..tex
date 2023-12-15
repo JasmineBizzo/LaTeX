@@ -182,8 +182,166 @@ Però per i processori di quegli anni si raccomandava di scrivere programmi che:
 \nt{Nel MULTICS nascono directory e subdirectory, ma la soluzione
 proposta aveva molti difetti risolti da UNIX.}
 
-\section{Fase 5 : }
+\section{Fase 5 : Sistemi concorrenti}
 
+\begin{itemize}
+    \item I sistemi operativi soffrivano spesso di deadlock, starvation e trashing;
+    \item Si riscoprirono i principi della programmazione concorrente (semafori, regioni critiche e monitor);
+    \item Nel 1969 Dijkstra sviluppa THE\footnote{Technische Hogeschool Eindhoven} operating system;
+    \item Il THE era un sistema a strati sovrapposti (una serie di VM) e usava i semafori;
+    \item Nel 1969 fu sviluppato anche il sistema operativo RC4000 (da Per Brinch Hansen);
+    \item RC4000 era il primo a implementare un kernel (nucleos);
+\end{itemize}
 
+\dfn{Concurrent Pascal}{
+    Hansen fu anche il padre del Concurrent Pascal (1973), un linguaggio
+    contenente primitive di sincronizzazione e comunicazione tra processi.
+    Fu usato per sviluppare il S.O. Solo.
+}
 
+\section{Fase 6 : Sistemi per PC}
+
+\begin{itemize}
+    \item Il capostipite degli S. O. per PC può essere considerato il sistema
+    OS 6 sviluppato tra il 1969 e il 1972 da Stoy e Strachey;
+    \item OS 6 era un S.O. scritto in BCPL, i cui concetti furono ripresi
+    nello Xerox Alto;
+    \item All'Alto seguono Pilot, Cedar e Xerox Star (dotato di Mouse e interfaccia grafica a finestre);
+    \item Purtroppo la Xerox non seppe convincere il mercato.
+\end{itemize}
+
+\subsection{CP/M, MS-DOS e Windows}
+
+All'inizio degli anni '60, Gary Kildall sviluppa il CP/M (Control Program for Microcomputers)
+per controllare un floppy disk da un processore Intel 8080.
+Nel 1974 fonda, insieme alla moglie, la Digital Research Inc. per commercializzare il CP/M 
+(pubblicizato su riviste di elettronica e informatica). Il CP/M aveva la
+caratteristica di poter girare su computer diversi. Il CP/M era diviso in:
+
+\begin{itemize}
+    \item CCP (Console Command Processor): interprete dei comandi;
+    \item BDOS (Basic Disk Operating System): interfaccia tra CCP e hardware;
+    \item BIOS;
+\end{itemize}
+
+Nel 1975, Kildall ideò il concetto di BIOS (Basic Input Output System) per
+interfacciare un sistema operativo con l'hardware. Sostanzialmente le istruzioni
+passavano da CCP a BDOS e poi a BIOS.
+
+\nt{Questo favoriva la portabilità del sistema operativo.}
+
+Il 4 Aprile 1975 Bill Gates e Paul Allen fondano la Micro-Soft e scrivono,
+per il CP/M, un interprete BASIC. Successivamente Bill Gates:
+
+\begin{enumerate}
+    \item compra la licenza d'uso dell'86-DOS (un clone del CP/M) da Seattle Computer Products;
+    \item ingaggia Tim Patterso per portare l'86-DOS sull'IBM PC (con processori 8088);
+    \item rinomina l'86-DOS in MS-DOS e vende la licenza d'uso alla IBM;
+    \item Microsoft può vendere DOS anche ad altri produttori di PC IBM compatibili.
+\end{enumerate}
+
+Nel 1985 Microsoft presenta Windows 1.0, un'interfaccia grafica per MS-DOS.
+Successivamente con la versione 3.0, Windows diventa un sistema operativo
+completo. Nel 1995 Windows 95 diventa il sistema operativo più diffuso.
+
+\nt{Apple in una serie di campagne pubblicitarie prese
+    in giro Windows 95 e i suoi vari problemi.}
+
+\subsection{DOS, Mac OS e OS X}
+
+Nel 19877 Apple II utilizzava DOS (Disk Operating System) per gestire
+un floppy disk. In realtà era noto come Apple DOS.
+Un'idea profiqua della Apple fu quella di rendere pubbliche le specifiche
+hardware delle sue macchine. Questo permise a terzi di sviluppare software
+per i computer Apple, per esempio VisiCalc (il primo foglio elettronico).
+
+Il primo tentativo della Apple di sviluppare un sistema operativo fu il Lisa OS
+(1983), ma non ebbe successo e fu rimpiazzato dal Macintosh con il Mac OS (1984).
+Mac OS arriva fino alla versione 9, ma nel 2001 viene sostituito da OS X.
+Il passaggio da Mac OS a OS X fu una importante svolta: OS X era basato su UNIX,
+derivato da NeXTSTEP (il sistema operativo di NeXT, la compagnia fondata da Steve Jobs
+dopo essere stato cacciato dalla Apple).
+
+\subsection{GNU, Minix e Linux}
+
+Nel 1983 Richard Stallman fonda il progetto GNU (GNU is Not Unix, acronimo ricorsivo):
+un progetto per lo sviluppo di software libero. L'obiettivo del progetto GNU era
+quello di creare software sviluppato da una comunità di programmatori e distribuito
+con una licenza che ne permettesse la modifica e la redistribuzione. 
+
+Nel 1987 Andrew Tanenbaum sviluppa Minix, un sistema operativo Unix-like per 
+l'uso didattico (usando il Tanenbaum). Il Minix era a 16 bit e non aveva il supporto   
+per i dispositivi di massa. 
+
+Linus Torvalds decise di sviluppare un nuovo sistema operativo usando il
+GNU C Compiler (gcc) e il Minix (in realtà è usato solo come esempio, non contiene codice del Minix). Nel 1991 Linus Torvalds rilascia la prima
+versione di Linux (un kernel) su una news group. Il nome originale di questo S.O.
+era Freax (Free Unix), ma il nome Linux fu scelto da un suo amico.
+Nel 1992 il kernel Linux viene rilasciato con la licenza GNU GPL (General Public License).
+
+\nt{Il logo di Linux è un pinguino di nome Tux., scelto nel 1996.}
+
+Ovviamente Linux, avendo licenza GNU GPL, era completamente modificabile e
+da esso nacquerò diverse distribuzioni (Debian, Red Hat, Ubuntu, SUSE, Arch, etc.).
+
+\section{Fase 7 : Sistemi distribuiti}
+
+\begin{itemize}
+    \item I sistemi distribuiti sono un insieme di computer collegati tra loro
+    tramite una rete;
+    \item Devono dare l'idea di un unico sistema;
+    \item Negli anni '80 si diffuserò, tramite Ethernet, vari sistemi distribuiti;
+    \item In questi sistemi era implementato Remote Procedure Call (RPC), un'estensione 
+    di IPC\footnote{Come visto nel corso "Sistemi Operativi".};
+    \item Le prime RPC in ambiente UNIX furono sviluppate da Sun Microsystems
+    per NFS (Network File System);
+    \item In realtà i sistemi distribuiti non si diffuserò al di fuori dall'ambito
+    di ricerca.
+\end{itemize}
+
+\nt{A titolo esemplificativo si possono ricordare:
+\begin{itemize}
+    \item Unix United System (UUS), nel 1982 che collegava 5 PDP11;
+    \item Amoeba formato da una rete di workstation e con un file System
+    distribuito.
+\end{itemize}
+}
+
+\section{Fase 8 : Sistemi operativi per dispositivi mobili}
+
+Dalla metà degli anni '90 si diffuserò i dispositivi mobili (smartphone e tablet).
+Un S.O. per dispositivi mobili deve essere:
+\begin{itemize}
+    \item in grado di gestire un touchscren;
+    \item in grado di gestire funzionalità in tempo reale;
+    \item in grado di gestire le risorse in maniera efficiente.
+\end{itemize}
+
+Nel 1996 la Nokia inizia la commercializzazione del Nokia 9000,
+enormemente diffuso dagli operatori di borsa. Nel 1993 Apple sviluppa
+il primo palmare, MessagePad. Dall'integrazione di questi due dispositivi
+nascono i veri e propri smartphone. L'iPhone (2007) è il primo smartphone
+ad avere accesso ai social. Nei primi anni 2000 si diffondono anche i tablet,
+il coronamento del sogno di Alan Kay\footnote{Dynabook.}.
+
+\nt{Per questi dispositivi si sviluppano sistemi operativi come:
+\begin{itemize}
+    \item Symbian OS (1998);
+    \item BlackBerry OS (1999);
+    \item iOS (2007);
+    \item Android (2008);
+    \item Windows Mobile.
+\end{itemize}}
+
+\subsection{Android}
+
+La Android fu fondata nel 2003, nel 2005 viene acquistata da Google.
+Il suo sistema si basa su un kernel linux, ma viene sviluppato in Java.
+Fece il suo debutto nel 2008 con HTC Dream.
+
+\subsection{Apple iOS}
+
+Apple iOS è un sistema operativo sviluppato da Apple per iPhone, iPod Touch e iPad.
+Viene rilasciato nel 2007 e ha un kernel XNU (X is Not Unix) basato su Mach e BSD. Ha una
+ristretta fetta di mercato (tra il 15\% e il 25\%).
 
