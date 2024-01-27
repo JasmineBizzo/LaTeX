@@ -4,26 +4,60 @@
 
 \qs{}{A chi è rivolta questa attività?}
 
-\sol{}
+\sol{A studenti del quarto/quinto anno di una scuola secondaria di secondo grado
+di un indirizzo \textbf{scientifico}\footnote{Liceo Scientifico Op. 
+Scienze Applicate}.}
 
 \qs{}{Può essere adattata/rivolta a studenti di diverse età e indirizzi?}
 
-\sol{}
+\sol{Quest'attività può essere somministrata a studenti al quinto anno di superiori
+senza alcuna modifica. Può, altresì, essere eseguita da studenti di età 
+inferiore con alcune correzioni (che indicherò nel documento).}
 
 \section{Motivazioni e finalità}
 
 \qs{}{Perchè si è scelta proprio quest'attività?}
 
-\sol{}
+\sol{L'attività nasce dalla necessità di insegnare ai ragazzi
+a ragionare in un modo diverso da quello a cui sono abituati.
+Spesso gli studenti, quando si trovano davanti a un problema che
+non sanno affrontare, tendono a procedere per tentativi ed errori,
+ma ciò non è possibile con un linguaggio funzionale. Ciò porta gli
+studenti a ingegnarsi per trovare una soluzione al problema,
+che sia adatta ad essere espressa in un modo ricorsivo. La ricorsione
+è un concetto che spesso viene trascurato nelle scuole superiori,
+in quanto si tende a prediligere uno stile imperativo o a oggetti.
+}
 
 \section{Prerequisiti}
 
 \begin{itemize}
-    \item [$\Rightarrow$];
+    \item [$\Rightarrow$] Utilizzo di base del computer;
+    \item [$\Rightarrow$] Concetto di algoritmo;
+    \item [$\Rightarrow$] Concetto di variabile;
+    \item [$\Rightarrow$] Logica booleana;
+    \item [$\Rightarrow$] Propensione al ragionamento astratto.
 \end{itemize}
 
 \section{Contenuti}
 
+I contenuti che presentano un asterisco blu (\textcolor{blue}{*}) sono
+adatti anche a studenti di altri indirizzi o di età inferiore (quarta superiore). I contenuti che presentano un asterisco rosso (\textcolor{red}{*}) sono
+opzionali per via della maggiore difficoltà, ma se gli alunni reagiscono bene al resto dell'attività
+si potrebbero considerare come "bonus".
+
+\begin{itemize}
+    \item [$\Rightarrow$] \textcolor{blue}{*} Tipi primitivi di Haskell;
+    \item [$\Rightarrow$] \textcolor{blue}{*} Funzioni;
+    \item [$\Rightarrow$] \textcolor{blue}{*} Ricorsione;
+    \item [$\Rightarrow$] Inferenza di tipo;
+    \item [$\Rightarrow$] Funzioni a più argomenti;
+    \item [$\Rightarrow$] Funzioni con guardie;
+    \item [$\Rightarrow$] Liste;
+    \item [$\Rightarrow$] Pattern matching;
+    \item [$\Rightarrow$] \textcolor{red}{*} Funzioni anonime;
+    \item [$\Rightarrow$] \textcolor{red}{*} Alberi.
+\end{itemize}
 \section{Traguardi e obiettivi}
 
 \subsection{Obiettivi di apprendimento}
@@ -31,15 +65,47 @@
 % fare tabella per organizzare in traguardi di competenze
 % e obiettivi di conoscenze e abilità
 
+\nt{I seguenti obiettivi di apprendimento sono stati scritti usando la tassonomia
+di Bloom rivisitata e sono divisi in traguardi di competenze e obiettivi di conoscenze.
+Il segno \{\textbf{+}\} indica un obiettivo procedurale, il segno \{\textbf{++}\}
+indica un obiettivo concettuale e il segno \{\textbf{-}\} indica un obiettivo
+metacognitivo.}
+
 \begin{center}
-    \begin{tabular}{ || p{5cm} | p{8cm} ||}
+    \begin{tabular}{ || p{8cm} | p{8cm} ||}
     \hline\hline
 
     \textbf{Traguardi di competenze} & \textbf{Obiettivi di conoscenze e abilità} \\ \hline
         
-        Test1 & Test2 \\\hline
-        Test3 & Test4 \\\hline
-    
+        \{+\} Implementare semplici algoritmi in Haskell. & \{+\} Saper utilizzare ghci. \\\hline
+        \{++\} Capire l'utilizzo di un determinato costrutto. & \{++\} Conoscere la sintassi di Haskell. \\\hline
+        \{-\} Costruire una funzione Haskell per risolvere un problema generico. & \{++\} Utilizzare, in modo opportuno, i costrutti. \\\hline
+        \{++\} Analizzare un codice che utilizza la ricorsion. & \{++\} Valutare quando convenga utilizzare l'if e quando convenga usare le guardie.\\\hline
+        \{+\} Saper scrivere un programma in modo che sia immediatamente
+        comprensibile da altre persone.& \\\hline
     \hline
     \end{tabular}
 \end{center}
+
+\section{Materiali e strumenti necessari}
+
+\begin{itemize}
+    \item [$\Rightarrow$] Lavagna;
+    \item [$\Rightarrow$] Gesso;
+    \item [$\Rightarrow$] Computer con installato Haskell/ghci.
+\end{itemize}
+
+\section{Linguaggio}
+
+\paragraph{Linguaggio scelto:} \evidence{Haskell}.
+
+\qs{}{Perchè si è scelto questo linguaggio?}
+
+\sol{Haskell è un linguaggio funzionale puro, il che lo rende ideale
+per insegnare agli studenti un concetto importante come la ricorsione.
+Inoltre Haskell presenta una sintassi molto semplice e pulita, che
+non distrae gli studenti dal concetto che si sta insegnando: i codici risultano
+molto più compatti rispetto ad altri linguaggi (C, Java, ecc...).
+Infine, Haskell è un linguaggio unico nel suo genere, in quanto
+"lazy" e "strongly typed", il che lo rende un linguaggio molto interessante
+da studiare e da approfondire.}

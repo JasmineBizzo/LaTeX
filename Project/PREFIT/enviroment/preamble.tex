@@ -69,6 +69,26 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SOME COOL COLORS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\evidence}[1]{%
+    \textcolor{cyan}{\textit{#1}}%
+}
+
+\newcommand{\glitter}[1]{%
+    \textcolor{green}{\textit{#1}}%
+}
+
+\newcommand{\fancyglitter}[1]{%
+    \textcolor{red}{\textit{#1}}%
+}
+
+\newcommand{\newfancyglitter}[1]{%
+    \textcolor{violet}{\textit{#1}}%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SELF MADE COLORS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -209,7 +229,7 @@
 %================================
 
 \tcbuselibrary{theorems,skins,hooks}
-\newtcbtheorem[number within=section]{Lenma}{Lenma}
+\newtcbtheorem{Lenma}{Eserczio}
 {%
 	enhanced,
 	breakable,
@@ -299,7 +319,7 @@
 %================================
 
 \tcbuselibrary{theorems,skins,hooks}
-\newtcbtheorem[number within=section]{claim}{Claim}
+\newtcbtheorem{claim}{Per gli insegnanti}
 {%
 	enhanced
 	,breakable
@@ -325,7 +345,7 @@
 %================================
 
 \tcbuselibrary{theorems,skins,hooks}
-\newtcbtheorem[number within=section]{Exercise}{Exercise}
+\newtcbtheorem[number within=section]{Exercise}{Problema}
 {%
 	enhanced,
 	breakable,
