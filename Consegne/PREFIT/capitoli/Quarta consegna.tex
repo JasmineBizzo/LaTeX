@@ -15,10 +15,10 @@ misconception con il relativo tipo di difficoltà:
 \end{itemize}
 
 \begin{center}
-    \begin{tabular}{ || p{11cm} | p{5cm} ||}
+    \begin{tabular}{ || p{10.5cm} | p{5.5cm} ||}
     \hline\hline
 
-    \textbf{\textcolor{blue}{Misconceptions}} & \textbf{\textcolor{blue}{Tipo di difficoltà}} \\ \hline
+    \textbf{\textcolor{blue}{Misconception}} & \textbf{\textcolor{blue}{Tipo di difficoltà}} \\ \hline
         
         L'assegnamento di variabili funziona in entrambe le direzioni o in direzione inversa. & Concettuale. \\\hline
         
@@ -74,7 +74,7 @@ che abbiamo incontrato durante il nostro percorso scolastico/accademico.
 \begin{center}
     \begin{longtable}{ || p{7.8cm} | p{8.2cm} ||}
     \hline\hline
-    \textbf{\textcolor{orange}{Misconceptions}} & \textbf{\textcolor{orange}{Risoluzione}} \\ \hline
+    \textbf{\textcolor{orange}{Misconception}} & \textbf{\textcolor{orange}{Analisi e Risoluzione}} \\ \hline
 
     L'assegnamento di variabili funziona in entrambe le direzioni. & Questa misconception
     nasce dall'utilizzo del segno uguale (=) che, generalmente, viene associato alle equazioni e quindi
@@ -115,8 +115,7 @@ che abbiamo incontrato durante il nostro percorso scolastico/accademico.
     la comprensione e la lettura del codice. \\\hline
 
     Dopo un "IF" sia la clausola "THEN" che la clausola "ELSE" sono eseguite. & Il fraintendimento nasce da una concezione sbagliata di "IF",
-    la soluzione più efficace è portare lo studente a riflettere sul perchè sia necessaria una condizione booleana e sul variare
-    del comportamento in base a essa.  \\\hline
+    la soluzione più efficace è portare lo studente a riflettere sul perchè sia necessaria una condizione booleana.  \\\hline
 
     Difficoltà nel capire l'incremento del contatore in un ciclo "FOR". & La sintassi del ciclo "FOR" può
     apparire confusionaria all'inizio e il modo più semplice per affrontarla è quello di spezzarla in tre parti distinte:
@@ -134,6 +133,18 @@ che abbiamo incontrato durante il nostro percorso scolastico/accademico.
     due oggetti che hanno un campo "nome" uguale non sono lo stesso oggetto: "nome" è solo una convenzione che si è scelta
     per rappresentare una caratteristica di un oggetto ma, come si è visto nella misconception sul linguaggio naturale,
     non presenta alcun legame intrinseco con l'idea che si ha di "\evidence{identità}". \\\hline
+
+    Un costruttore può includere solo assegnamenti per inizializzare gli attributi. & L'incomprensione del concetto di costruttore
+    deriva dal fatto che \textit{solitamente} si utilizza in questo modo, ma nulla vieta di effettuare altre operazioni al suo interno.
+    Il modo con cui si cura questa misconception è mostrare un esempio in cui nel costruttore vengano eseguite operazioni diverse dall'assegnamento. \\\hline
+
+    Un oggetto non può essere il valore di un attributo. & Basta semplicemente fare un esempio in cui si ha questa necessità:
+    un oggetto "banca" può avere un attributo "conto" che è a sua volta un oggetto con attributi "numero", "saldo", etc... \\\hline
+
+    Confusione di stringhe che presentano numberi con numeri veri e propri. & La sbagliata concezione dell stringhe "numeriche" come numeri
+    deriva dal fatto che, nella vita quotidiana, ogni numero è di per sè una stringa (ogni simbolo può essere visto come un carattere, di fatto non c'è distinzione tra
+    1 e un "1") ma allo stesso tempo un numero (ci si possono effetture dei calcoli). Come per altri problemi simili
+    la soluzione risiede nell'insegnare come un computer rappresenta e veda tutto ciò. \\\hline
 
     \hline
 \end{longtable}
