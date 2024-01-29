@@ -7,15 +7,26 @@
 
 \qs{}{A chi è rivolta questa attività?}
 
-\sol{A studenti del quarto/quinto anno di una scuola secondaria di secondo grado
+\sol{A studenti/studentesse del quarto/quinto anno di una scuola secondaria di secondo grado
 di un indirizzo \textbf{scientifico}\footnote{Liceo Scientifico Op. 
 Scienze Applicate}.}
 
-\qs{}{Può essere adattata/rivolta a studenti di diverse età e indirizzi?}
+\qs{}{Può essere adattata/rivolta a studenti/studentesse di diverse età e indirizzi?}
 
-\sol{Quest'attività può essere somministrata a studenti al quinto anno di superiori
+\sol{Quest'attività può essere somministrata a studenti/studentesse al quinto anno di superiori
 senza alcuna modifica. Può, altresì, essere eseguita da studenti di età 
 inferiore con alcune correzioni (che indicherò nel documento).}
+
+\qs{}{In quale specifica disciplina scolastica si colloca l'attività?}
+
+\sol{Quest'attività ha carattere principalmente informatico trattando un argomento
+prevalentemente computazione (la ricorsione). Tuttavia si può inquadrare quest'unità didattica
+in un contesto più ampio trattando anche Haskell che, come linguaggio puramente funzionale,
+si può associare a un ambito matematico e logico. Il ragionamento ricorsivo ha anche un'utilità
+trasversale dato che aiuta a comprendere in maniera più profonda alcuni problemi e la
+loro scomposizione in sottoproblemi.}
+
+\pagebreak
 
 \section{Motivazioni e finalità}
 
@@ -55,6 +66,9 @@ Verranno dati per scontati i seguenti prerequisiti in quanto fondamentali per la
     \item [$\Rightarrow$] Logica booleana;
     \item [$\Rightarrow$] Propensione al ragionamento astratto.
 \end{itemize}
+\paragraph{}
+
+\nt{È propedeutica la conoscenza di Haskell che verrà comunque ripreso, sviluppato e approfondito nel corso dell'unità didattica.}
 
 \section{Contenuti}
 
@@ -64,16 +78,19 @@ opzionali per via della maggiore difficoltà, ma se gli alunni reagiscono bene a
 si potrebbero considerare come "bonus".
 
 \begin{itemize}
-    \item [$\Rightarrow$] \textcolor{blue}{*} Ricorsione;
-    \item [$\Rightarrow$] \textcolor{blue}{*} Funzioni;
-    \item [$\Rightarrow$] \textcolor{blue}{*} Tipi primitivi di Haskell;
-    \item [$\Rightarrow$] Inferenza di tipo;
-    \item [$\Rightarrow$] Funzioni a più argomenti;
-    \item [$\Rightarrow$] Funzioni con guardie;
-    \item [$\Rightarrow$] Liste;
-    \item [$\Rightarrow$] Pattern matching;
-    \item [$\Rightarrow$] \textcolor{red}{*} Funzioni anonime;
-    \item [$\Rightarrow$] \textcolor{red}{*} Alberi.
+    \item [$\Rightarrow$] \textcolor{blue}{*} \textbf{Ricorsione:} il cuore di quest'attività è insegnare la ricorsione e il
+    ragionamento ricorsivo, aiutando a riconoscere quando esso sia preferibile a un ragionamento iterativo;
+    \item [$\Rightarrow$] \textcolor{blue}{*} \textbf{Funzioni:} ci si occuperà sia di funzioni in generale (principalmente per fare pratica con Haskell)
+    che di funzioni ricorsive;
+    \item [$\Rightarrow$] \textcolor{blue}{*} \textbf{Tipi di Haskell:} Num, Int, Float, String;
+    \item [$\Rightarrow$] \textbf{Inferenza di tipo:} mostrare come in Haskell si deve essere precisi con i tipi e di come ciò sia un aiuto alla programmazione;
+    \item [$\Rightarrow$] \textbf{Funzioni a più argomenti:} come si possono usare funzioni che richiedono più di un parametro in Haskell (curryficate);
+    \item [$\Rightarrow$] \textbf{Funzioni con guardie:} una rappresentazione per casi alternativa all'utilizzo di "\texttt{IF}" che risulta molto utile
+    anche nella definizione di funzioni ricorsive;
+    \item [$\Rightarrow$] \textbf{Liste:} usate come "scusa" per introdurre il pattern matching;
+    \item [$\Rightarrow$] \textbf{Pattern matching:} come il pattern matching delle liste sia utile per definire funzioni ricorsive;
+    \item [$\Rightarrow$] \textcolor{red}{*} \textbf{Funzioni anonime:} funzioni che usano lambda expression o funzioni parzialmente applicate;
+    \item [$\Rightarrow$] \textcolor{red}{*} \textbf{Alberi:} visione di un albero con l'utilizzo della ricorsione.
 \end{itemize}
 
 \section{Traguardi e obiettivi}
@@ -125,9 +142,29 @@ di Bloom rivisitata.}
 
 \subsection{Indicazioni nazionali}
 
-\paragraph{Ambito algoritmico:}  implementazione di un linguaggio di programmazione, metodologie di programmazione.
+\paragraph{Traguardi:}
 
-\paragraph{Ambito calcolo numerico e simulazioni:} semplici simulazioni.
+\begin{itemize}
+    \item Comprendere i principali
+    fondamenti teorici delle scienze dell’informazione;
+    \item Acquisire la padronanza di strumenti
+    dell’informatica, utilizzare tali strumenti per la soluzione di problemi significativi in generale;
+    \item L'uso di strumenti e la creazione di applicazioni deve essere accompagnata non solo da una
+    conoscenza adeguata delle funzioni e della sintassi, ma da un sistematico collegamento con i
+    concetti teorici ad essi sottostanti;
+    \item l rapporto fra teoria e pratica va mantenuto
+    su di un piano paritario e i due aspetti vanno strettamente integrati evitando sviluppi paralleli
+    incompatibili con i limiti del tempo a disposizione;
+\end{itemize}
+
+\paragraph{Obiettivi specifici:}
+
+\begin{itemize}
+    \item [$\Rightarrow$] \textbf{Ambito algoritmico:}  implementazione di un linguaggio di programmazione, metodologie di programmazione;
+    \item [$\Rightarrow$] \textbf{Ambito calcolo numerico e simulazioni:} semplici simulazioni.
+\end{itemize}
+
+\paragraph{Fonte:} \href{https://www.istruzione.it/alternanza/allegati/NORMATIVA%20ASL/INDICAZIONI%20NAZIONALI%20PER%20I%20LICEI.pdf}{\texttt{INDICAZIONI NAZIONALI}}
 
 \section{Materiali e strumenti necessari}
 
@@ -135,6 +172,9 @@ di Bloom rivisitata.}
 
 \begin{itemize}
     \item [$\Rightarrow$] Matrioske (bambole russe);
+    \item [$\Rightarrow$] Adesivi (in alternativa e si possono utilizzare dei pezzi di carta e del nastro adesivo);
+    \item [$\Rightarrow$] Fogli di carta;
+    \item [$\Rightarrow$] Penne;
     \item [$\Rightarrow$] Lavagna multimediale;
     \item [$\Rightarrow$] Computers.
 \end{itemize}
@@ -148,7 +188,16 @@ di Bloom rivisitata.}
 \end{itemize}
 
 \nt{GHCI può essere reperito al seguente link: \texttt{\href{https://www.haskell.org/downloads/}{https://www.haskell.org/downloads/}}.
-Si raccomanda di utilizzarlo su un computer con Linux, anche se rimane comunque installabile su Windows.}
+Si raccomanda di utilizzarlo su un computer con Linux, anche se rimane comunque installabile su Windows.
+Come Editor/IDE si possono usare:
+\begin{itemize}
+    \item [$\Rightarrow$] Notepad;
+    \item [$\Rightarrow$] VsCode: \href{https://code.visualstudio.com/download}{\texttt{https://code.visualstudio.com/download}} o su linux
+    si può utilizare il proprio package manager (apt, pacman, yay, etc.). Es. \texttt{sudo apt install code};
+    \item [$\Rightarrow$] IntelliJ: \href{https://www.jetbrains.com/toolbox-app/}{https://www.jetbrains.com/toolbox-app/}. Dopo aver installato il toolbox
+    si può installare la versione community di IntelliJ (più che sufficiente).
+\end{itemize}
+}
 
 \section{Linguaggio}
 
