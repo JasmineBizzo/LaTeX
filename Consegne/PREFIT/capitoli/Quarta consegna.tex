@@ -13,11 +13,11 @@ misconception con il relativo tipo di difficoltà:
     \item [$\Rightarrow$] \evidence{strategica}: relativa all'applicare i concetti appresi 
     (es. dubbi sull'utilizzare una certa struttura rispetto a un'altra).
 \end{itemize}
-
+\definecolor{mgray}{rgb}{0.9, 0.9, 0.9}
 \begin{center}
-    \begin{tabular}{ || p{10.5cm} | p{5.5cm} ||}
+    \begin{tabular}{ || >{\columncolor{mgray}}p{10.5cm} | p{5.5cm} ||}
     \hline\hline
-
+    \rowcolor{lightgray}
     \textbf{\textcolor{blue}{Misconception}} & \textbf{\textcolor{blue}{Tipo di difficoltà}} \\ \hline
         
         L'assegnamento di variabili funziona in entrambe le direzioni o in direzione inversa. & Concettuale. \\\hline
@@ -72,9 +72,10 @@ In questa sezione ci occuperemo di discutere possibili soluzioni ad alcune delle
 che abbiamo incontrato durante il nostro percorso scolastico/accademico. 
 
 \begin{center}
-    \begin{longtable}{ || p{7.8cm} | p{8.2cm} ||}
+    \begin{longtable}{ || >{\columncolor{mgray}}p{7.8cm} | p{8.2cm} ||}
     \hline\hline
-    \textbf{\textcolor{orange}{Misconception}} & \textbf{\textcolor{orange}{Analisi e Risoluzione}} \\ \hline
+    \rowcolor{lightgray}
+    \textbf{\textcolor{red}{Misconception}} & \textbf{\textcolor{red}{Analisi e Risoluzione}} \\ \hline
 
     L'assegnamento di variabili funziona in entrambe le direzioni. & Questa misconception
     nasce dall'utilizzo del segno uguale (=) che, generalmente, viene associato alle equazioni e quindi
@@ -85,7 +86,7 @@ che abbiamo incontrato durante il nostro percorso scolastico/accademico.
     a ridurre il carico cognitivo.} . \\\hline
     
     Un metodo può essere invocato solo una volta. & Questa visione dei metodi come "usa e getta"
-    è relativamente facile da correggere in quanto basta far riflettere lo studente sul perchè 
+    è relativamente facile da correggere in quanto basta far riflettere lo studente sul perché 
     si scelga di utilizzare un metodo invece che scrivere tutto il codice all'interno del main. \\\hline
 
     Per ogni oggetto si alloca sempre la stessa quantità di memoria a prescindere dall'istanza. & 
@@ -96,7 +97,7 @@ che abbiamo incontrato durante il nostro percorso scolastico/accademico.
     ma, viceversa se si devono mettere dentro molte cose uno troppo piccolo non è sufficiente.\\\hline
 
     I numeri sono solo numeri (int, float, etc.) & Quando si scrive un equazione o una disequzione
-    su carta non ci si preoccupa troppo del tipo che essi devono avere perchè gli interi possono
+    su carta non ci si preoccupa troppo del tipo che essi devono avere perché gli interi possono
     essere scritti come numeri decimali con infiniti zeri, ma i computer hanno una quantità di memoria finita
     per cui una cosa del genere è infattibile. Questo "salto cognitivo" degli studenti è anche dovuto
     al processo di \evidence{cast}\footnote{Il cast è l'operazione con cui si converte una variabile da un tipo di dato a un altro.}.
@@ -115,7 +116,7 @@ che abbiamo incontrato durante il nostro percorso scolastico/accademico.
     la comprensione e la lettura del codice. \\\hline
 
     Dopo un "IF" sia la clausola "THEN" che la clausola "ELSE" sono eseguite. & Il fraintendimento nasce da una concezione sbagliata di "IF",
-    la soluzione più efficace è portare lo studente a riflettere sul perchè sia necessaria una condizione booleana.  \\\hline
+    la soluzione più efficace è portare lo studente a riflettere sul perché sia necessaria una condizione booleana.  \\\hline
 
     Difficoltà nel capire l'incremento del contatore in un ciclo "FOR". & La sintassi del ciclo "FOR" può
     apparire confusionaria all'inizio e il modo più semplice per affrontarla è quello di spezzarla in tre parti distinte:
@@ -142,7 +143,7 @@ che abbiamo incontrato durante il nostro percorso scolastico/accademico.
     un oggetto "banca" può avere un attributo "conto" che è a sua volta un oggetto con attributi "numero", "saldo", etc... \\\hline
 
     Confusione di stringhe che presentano numberi con numeri veri e propri. & La sbagliata concezione dell stringhe "numeriche" come numeri
-    deriva dal fatto che, nella vita quotidiana, ogni numero è di per sè una stringa (ogni simbolo può essere visto come un carattere, di fatto non c'è distinzione tra
+    deriva dal fatto che, nella vita quotidiana, ogni numero è di per sé una stringa (ogni simbolo può essere visto come un carattere, di fatto non c'è distinzione tra
     1 e un "1") ma allo stesso tempo un numero (ci si possono effetture dei calcoli). Come per altri problemi simili
     la soluzione risiede nell'insegnare come un computer rappresenta e veda tutto ciò. \\\hline
 

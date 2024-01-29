@@ -1,5 +1,8 @@
 \chapter{Introduzione}
 
+\nt{Quest'attività, essendo pesante e impegnativa, richiede 2-3 lezioni per essere svolta
+(volendo si può pensare a una quarta lezione per approfondire meglio).}
+
 \section{Livello di scuola, classe e indirizzo}
 
 \qs{}{A chi è rivolta questa attività?}
@@ -16,25 +19,39 @@ inferiore con alcune correzioni (che indicherò nel documento).}
 
 \section{Motivazioni e finalità}
 
-\qs{}{Perchè si è scelta proprio quest'attività?}
+\qs{}{Perché si è scelta proprio quest'attività?}
 
 \sol{L'attività nasce dalla necessità di insegnare ai ragazzi
-a ragionare in un modo diverso da quello a cui sono abituati.
-Spesso gli studenti, quando si trovano davanti a un problema che
-non sanno affrontare, tendono a procedere per tentativi ed errori,
-ma ciò non è possibile con un linguaggio funzionale. Ciò porta gli
-studenti a ingegnarsi per trovare una soluzione al problema,
-che sia adatta ad essere espressa in un modo ricorsivo. La ricorsione
-è un concetto che spesso viene trascurato nelle scuole superiori,
-in quanto si tende a prediligere uno stile imperativo o a oggetti.
+delle superiori il concetto di programma ricorsivo. Spesso quest'argomento 
+viene trattato in modo superficiale o non viene trattato proprio, ma è utile avere 
+un modello mentale di ricorsione per poter vedere i problemi sotto un'altra luce.
+Infatti lo scopo di questa unità didattica non è solamente quello di insegnare 
+un argomento, ma punta a mostrare soluzioni alternative ad alcuni problemi.
 }
 
+\begin{itemize}
+    \item [$\Rightarrow$] \textbf{Scrivere codice in modo elegante:} quando si insegna
+    a programmare, almeno all'inizio, viene trascurato il fatto che il codice debba essere
+    letto e capito da altre persone per cui ci si focalizza più sull'aspetto "funziona" rispetto
+    alla "veste grafica". Questo può anche portare a errori di programmazione dato che si avranno
+    difficoltà a leggere anche i propri programmi. Il presente documento non si vuole semplicemente
+    limitare a insegnare il concetto, molto utile, della ricorsione, ma vuole anche far fronte al
+    problema dello "spaghetti code" (programmi mal strutturati) fornendo una valida alternativa.
+    \item [$\Rightarrow$] \textbf{Pensiero computazionale e algoritmico:} una caratteristica fondamentale
+    nella società odierna è quella di far fronte a problemi spesso imprevisti. Non c'è solo un modo per
+    risolvere un quesito e le soluzioni possono essere molteplici. Infatti, per alcuni problemi, può
+    risultare ostico usare un approccio iterativo per cui è preferibile utilizzare la ricorsione.
+\end{itemize}
+
 \section{Prerequisiti}
+
+Verranno dati per scontati i seguenti prerequisiti in quanto fondamentali per la comprensione dell'unità didattica.
 
 \begin{itemize}
     \item [$\Rightarrow$] Utilizzo di base del computer;
     \item [$\Rightarrow$] Concetto di algoritmo;
     \item [$\Rightarrow$] Concetto di variabile;
+    \item [$\Rightarrow$] Tipi di variabili (Int, Float, etc.);
     \item [$\Rightarrow$] Logica booleana;
     \item [$\Rightarrow$] Propensione al ragionamento astratto.
 \end{itemize}
@@ -47,9 +64,9 @@ opzionali per via della maggiore difficoltà, ma se gli alunni reagiscono bene a
 si potrebbero considerare come "bonus".
 
 \begin{itemize}
-    \item [$\Rightarrow$] \textcolor{blue}{*} Tipi primitivi di Haskell;
-    \item [$\Rightarrow$] \textcolor{blue}{*} Funzioni;
     \item [$\Rightarrow$] \textcolor{blue}{*} Ricorsione;
+    \item [$\Rightarrow$] \textcolor{blue}{*} Funzioni;
+    \item [$\Rightarrow$] \textcolor{blue}{*} Tipi primitivi di Haskell;
     \item [$\Rightarrow$] Inferenza di tipo;
     \item [$\Rightarrow$] Funzioni a più argomenti;
     \item [$\Rightarrow$] Funzioni con guardie;
@@ -58,48 +75,86 @@ si potrebbero considerare come "bonus".
     \item [$\Rightarrow$] \textcolor{red}{*} Funzioni anonime;
     \item [$\Rightarrow$] \textcolor{red}{*} Alberi.
 \end{itemize}
+
 \section{Traguardi e obiettivi}
 
 \subsection{Obiettivi di apprendimento}
 
-% fare tabella per organizzare in traguardi di competenze
-% e obiettivi di conoscenze e abilità
-
 \nt{I seguenti obiettivi di apprendimento sono stati scritti usando la tassonomia
-di Bloom rivisitata e sono divisi in traguardi di competenze e obiettivi di conoscenze.
-Il segno \{\textbf{+}\} indica un obiettivo procedurale, il segno \{\textbf{++}\}
-indica un obiettivo concettuale e il segno \{\textbf{-}\} indica un obiettivo
-metacognitivo.}
+di Bloom rivisitata.}
+
 
 \begin{center}
-    \begin{tabular}{ || p{8cm} | p{8cm} ||}
+    \begin{tabular}{ || C{3cm} | >{\columncolor{RedPastel}}p{8.3cm} ||}
     \hline\hline
+        \rowcolor{lightgray}
+    \textbf{Tassonomia} & \textbf{Obiettivi}\\ \hline
+    \rowcolor{RedPastel}
+        \textbf{CREATE} & Lo/La studente/ssa, al termine dell'attività, 
+        sarà in grado di \textbf{sviluppare} semplici programmi ricorsivi in Haskell. \\\hline
 
-    \textbf{Traguardi di competenze} & \textbf{Obiettivi di conoscenze e abilità} \\ \hline
-        
-        \{+\} Implementare semplici algoritmi in Haskell. & \{+\} Saper utilizzare ghci. \\\hline
-        \{++\} Capire l'utilizzo di un determinato costrutto. & \{++\} Conoscere la sintassi di Haskell. \\\hline
-        \{-\} Costruire una funzione Haskell per risolvere un problema generico. & \{++\} Utilizzare, in modo opportuno, i costrutti. \\\hline
-        \{++\} Analizzare un codice che utilizza la ricorsion. & \{++\} Valutare quando convenga utilizzare l'if e quando convenga usare le guardie.\\\hline
-        \{+\} Saper scrivere un programma in modo che sia immediatamente
-        comprensibile da altre persone.& \\\hline
+        \rowcolor{OrangePastel}
+        \textbf{EVALUATE} & Lo/La studente/ssa, al termine dell'attività,
+        saprà \textbf{valutare} la convenienza di un approccio ricorsivo rispetto a un 
+        approccio iterativo.\\\hline
+
+        \rowcolor{BrownPastel}
+        \textbf{ANALYZE} &  Lo/La studente/ssa, al termine dell'attività,
+        comprenderà i concetti di passo base e passo induttivo/ricorsivo e 
+        saprà \textbf{simulare} l'esecuzione di programmi che usano esplicitamente
+        la ricorsione.\\\hline
+
+        \rowcolor{GreenPastel}
+        \textbf{APPLY} & Lo/La studente/ssa, al termine dell'attività,
+        riuscirà a \textbf{usare} in modo efficace la ricorsione per risolvere
+        problemi. \\\hline
+
+        \rowcolor{BluePastel}
+        \textbf{UNDERSTAND} &  Lo/La studente/ssa, al termine dell'attività,
+        saprà \textbf{identificare}, \textbf{classificare} e \textbf{descrivere} programmi ricorsivi. \\\hline
+
+        \rowcolor{PurplePastel}
+        \textbf{REMEMBER} &  Lo/La studentessa, al termine dell'attività,
+        \textbf{ricorderà} le componenti fondamentali di un programma ricorsivo 
+        (passo base e passo induttivo).\\\hline
+
     \hline
     \end{tabular}
 \end{center}
 
+
+\subsection{Indicazioni nazionali}
+
+\paragraph{Ambito algoritmico:}  implementazione di un linguaggio di programmazione, metodologie di programmazione.
+
+\paragraph{Ambito calcolo numerico e simulazioni:} semplici simulazioni.
+
 \section{Materiali e strumenti necessari}
 
+\paragraph{Materiale fisico:}
+
 \begin{itemize}
-    \item [$\Rightarrow$] Lavagna;
-    \item [$\Rightarrow$] Gesso;
-    \item [$\Rightarrow$] Computer con installato Haskell/ghci.
+    \item [$\Rightarrow$] Matrioske (bambole russe);
+    \item [$\Rightarrow$] Lavagna multimediale;
+    \item [$\Rightarrow$] Computers.
 \end{itemize}
+
+\paragraph{Materiale software:}
+
+\begin{itemize}
+    \item [$\Rightarrow$] GHCI (interprete per Haskell);
+    \item [$\Rightarrow$] Editor di testo o IDE (Integrated Development Enviroment);
+    \item [$\Rightarrow$] Terminale o Powershell.
+\end{itemize}
+
+\nt{GHCI può essere reperito al seguente link: \texttt{\href{https://www.haskell.org/downloads/}{https://www.haskell.org/downloads/}}.
+Si raccomanda di utilizzarlo su un computer con Linux, anche se rimane comunque installabile su Windows.}
 
 \section{Linguaggio}
 
 \paragraph{Linguaggio scelto:} \evidence{Haskell}.
 
-\qs{}{Perchè si è scelto questo linguaggio?}
+\qs{}{Perché si è scelto questo linguaggio?}
 
 \sol{Haskell è un linguaggio funzionale puro, il che lo rende ideale
 per insegnare agli studenti un concetto importante come la ricorsione.

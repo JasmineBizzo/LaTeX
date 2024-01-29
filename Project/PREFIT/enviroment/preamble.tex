@@ -1,8 +1,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % PACKAGE IMPORTS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
+\usepackage[table]{xcolor}
+\usepackage{tabularx}
+\usepackage{multirow}
 \usepackage[tmargin=2cm,rmargin=1in,lmargin=1in,margin=0.85in,bmargin=2cm,footskip=.2in]{geometry}
 \usepackage{amsmath,amsfonts,amsthm,amssymb,mathtools}
 \usepackage[varbb]{newpxmath}
@@ -25,6 +26,7 @@
 \usepackage{etoolbox}
 %\usepackage{authblk}
 \usepackage{nameref}
+\usepackage{array}
 \usepackage{multicol,array}
 \usepackage{tikz-cd}
 \usepackage[ruled,vlined,linesnumbered]{algorithm2e}
@@ -34,7 +36,7 @@
 \usepackage{pdfpages}
 \usepackage{transparent}
 \usepackage{afterpage}
-
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
 \newcommand\mycommfont[1]{\footnotesize\ttfamily\textcolor{myr}{#1}}
 \SetCommentSty{mycommfont}
 \newcommand{\incfig}[1]{%
@@ -71,6 +73,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SOME COOL COLORS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\definecolor{RedPastel}{RGB}{255, 204, 204}
+\definecolor{OrangePastel}{RGB}{255, 224, 204}
+\definecolor{BrownPastel}{RGB}{229, 204, 170}
+\definecolor{GreenPastel}{RGB}{204, 255, 204}
+\definecolor{BluePastel}{RGB}{204, 229, 255}
+\definecolor{PurplePastel}{RGB}{229, 204, 255}
 
 \newcommand{\evidence}[1]{%
     \textcolor{cyan}{\textit{#1}}%
