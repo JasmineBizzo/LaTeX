@@ -1,30 +1,30 @@
 \chapter{Introduzione}
 
-\nt{Quest'attività, essendo pesante e impegnativa, richiede 2-3 lezioni per essere svolta
+\nt{Quest'attività, essendo pesante e impegnativa, richiede 2-3 lezioni (da un'ora) per essere svolta
 (volendo si può pensare a una quarta lezione per approfondire meglio).}
 
 \section{Livello di scuola, classe e indirizzo}
 
 \qs{}{A chi è rivolta questa attività?}
 
-\sol{A studenti/studentesse del quarto/quinto anno di una scuola secondaria di secondo grado
+\sol{A studenti e studentesse del quarto/quinto anno di una scuola secondaria di secondo grado
 di un indirizzo \textbf{scientifico}\footnote{Liceo Scientifico Op. 
 Scienze Applicate}.}
 
-\qs{}{Può essere adattata/rivolta a studenti/studentesse di diverse età e indirizzi?}
+\qs{}{Può essere adattata/rivolta a studenti e studentesse di diverse età e indirizzi?}
 
-\sol{Quest'attività può essere somministrata a studenti/studentesse al quinto anno di superiori
+\sol{Quest'attività può essere somministrata a studenti e studentesse al quinto anno di superiori
 senza alcuna modifica. Può, altresì, essere eseguita da studenti di età 
 inferiore con alcune correzioni (che indicherò nel documento).}
 
 \qs{}{In quale specifica disciplina scolastica si colloca l'attività?}
 
-\sol{Quest'attività ha carattere principalmente informatico trattando un argomento
-prevalentemente computazione (la ricorsione). Tuttavia si può inquadrare quest'unità didattica
+\sol{Quest'attività ha carattere \evidence{principalmente informatico} trattando un argomento
+prevalentemente computazionale (la ricorsione). Tuttavia si può inquadrare quest'unità didattica
 in un contesto più ampio trattando anche Haskell che, come linguaggio puramente funzionale,
-si può associare a un ambito matematico e logico. Il ragionamento ricorsivo ha anche un'utilità
+si può associare a un ambito \evidence{matematico} e \evidence{logico}. Il ragionamento ricorsivo ha anche un'utilità
 trasversale dato che aiuta a comprendere in maniera più profonda alcuni problemi e la
-loro scomposizione in sottoproblemi.}
+loro scomposizione in sottoproblemi, aiutando a sviluppare \evidence{soft-skill} e problem solving.}
 
 \pagebreak
 
@@ -32,31 +32,31 @@ loro scomposizione in sottoproblemi.}
 
 \qs{}{Perché si è scelta proprio quest'attività?}
 
-\sol{L'attività nasce dalla necessità di insegnare ai/alle ragazzi/e
-delle superiori il concetto di programma ricorsivo. Spesso quest'argomento 
+\sol{L'attività nasce dalla necessità di insegnare ai ragazzi e alle ragazze
+delle superiori il concetto di \newfancyglitter{programma ricorsivo}. Spesso quest'argomento 
 viene trattato in modo superficiale o non viene trattato proprio, ma è utile avere 
-un modello mentale di ricorsione per poter vedere i problemi sotto un'altra luce.
+un \newfancyglitter{modello mentale} di ricorsione per poter vedere i problemi sotto un'altra luce.
 Infatti lo scopo di questa unità didattica non è solamente quello di insegnare 
-un argomento, ma punta a mostrare soluzioni alternative ad alcuni problemi.
+un argomento, ma punta a mostrare \newfancyglitter{soluzioni alternative} ad alcuni problemi.
 }
 
 \begin{itemize}
     \item [$\Rightarrow$] \textbf{Scrivere codice in modo elegante:} quando si insegna
     a programmare, almeno all'inizio, viene trascurato il fatto che il codice debba essere
-    letto e capito da altre persone per cui ci si focalizza più sull'aspetto "funziona" rispetto
-    alla "veste grafica". Questo può anche portare a errori di programmazione dato che si avranno
+    letto e capito da altre persone per cui ci si focalizza più sull'aspetto "\fancyglitter{funziona}" rispetto
+    alla "\fancyglitter{veste grafica}". Questo può anche portare a errori di programmazione dato che si avranno
     difficoltà a leggere anche i propri programmi. Il presente documento non si vuole semplicemente
     limitare a insegnare il concetto, molto utile, della ricorsione, ma vuole anche far fronte al
-    problema dello "spaghetti code" (programmi mal strutturati) fornendo una valida alternativa.
+    problema dello "\fancyglitter{spaghetti code}" (programmi mal strutturati) fornendo una valida alternativa.
     \item [$\Rightarrow$] \textbf{Pensiero computazionale e algoritmico:} una caratteristica fondamentale
-    nella società odierna è quella di far fronte a problemi spesso imprevisti. Non c'è solo un modo per
-    risolvere un quesito e le soluzioni possono essere molteplici. Infatti, per alcuni problemi, può
-    risultare ostico usare un approccio iterativo per cui è preferibile utilizzare la ricorsione;
+    nella società odierna è il saper far fronte a problemi spesso imprevisti. Non c'è solo un modo per
+    risolvere un quesito e le soluzioni possono essere \fancyglitter{molteplici}. Infatti, per alcuni problemi, può
+    risultare ostico usare un approccio iterativo per cui è preferibile utilizzare la \fancyglitter{ricorsione}.
     \item [$\Rightarrow$] \textbf{Codice efficiente:} nella parte avanza di quest'unità didattica viene
     portato un esempio di struttura dati che si presta a un'efficiente rappresentazione ricorsiva, ossia
     gli alberi (e in particolare gli alberi binari di ricerca). Questo per combattere lo stigma
-    relativo al fatto che i programmi ricorsivi, oltre a essere più difficili dei programmi iterativi, siano 
-    sempre inefficienti rispetto ad eventuali controparte scritte utilizzando il paradigma imperativo.
+    relativo al fatto che i programmi ricorsivi, oltre a essere più difficili da scrivere rispetto ai programmi iterativi, siano 
+    sempre inefficienti rispetto a eventuali controparti che utilizzano un approccio "classico".
 \end{itemize}
 
 \section{Prerequisiti}
@@ -75,10 +75,12 @@ Verranno dati per scontati i seguenti prerequisiti in quanto fondamentali per la
 
 \nt{È propedeutica la conoscenza di Haskell che verrà comunque ripreso, sviluppato e approfondito nel corso dell'unità didattica.}
 
+\pagebreak
+
 \section{Contenuti}
 
 I contenuti che presentano un asterisco blu (\textcolor{blue}{*}) sono
-adatti anche a studenti di altri indirizzi o di età inferiore (quarta superiore). I contenuti che presentano un asterisco rosso (\textcolor{red}{*}) sono
+adatti anche a studenti e studentesse di altri indirizzi o di età inferiore. I contenuti che presentano un asterisco rosso (\textcolor{red}{*}) sono
 opzionali per via della maggiore difficoltà, ma se gli alunni reagiscono bene al resto dell'attività
 si potrebbero considerare come "bonus".
 
@@ -103,12 +105,12 @@ si potrebbero considerare come "bonus".
 \begin{itemize}
     \item \textbf{Introduzione teorica:} si introdurranno i concetti fondamentali di quest'attività, a partire dalla ricorsione
     (supportandosi con esempi presi dall'esperienza comune e dal mondo dell'arte). Verrà posto l'accento 
-    sulla divisione in "passo base" e "passo induttivo" e come questo sia fondamentale per evitare programmi che non funzionano o che non terminano. 
+    sulla divisione in "passo base" e "passo induttivo" (fondamentale per evitare programmi che non funzionano o che non terminano). 
     In questa parte si inizierà anche a esplorare
     il mondo di Haskell con la sua sintassi e i comandi di GHCI, il suo interprete, discutendo un esempio noto,
     ossia la successione di Fibonacci;
     \item \textbf{Attività ludica:} sarà proposta un'attività, inizialmente unplugged, utilizzando un oggetto, magari non molto comune, ma che
-    la maggior parte delle persone ha presente nel suo immaginario, ossia le Matrioske (o bambole russe). Le matrioske hanno
+    la maggior parte delle persone ha presente nel proprio immaginario, ossia le Matrioske (o bambole russe). Le matrioske hanno
     una natura intrinsecamente ricorsiva contenendo al loro interno una copia identica, ma di dimensioni minori (infatti la matrioska più interna è la più piccola).
     Nella fase successiva dell'attivita, tramite un programma Haskell (hs) fornito nell'apposita sezione, sarà possibile vedere in modo esplicito la ricorsività trattata nella fase unplugged;
     \item \textbf{Programmazione:} l'attività finale di quest'unità consisterà nel definire semplici funzioni in Haskell (di cui è presente, per l'insegnante, una soluzione) per testare
@@ -153,7 +155,7 @@ di Bloom rivisitata.}
         saprà \textbf{identificare}, \textbf{classificare} e \textbf{descrivere} programmi ricorsivi. \\\hline
 
         \rowcolor{PurplePastel}
-        \textbf{REMEMBER} &  Lo/La studentessa, al termine dell'attività,
+        \textbf{REMEMBER} &  Lo/La studente/ssa, al termine dell'attività,
         \textbf{ricorderà} le componenti fondamentali di un programma ricorsivo 
         (passo base e passo induttivo).\\\hline
 
@@ -176,7 +178,7 @@ di Bloom rivisitata.}
     concetti teorici ad essi sottostanti;
     \item l rapporto fra teoria e pratica va mantenuto
     su di un piano paritario e i due aspetti vanno strettamente integrati evitando sviluppi paralleli
-    incompatibili con i limiti del tempo a disposizione;
+    incompatibili con i limiti del tempo a disposizione.
 \end{itemize}
 
 \paragraph{Obiettivi specifici:}
@@ -196,7 +198,7 @@ di Bloom rivisitata.}
 
 \begin{itemize}
     \item [$\Rightarrow$] Matrioske (bambole russe);
-    \item [$\Rightarrow$] Adesivi (in alternativa e si possono utilizzare dei pezzi di carta e del nastro adesivo);
+    \item [$\Rightarrow$] Adesivi (in alternativa si possono utilizzare dei pezzi di carta e del nastro adesivo);
     \item [$\Rightarrow$] Fogli di carta;
     \item [$\Rightarrow$] Penne;
     \item [$\Rightarrow$] Lavagna multimediale;
@@ -215,7 +217,9 @@ di Bloom rivisitata.}
 Si raccomanda di utilizzarlo su un computer con Linux, anche se rimane comunque installabile su Windows.
 Come Editor/IDE si possono usare:
 \begin{itemize}
-    \item [$\Rightarrow$] Notepad;
+    \item [$\Rightarrow$] Gedit, Nano, Vim: installati di default sulla maggior parte delle distro linux;
+    \item [$\Rightarrow$] Notepad: per chi decide di utilizzare Windows;
+    \item [$\Rightarrow$] Notepad++;
     \item [$\Rightarrow$] VsCode: \href{https://code.visualstudio.com/download}{\texttt{https://code.visualstudio.com/download}} o su linux
     si può utilizare il proprio package manager (apt, pacman, yay, etc.). Es. \texttt{sudo apt install code};
     \item [$\Rightarrow$] IntelliJ: \href{https://www.jetbrains.com/toolbox-app/}{https://www.jetbrains.com/toolbox-app/}. Dopo aver installato il toolbox
@@ -229,11 +233,14 @@ Come Editor/IDE si possono usare:
 
 \qs{}{Perché si è scelto questo linguaggio?}
 
-\sol{Haskell è un linguaggio funzionale puro, il che lo rende ideale
-per insegnare agli studenti un concetto importante come la ricorsione.
-Inoltre Haskell presenta una sintassi molto semplice e pulita, che
-non distrae gli studenti dal concetto che si sta insegnando: i codici risultano
-molto più compatti rispetto ad altri linguaggi (C, Java, ecc...).
-Infine, Haskell è un linguaggio unico nel suo genere, in quanto
-"lazy" e "strongly typed", il che lo rende un linguaggio molto interessante
-da studiare e da approfondire.}
+\sol{Haskell è ideale per insegnare il concetto della ricorsione perchè:
+\begin{itemize}
+    \item [$\Rightarrow$] ha una sintassi compatta (a differenza di C, Java, etc.): questa non distrae gli studenti e 
+    le studentesse dal concetto che si vuole insegnare;
+    \item [$\Rightarrow$] la sua natura puramente funzionale rende quasi impossibile la codifica
+    di programmi che non siano ricorsivi (si possono scrivere con le funzioni di libreria, ma in realtà si sta usando implicitamente la ricorsione);
+    \item [$\Rightarrow$] è strongly-typed, il ché può sembrare faticoso inizialmente, ma è molto utile dato che costringe gli alunni e le alunne a utilizzare i tipi in modo corretto (rispetto ad altri linguaggi che supportano operazioni "sporche" come il cast);
+    \item [$\Rightarrow$] migliora la propria abilità nel programmare e nello scrivere codice in generale, spingendo a cercare soluzioni innovative e favorendo
+    una visione dei problemi complessi come entità composte da più problemi semplici.
+\end{itemize}
+}
