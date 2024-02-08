@@ -2,7 +2,8 @@
 % PACKAGE IMPORTS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
+\usepackage{changepage}
+\usepackage{etoolbox}
 \usepackage[tmargin=2cm,rmargin=1in,lmargin=1in,margin=0.85in,bmargin=2cm,footskip=.2in]{geometry}
 \usepackage{amsmath,amsfonts,amsthm,amssymb,mathtools}
 \usepackage[varbb]{newpxmath}
@@ -14,7 +15,7 @@
 \usepackage{hyperref,theoremref}
 \hypersetup{
 	pdftitle={Assignment},
-	colorlinks=true, linkcolor=blue,
+	colorlinks=true, linkcolor=purple,
 	bookmarksnumbered=true,
 	bookmarksopen=true
 }
@@ -30,12 +31,13 @@
 \usepackage[ruled,vlined,linesnumbered]{algorithm2e}
 \usepackage{comment} % enables the use of multi-line comments (\ifx \fi) 
 \usepackage{import}
+\usepackage{epigraph} 
 \usepackage{xifthen}
 \usepackage{pdfpages}
 \usepackage{transparent}
 \usepackage{afterpage}
 
-\newcommand\mycommfont[1]{\footnotesize\ttfamily\textcolor{blue}{#1}}
+\newcommand\mycommfont[1]{\footnotesize\ttfamily\textcolor{purple}{#1}}
 \SetCommentSty{mycommfont}
 \newcommand{\incfig}[1]{%
     \def\svgwidth{\columnwidth}
@@ -44,6 +46,9 @@
 
 \usepackage{tikzsymbols}
 \renewcommand\qedsymbol{$\Laughey$}
+\hbadness=10000
+\hfuzz=3.5pt
+\sloppy
 
 
 %\usepackage{import}
@@ -68,6 +73,27 @@
     \addtocounter{page}{-1}%
     \newpage
 }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SOME COOL COLORS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\evidence}[1]{%
+    \textcolor{blue}{\textit{#1}}%
+}
+\definecolor{dkgreen}{rgb}{0, 0.5, 0}
+\newcommand{\glitter}[1]{%
+    \textcolor{dkgreen}{\textit{#1}}%
+}
+
+\newcommand{\fancyglitter}[1]{%
+    \textcolor{red}{\textit{#1}}%
+}
+
+\newcommand{\newfancyglitter}[1]{%
+    \textcolor{violet}{\textit{#1}}%
+}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SELF MADE COLORS
