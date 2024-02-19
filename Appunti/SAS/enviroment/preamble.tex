@@ -51,6 +51,13 @@
 \sloppy
 
 
+\definecolor{RedPastel}{RGB}{255, 204, 204}
+\definecolor{OrangePastel}{RGB}{255, 224, 204}
+\definecolor{BrownPastel}{RGB}{229, 204, 170}
+\definecolor{GreenPastel}{RGB}{204, 255, 204}
+\definecolor{BrownPastelPastel}{RGB}{204, 229, 255}
+\definecolor{PurplePastel}{RGB}{229, 204, 255}
+
 %\usepackage{import}
 %\usepackage{xifthen}
 %\usepackage{pdfpages}
@@ -79,7 +86,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\evidence}[1]{%
-    \textcolor{blue}{\textit{#1}}%
+    \textcolor{BrownPastel}{\textit{#1}}%
 }
 \definecolor{dkgreen}{rgb}{0, 0.5, 0}
 \newcommand{\glitter}[1]{%
@@ -785,14 +792,14 @@
 \titlecontents{chapter}[3.7pc]
 {\addvspace{30pt}%
 	\begin{tikzpicture}[remember picture, overlay]%
-		\draw[fill=blue,draw=blue] (-7.3,-.1) rectangle (-0.5,.5);%
+		\draw[fill=BrownPastel,draw=BrownPastel] (-7.3,-.1) rectangle (-0.5,.5);%
 		\pgftext[left,x=-3.7cm,y=0.2cm]{\color{white}\Large\sc\bfseries Capitolo\ \thecontentslabel};%
-	\end{tikzpicture}\color{blue}\large\sc\bfseries}%
+	\end{tikzpicture}\color{BrownPastel}\large\sc\bfseries}%
 {}
 {}
 {\;\titlerule\;\large\sc\bfseries Pagina \thecontentspage
 	\begin{tikzpicture}[remember picture, overlay]
-		\draw[fill=blue,draw=blue] (2pt,0) rectangle (4,0.1pt);
+		\draw[fill=BrownPastel,draw=BrownPastel] (2pt,0) rectangle (4,0.1pt);
 	\end{tikzpicture}}%
 \titlecontents{section}[3.7pc]
 {\addvspace{2pt}}
@@ -813,8 +820,8 @@
 	\chapter*{%
 	  \vspace*{-20\p@}%
 	  \begin{tikzpicture}[remember picture, overlay]%
-		  \pgftext[right,x=15cm,y=0.2cm]{\color{blue}\Huge\sc\bfseries \contentsname};%
-		  \draw[fill=blue,draw=blue] (13,-.75) rectangle (20,1);%
+		  \pgftext[right,x=15cm,y=0.2cm]{\color{BrownPastel}\Huge\sc\bfseries \contentsname};%
+		  \draw[fill=BrownPastel,draw=BrownPastel] (13,-.75) rectangle (20,1);%
 		  \clip (13,-.75) rectangle (20,1);
 		  \pgftext[right,x=15cm,y=0.2cm]{\color{white}\Huge\sc\bfseries \contentsname};%
 	  \end{tikzpicture}}%
