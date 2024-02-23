@@ -101,7 +101,7 @@ L'attività di verifica e convalida serve a dimostrare che un sistema sia
 le esigenze del cliente.
 La convalida richiede anche attività di \newfancyglitter{controllo}, \newfancyglitter{ispezione} e \newfancyglitter{revisione}
 a ogni stadio del processo di sviluppo. In alcune meteodologie agili
-si scrivono i test prima di scrivere il codice (extreme programming).
+si scrivono i test prima di scrivere il codice (eXtreame Programming).
 
 \nt{In questo corso ci si concentrerà sul processo di testing. 
 Per una modo formale di verificare la correttezza di un sistema
@@ -278,7 +278,7 @@ Questo modello è:
     \begin{itemize}
         \item [$\Rightarrow$] lo sviluppo è organizzato in mini-progetti brevi (le iterazioni);
         \item [$\Rightarrow$] il risultato di ogni iterazione è un sistema parzialmente funzionante (testato e integrato);
-        \item [$\Rightarrow$] ogni iterazione dura poche settimane e comprende le proprie attività di analisi, sviluppo, etc.;
+        \item [$\Rightarrow$] ogni iterazione dura poche settimane\footnote{Un'iterazione di lunghezza fissata è detta \newfancyglitter{timeboxed}.} e comprende le proprie attività di analisi, sviluppo, etc.;
         \item [$\Rightarrow$] si ottiene un feedback a ogni iterazione.
     \end{itemize}
 }
@@ -287,8 +287,94 @@ Questo modello è:
 
 \section{Sviluppo agile}
 
+\dfn{Sviluppo agile}{
+    Lo sviluppo \newfancyglitter{agile} è un insieme di metodi di sviluppo software.
+}
+
+\paragraph{Contesto:}
+
+\begin{itemize}
+    \item [$\Rightarrow$] Il software è parte essenziale delle operazioni aziendali;
+    \item [$\Rightarrow$] La rapidità della consegna è un fattore critico;
+    \item [$\Rightarrow$] Spesso non si possono ottenere requisiti stabili;
+    \item [$\Rightarrow$] I requisiti diventano chiari solo dopo che il sistema
+    è stato consegnato e utilizzato;
+    \item [$\Rightarrow$] In successive iterazioni si possono ottenere requisiti
+    più chiari.
+\end{itemize}
+
 \subsection{I principi dello sviluppo agile}
 
-\subsection{Estreme Programming (XP)}
+\dfn{Agile Modelling}{
+    Lo scopo della modellazione (UML) è principalmente quello
+    di \newfancyglitter{comprendere} e di agevolare la \newfancyglitter{comunicazione}, non di documentare.
+}
+
+\begin{itemize}
+    \item [$\Rightarrow$] Adottare un metodo agile non significa evitare del tutto
+    la modellazione;
+    \item [$\Rightarrow$] Non si deve applicare UML per eseguire per intero o per la maggior parte la
+    progettazione software;
+    \item [$\Rightarrow$] Va utilizzato l'approccio più semplice e che comporta il minor dispendio 
+    di energie. Esempio: abbozzo di UML su una lavagna;
+    \item [$\Rightarrow$] La modellazione non va fatta da soli ma in coppie o in gruppo;
+    \item [$\Rightarrow$] Solo il codice verificato dimostra il vero progetto, i diagrammi precedenti
+    sono suggerimenti incompleti (usa e getta);
+    \item [$\Rightarrow$] La modellazione per OO dovrebbe essere eseguita degli stessi sviluppatori che andranno
+    effettivamente a scrivere il codice. 
+\end{itemize}
+
+\paragraph{Pratiche innovative:}
+
+\begin{itemize}
+    \item [$\Rightarrow$] \fancyglitter{Storie utente:} scenari d'uso in cui potrebbe trovarsi un utente. Il cliente 
+    lavora a stretto contatto con il team di sviluppo e discute di possibili scenari;
+    \item [$\Rightarrow$] \fancyglitter{Refactoring:} il codice va costantemente rifattorizzato per proteggerlo dal deterioramento causato dallo sviluppo incrementale;
+    \item [$\Rightarrow$] \fancyglitter{Sviluppo con test iniziali:} lo sviluppo non può procedere finchè tutti i test non sono stati superati;
+    \item [$\Rightarrow$] \fancyglitter{Programmazione a coppie:} i programmatori lavorano a coppie nella stessa postazione per sviluppare il software.
+\end{itemize}
+
+\subsection{eXtreame Programming (XP)}
+
+\dfn{eXtreame Programming}{
+    eXtreame Programming (XP) è un metodo di sviluppo software che si basa su
+    valori e principi di base:
+    \begin{itemize}
+        \item [$\Rightarrow$] sviluppo incrementale attraverso piccole e frequenti release;
+        \item [$\Rightarrow$] il cliente è parte attiva dello sviluppo;
+        \item [$\Rightarrow$] il progetto è supportato da test, refactoring e integrazione continua;
+        \item [$\Rightarrow$] si punta a mantenere la semplicità.
+    \end{itemize}
+}
 
 \subsection{Scrum}
+
+\dfn{Scrum}{
+    Scrum offre un framework per organizzare progetti agili e fornire una visibilità esterna su ciò che 
+    sta accadendo, ossia si occupa dell'organizzazione del lavoro e della gestione dei progetti.
+
+    Scrum è un approccio iterativo e incrementale in cui ciascuna iterazione 
+    ha una durata fissata denominata Sprint (non si hanno estensioni).
+}
+
+\paragraph{Sono presenti tre ruoli:}
+
+\begin{itemize}
+    \item [$\Rightarrow$] \fancyglitter{Product Owner:} rappresenta il cliente, definisce i requisiti
+    e specifica le priorità attraverso il \newfancyglitter{Product Backlog}\footnote{Un elenco di voci, funzionalità e requisiti.};
+    \item [$\Rightarrow$] \fancyglitter{Development Team:} le persone che sviluppano il software;
+    \item [$\Rightarrow$] \fancyglitter{Scrum Master:} garantisce che il team segua le regole di Scrum.
+\end{itemize}
+
+\subsubsection{Gestione agile della progettazione:}
+
+\begin{itemize}
+    \item [$\Rightarrow$] Il Development Team seleziona dal Product Backlog un insieme di voci
+    da sviluppare durante quell'iterazione (\newfancyglitter{Sprint Goal}), compila 
+    lo \newfancyglitter{Sprint Backlog} (ossia i compiti dettagliati per raggiungere il goal);
+    \item [$\Rightarrow$] Il risultato di ciascuno Sprint è un prodotto software funzionante
+    chiamato "incremento di prodotto potenzialmente rilasciabile" (integrato, verificato e documentato);
+    \item [$\Rightarrow$] Nello \newfancyglitter{Sprint Review} il Product Owner e il Development Team presentano le parti
+    coinvolte dall'incremento, ne fanno la dimostrazione, ottengono un feedback e decidono cosa fare nello Sprint successivo;
+    \item [$\Rightarrow$] Si dà enffasi all'adozione di Team auto-organizzati e auto-gestiti.
+\end{itemize}
