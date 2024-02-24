@@ -1,9 +1,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % PACKAGE IMPORTS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\usepackage{changepage}
-\usepackage{etoolbox}
+\usepackage[table]{xcolor}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{longtable}
 \usepackage[tmargin=2cm,rmargin=1in,lmargin=1in,margin=0.85in,bmargin=2cm,footskip=.2in]{geometry}
 \usepackage{amsmath,amsfonts,amsthm,amssymb,mathtools}
 \usepackage[varbb]{newpxmath}
@@ -15,7 +16,7 @@
 \usepackage{hyperref,theoremref}
 \hypersetup{
 	pdftitle={Assignment},
-	colorlinks=true, linkcolor=purple,
+	colorlinks=true, linkcolor=BrownPastel,
 	bookmarksnumbered=true,
 	bookmarksopen=true
 }
@@ -26,18 +27,18 @@
 \usepackage{etoolbox}
 %\usepackage{authblk}
 \usepackage{nameref}
+\usepackage{array}
 \usepackage{multicol,array}
 \usepackage{tikz-cd}
 \usepackage[ruled,vlined,linesnumbered]{algorithm2e}
 \usepackage{comment} % enables the use of multi-line comments (\ifx \fi) 
 \usepackage{import}
-\usepackage{epigraph} 
 \usepackage{xifthen}
 \usepackage{pdfpages}
 \usepackage{transparent}
 \usepackage{afterpage}
-
-\newcommand\mycommfont[1]{\footnotesize\ttfamily\textcolor{purple}{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+\newcommand\mycommfont[1]{\footnotesize\ttfamily\textcolor{BrownPastel}{#1}}
 \SetCommentSty{mycommfont}
 \newcommand{\incfig}[1]{%
     \def\svgwidth{\columnwidth}
@@ -46,17 +47,7 @@
 
 \usepackage{tikzsymbols}
 \renewcommand\qedsymbol{$\Laughey$}
-\hbadness=10000
-\hfuzz=3.5pt
-\sloppy
 
-
-\definecolor{RedPastel}{RGB}{255, 204, 204}
-\definecolor{OrangePastel}{RGB}{255, 224, 204}
-\definecolor{BrownPastel}{RGB}{229, 204, 170}
-\definecolor{GreenPastel}{RGB}{204, 255, 204}
-\definecolor{BrownPastelPastel}{RGB}{204, 229, 255}
-\definecolor{PurplePastel}{RGB}{229, 204, 255}
 
 %\usepackage{import}
 %\usepackage{xifthen}
@@ -77,7 +68,6 @@
 \newcommand\blankpage{%
     \null
     \thispagestyle{empty}%
-    \addtocounter{page}{-1}%
     \newpage
 }
 
@@ -85,12 +75,19 @@
 % SOME COOL COLORS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\definecolor{RedPastel}{RGB}{255, 204, 204}
+\definecolor{OrangePastel}{RGB}{255, 224, 204}
+\definecolor{BrownPastel}{RGB}{229, 204, 170}
+\definecolor{GreenPastel}{RGB}{204, 255, 204}
+\definecolor{BluePastel}{RGB}{204, 229, 255}
+\definecolor{PurplePastel}{RGB}{229, 204, 255}
+
 \newcommand{\evidence}[1]{%
-    \textcolor{BrownPastel}{\textit{#1}}%
+    \textcolor{cyan}{\textit{#1}}%
 }
-\definecolor{dkgreen}{rgb}{0, 0.5, 0}
+
 \newcommand{\glitter}[1]{%
-    \textcolor{dkgreen}{\textit{#1}}%
+    \textcolor{green}{\textit{#1}}%
 }
 
 \newcommand{\fancyglitter}[1]{%
@@ -100,7 +97,6 @@
 \newcommand{\newfancyglitter}[1]{%
     \textcolor{violet}{\textit{#1}}%
 }
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SELF MADE COLORS
@@ -125,7 +121,7 @@
 \definecolor{notesred}{RGB}{0,162,0}
 \definecolor{myp}{RGB}{197, 92, 212}
 \definecolor{mygr}{HTML}{2C3338}
-\definecolor{myred}{RGB}{127,0,0}
+\definecolor{BrownPasteled}{RGB}{127,0,0}
 \definecolor{myyellow}{RGB}{169,121,69}
 \definecolor{myexercisebg}{HTML}{F2FBF8}
 \definecolor{myexercisefg}{HTML}{88D6D1}
@@ -243,7 +239,7 @@
 %================================
 
 \tcbuselibrary{theorems,skins,hooks}
-\newtcbtheorem[number within=section]{Lenma}{Lenma}
+\newtcbtheorem{Lenma}{Eserczio}
 {%
 	enhanced,
 	breakable,
@@ -333,7 +329,7 @@
 %================================
 
 \tcbuselibrary{theorems,skins,hooks}
-\newtcbtheorem[number within=section]{claim}{Claim}
+\newtcbtheorem{claim}{Per gli insegnanti}
 {%
 	enhanced
 	,breakable
@@ -359,7 +355,7 @@
 %================================
 
 \tcbuselibrary{theorems,skins,hooks}
-\newtcbtheorem[number within=section]{Exercise}{Exercise}
+\newtcbtheorem[number within=section]{Exercise}{Problema}
 {%
 	enhanced,
 	breakable,
@@ -488,7 +484,7 @@
 %================================
 
 \makeatletter
-\newtcbtheorem{question}{Question}{enhanced,
+\newtcbtheorem{question}{Domanda}{enhanced,
 	breakable,
 	colback=white,
 	colframe=myb!80!black,
@@ -523,7 +519,7 @@
 	colback=white,
 	colframe=myg!80!black,
 	attach boxed title to top left={yshift*=-\tcboxedtitleheight},
-	title=Solution,
+	title=Risposta,
 	boxed title size=title,
 	boxed title style={%
 			sharp corners,
@@ -575,18 +571,18 @@
 	breakable,
 	enhanced,
 	colback=white,
-	colframe=myr,
+	colframe=BrownPastel,
 	arc=0pt,
 	outer arc=0pt,
 	fonttitle=\bfseries\sffamily\large,
-	colbacktitle=myr,
+	colbacktitle=BrownPastel,
 	attach boxed title to top left={},
 	boxed title style={
 			enhanced,
 			skin=enhancedfirst jigsaw,
 			arc=3pt,
 			bottom=0pt,
-			interior style={fill=myr}
+			interior style={fill=BrownPastel}
 		},
 	#1
 }{def}
@@ -767,17 +763,17 @@
 %\titlecontents{chapter}
 %[0em]{\vspace*{2\baselineskip}}
 %{\parbox{4.5em}{%
-%		\hfill\Huge\sffamily\bfseries\color{myred}\thecontentspage}%
+%		\hfill\Huge\sffamily\bfseries\color{BrownPasteled}\thecontentspage}%
 %	\vspace*{-2.3\baselineskip}\leftbar\textsc{\small\chaptername~\thecontentslabel}\\\sffamily}
 %{}{\endleftbar}
 %\titlecontents{section}
 %[8.4em]
 %{\sffamily\contentslabel{3em}}{}{}
-%{\hspace{0.5em}\nobreak\itshape\color{myred}\contentspage}
+%{\hspace{0.5em}\nobreak\itshape\color{BrownPasteled}\contentspage}
 %\titlecontents{subsection}
 %[8.4em]
 %{\sffamily\contentslabel{3em}}{}{}  
-%{\hspace{0.5em}\nobreak\itshape\color{myred}\contentspage}
+%{\hspace{0.5em}\nobreak\itshape\color{BrownPasteled}\contentspage}
 
 
 
