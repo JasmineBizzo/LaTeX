@@ -101,7 +101,7 @@ UML è un \textit{abbozzo} o un \textit{progetto} per aiutare la comprensione ne
 Il termine abbozzo indica che può essere soggetto a correzzione, ma se non ci 
 sono feedback a tal proposito deve essere trattato come un dizionario.
 
-\paragraph{Uso di UML:}
+\subsubsection{Uso di UML:}
 
 \begin{itemize}
     \item [$\Rightarrow$] Punto di vista \fancyglitter{concettuale}: modello 
@@ -110,4 +110,167 @@ sono feedback a tal proposito deve essere trattato come un dizionario.
     delle classi di progetto, utilizzata per visualizzare elementi software.
 \end{itemize}
 
+\subsubsection{Brevi note storiche:}
 
+\begin{itemize}
+    \item [$\Rightarrow$] Anni '60 e '70: nascita dei linguaggi OO (Simula e Smalltalk);
+    \item [$\Rightarrow$] 1988: Bertrand Meyer, "Object-Oriented Software";
+    \item [$\Rightarrow$] 1991: Jim Rumbaugh, "Object-Oriented Modelling and Design" (OOA/D);
+    \item [$\Rightarrow$] 1991, Grady Booch, "Object-Oriented Software Engineering" (OOA/D e Casi d'Uso);
+    \item [$\Rightarrow$] 1994, Rumbaugh e Booch fanno le prime proposte di UML;
+    \item [$\Rightarrow$] Rational Corporation fondata dai "tre amigos" (Jacobson, Booch e Rumbaugh);
+    \item [$\Rightarrow$] 1997 UML 1;
+    \item [$\Rightarrow$] 2004 UML 2 (usato attualmente).
+\end{itemize}
+
+\section{Unified Process}
+
+\dfn{Unified Process}{
+    Unified Process è un processo iterativo ed evolutivo (incrementale)
+    per lo sviluppo del software per la costruzione di sistemi orientati agli oggetti.
+    Le iterazioni iniziali sono guidate dal \newfancyglitter{rischio}, dal
+    \newfancyglitter{cliente} e dall'\newfancyglitter{architettura}.
+}
+
+\qs{}{Cosa c'è in UP?}
+
+\begin{itemize}
+    \item [$\Rightarrow$] Un'organizzazione del piano di progetto
+    per fasi sequenziali;
+    \item [$\Rightarrow$] Indicazioni sulle attività da svolgere nell'ambito
+    di discipline e sulle loro inter-relazioni;
+    \item [$\Rightarrow$] Un insieme di ruoli predefiniti;
+    \item [$\Rightarrow$] Un insieme di artefatti da produrre.
+\end{itemize}
+
+\subsubsection{Un progetto UP è organizzato in 4 fasi:}
+
+\begin{itemize}
+    \item [$\Rightarrow$] \fancyglitter{Ideazione} (inception): visione approssimativa, studio economico, portata, stime approssimative di costi e tempi. \textbf{\underline{Milestone}:} \newfancyglitter{Obiettivi};
+    \item [$\Rightarrow$] \fancyglitter{Elaborazione} (elaboration): visione raffinata, implementazione iterativa del nucleo dell'architettura, risoluzione dei rischi maggiori, identificazione della maggior parte dei requisiti e della portata, stime più realistiche sulle loro inter-relazioni. \textbf{\underline{Milestone}:} \newfancyglitter{Architetturale};  
+    \item [$\Rightarrow$] \fancyglitter{Costruzione} (construction): implementazione iterativa degli elementi rimanenti, più facili e a rischio minore, preparazione al rilascio. \textbf{\underline{Milestone}:} \newfancyglitter{Capacità operazionale};
+    \item [$\Rightarrow$] \fancyglitter{Transizione} (transition): beta test, rilascio. \textbf{\underline{Milestone}:} \newfancyglitter{Rilascio prodotto}.
+\end{itemize}
+
+\begin{center}
+    \includegraphics[scale = 1]{images/UP.png}
+\end{center}
+
+\nt{
+    \begin{itemize}
+        \item [$\Rightarrow$] L'Ideazione non è una fase di requisiti, ma di fattibilità;
+        \item [$\Rightarrow$] L'Elaborazione non è una fase di requisiti o di progettazione, ma una fase in cui 
+        si implementa in modo iterativo l'architettura del sistema e vengono ridotti i rischi maggiori.
+    \end{itemize}
+}
+
+\subsection{Le discipline}
+
+\dfn{Discipline}{
+    Una disciplina è un insieme di attività e dei relativi \newfancyglitter{elaborati}
+    in una determinata area, come le attività relative all'analisi dei requisiti. 
+}
+
+\cor{Elaborato}{
+    Un elaborato (artefatto o work product) è il termine generico che indica un qualsiasi prodotto di lavoro: codice, schemi di basi di dati, 
+    documenti di testo, diagrammi, modelli, etc.
+}
+
+\subsubsection{Discipline ingegneristiche di UP:}
+
+\begin{itemize}
+    \item [$\Rightarrow$] \fancyglitter{Modellazione del business}: attività che 
+    modellano il dominio del problema e il suo ambito;
+    \item [$\Rightarrow$] \fancyglitter{Requisiti}: attività di raccolra dei requisiti;
+    \item [$\Rightarrow$] \fancyglitter{Progettazione} (analysis and design): attività di analisi dei requisiti
+    e progetto architetturale;
+    \item [$\Rightarrow$] \fancyglitter{Implementazione}: attività di progetto dettagliato e codifica del sistema, test sui componenti;
+    \item [$\Rightarrow$] \fancyglitter{Test}: attività di controllo di qualità, test di integrazione e di sistema;
+    \item [$\Rightarrow$] \fancyglitter{Rilascio}: attività di consegna e messa in opera.
+\end{itemize}
+
+\subsubsection{Discipline di supporto di UP:}
+
+\begin{itemize}
+    \item [$\Rightarrow$] \fancyglitter{Gestione delle configurazioni e del cambiamento}: attività di manutenzione durante il progetto;
+    \item [$\Rightarrow$] \fancyglitter{Gestione progetto}: attività di pianificazione e governo del progetto;
+    \item [$\Rightarrow$] \fancyglitter{Infrastruttura} (enviroment): attività che supportano il team di progetto, riguardo ai processi e strumenti utilizzati.
+\end{itemize}
+
+\nt{Nonostante le fasi siano \newfancyglitter{sequenziali}, le discipline non lo sono (perchè si eseguono in ogni iterazione).
+Il numero di iterazioni dipende dal Project Manager.}
+
+\subsubsection{Uso di UML in UP:}
+
+\begin{itemize}
+    \item [$\Rightarrow$] UP usa solo UML come linguaggio di modellazione;
+    \item [$\Rightarrow$] I diagrammi UML si usano con variabilità, bisogna \newfancyglitter{personalizzare} UP;
+    \item [$\Rightarrow$] I diagrammi si usano in UP seguendo le iterazioni e gli incrementi;
+    \item [$\Rightarrow$] UP dice \newfancyglitter{quando} usare un diagramma;
+    \item [$\Rightarrow$] In UP quasi tutto è \newfancyglitter{opzionale} eccetto che lo sviluppo iterativo e guidato dal rischio, la verifica continua della qualità e il codice;
+    \item [$\Rightarrow$] La scelta delle pratiche e degli artefatti UP si riassume in un documento (\newfancyglitter{scenario di sviluppo}).
+\end{itemize}
+
+\subsection{Che cosa sono i requisiti?}
+
+\dfn{Requisito}{
+    Un requisito è una \newfancyglitter{capacità} o una condizione a cui il sistema deve essere \newfancyglitter{conforme}.
+}
+
+\cor{Sorgenti dei requisiti}{
+    I requisiti derivano da richieste degli utenti del sistema per risolvere dei problemi e raggiungere degli obiettivi.
+    Possono essere:
+    \begin{itemize}
+        \item [$\Rightarrow$] \fancyglitter{Requisiti funzionali}: descrivono il comportamento del sistema in termini di funzionalità offerte;
+        \item [$\Rightarrow$] \fancyglitter{Requisiti non funzionali}: le proprietà del sistema nel suo complesso (sicurezza, prestazioni, etc.).
+    \end{itemize}
+}
+
+\nt{
+    In UP bisogna gestire i requisiti: si utilizza un approccio sistematico
+    per trovare, documentare, organizza e tracciare i \underline{requisiti che cambiano}
+    di un sistema. Si inizia a programmare quando sono stati specificati il 10\% o il 20\%
+    dei requisiti significativi.
+}
+
+\subsubsection{Acquisizione sistematica dei requisiti:}
+
+\begin{itemize}
+    \item [$\Rightarrow$] Scrivere i Casi d'Uso con i clienti;
+    \item [$\Rightarrow$] Workshop dei requisiti con sviluppatori e clienti;
+    \item [$\Rightarrow$] Gruppi di lavoro con rappresentanti dei clienti;
+    \item [$\Rightarrow$] Dimostrazione ai clienti dei risultati di ciascuna iterazione, per favorire un feedback.
+\end{itemize}
+
+\subsubsection{Modello FURPS+:}
+
+\begin{itemize}
+    \item [$\Rightarrow$] \fancyglitter{Funzionali} (F): requisiti funzionali e di sicurezza;
+    \item [$\Rightarrow$] \fancyglitter{Usabilità} (U): facilità d'uso del sistema;
+    \item [$\Rightarrow$] \fancyglitter{Affidabilità} (R - Reliability): disponibilità del sistema, capacità di tollerare guasti o di essere ripristinato;
+    \item [$\Rightarrow$] \fancyglitter{Prestazioni} (P): tempi di risposta, throughput, capacità e uso delle risorse;
+    \item [$\Rightarrow$] \fancyglitter{Sostenibilità} (S): facilità di modifica per riparazioni e miglioramenti, adattabilità, manutenibilità, localizzazione, configurazione, compatibilità;
+    \item [$\Rightarrow$] \fancyglitter{+}: vincoli di progetto, interoperabilità, operazionali, fisici, legali, etc.
+\end{itemize}
+
+\subsubsection{Elaborati:}
+
+\begin{itemize}
+    \item [$\Rightarrow$] \fancyglitter{Modello dei Casi d'Uso}: scenari tipi dell'utilizzo di un sistema;
+    \item [$\Rightarrow$] \fancyglitter{Specifiche supplementari}: ciò che non rientra nei Casi d'Uso, requisiti non funzionali o funzionali non esprimibili attraverso i Casi d'Uso;
+    \item [$\Rightarrow$] \fancyglitter{Glossario}: termini significativi, dizionario dei dati;
+    \item [$\Rightarrow$] \fancyglitter{Visione}: riassume i requisiti di alto livello, un documento sintetico per apprendere rapidamente le idee principali del progetto;
+    \item [$\Rightarrow$] \fancyglitter{Regole di Business}: regole di dominio, i requisiti o le politiche che trascendono un unico progetto software e a cui un sistema deve conformarsi.
+\end{itemize}
+
+\section{Ideazione}
+
+\section{Casi d'Uso}
+
+\section{Elaborazione}
+
+\section{Modello di Dominio}
+
+\section{Diagrammi di sequenza del sistema (DSS)}
+
+\section{Contratti}
