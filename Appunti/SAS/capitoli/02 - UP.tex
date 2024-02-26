@@ -4,8 +4,8 @@
 
 \dfn{OOA/D}{
     \begin{itemize}
-        \item \textbf{OOA} (Object Oriented Analysis): studio dei requisiti e delle specifiche del sistema;
-        \item \textbf{OOD} (Object Oriented Design): progettazione del sistema.
+        \item [$\Rightarrow$] \textbf{OOA} (Object Oriented Analysis): studio dei requisiti e delle specifiche del sistema;
+        \item [$\Rightarrow$] \textbf{OOD} (Object Oriented Design): progettazione del sistema.
     \end{itemize}
 
     Per studiare OOA/D si utilizza Unified Process, 
@@ -995,16 +995,197 @@ valore allora probabilmente è una classe, non un attributo.}
 
 }
 
-\section{Diagrammi di sequenza del sistema (DSS)}
+\section{Diagrammi di sequenza del sistema (SSD)}
 
-\dfn{DSS}{
+\dfn{SSD}{
     Il \newfancyglitter{Diagramma di Sequenza del Sistema} è un elaborato
     della disciplina dei requisitiche illustra eventi di input e di output
     relativi ai sistemi in discussione.
+
+    È una figura che mostra, per un particolare Caso d'Uso, gli eventi
+    generati dagli attori esterni al sistema, il loro ordine e gli eventi inter-sistema.
 }
 
 \nt{Di solito si usa un SSD per ogni Caso d'Uso.}
 
+\cor{Eventi}{
+    Durante un'interazione con il sistema software, un attore genera degli 
+    eventi di sistema, che costituiscono un input
+    per il sistema, di solito per richiedere l'esecuzione di
+    alcune operazioni di sistema.
+
+    \begin{itemize}
+        \item [$\Rightarrow$] Le operazioni di sistema sono operazioni che il sistema
+        deve definire proprio per gestire tali eventi;
+        \item [$\Rightarrow$] Un evento deve essere degno di nota;
+        \item [$\Rightarrow$] Un evento di sistema è un evento esterno al sistema generato
+        da un attore per interagire con il sistema.
+    \end{itemize}
+}
+
+\subsubsection{Un sistema reagisce a:}
+
+\begin{itemize}
+    \item [$\Rightarrow$] \fancyglitter{Eventi esterni}: generati da attori umani o sistemi informatici;
+    \item [$\Rightarrow$] \fancyglitter{Eventi temporali};
+    \item [$\Rightarrow$] \fancyglitter{Guasti o eccezioni}.
+\end{itemize}
+
+
+\nt{Il software deve essere progettato per gestire questi eventi.}
+
+\ex{SSD}{
+    \begin{center}
+        \includegraphics[scale=0.35]{images/SSD.png}
+    \end{center}
+\pagebreak
+    \begin{itemize}
+        \item [$\Rightarrow$] \textit{makeNewSale}: il cassiere inizia una nuova vendita;
+        \item [$\Rightarrow$] \textit{enterItem}: il cassiere inserisce il codice identificativo di un articolo;
+        \item [$\Rightarrow$] \textit{endSale}: il cassiere indica di aver terminato l'inserimento degli articoli acquistati;
+        \item [$\Rightarrow$] \textit{makeCashPayment}: il cassiere indica che il cliente sta pagando in contanti e inserisce l'importo offerto dal cliente. 
+    \end{itemize}
+
+
+}
+
+\subsubsection{Un SSD mostra:}
+
+\begin{itemize}
+    \item [$\Rightarrow$] L'attore primario del Caso d'Uso;
+    \item [$\Rightarrow$] Il sistema in discussione;
+    \item [$\Rightarrow$] I passi che rappresentano le interazioni tra il sistema e l'attore.
+\end{itemize}
+
+\nt{Le interazioni sono mostrate come messaggi con parametri.}
+
+\subsection{Notazione}
+
+\subsubsection{\fancyglitter{Semplice diagramma di sequenza:}}
+
+\begin{center}
+    \includegraphics[scale=0.33]{images/Notazione SSD.png}
+\end{center}
+
+\subsubsection{\fancyglitter{Mostrare il risultato di ritorno:}}
+
+\begin{center}
+    \includegraphics[scale=0.33]{images/Notazione SSD2.png}
+\end{center}
+
+\subsubsection{\fancyglitter{Frame di UML:}}
+
+\begin{center}
+    \includegraphics[scale=0.33]{images/Notazione SSD3.png}
+\end{center}
+
+\subsubsection{\fancyglitter{Operatori comuni per i frame UML:}}
+
+\begin{center}
+    \includegraphics[scale=0.33]{images/Notazione SSD4.png}
+\end{center}
+
+\subsubsection{\fancyglitter{Annidamento di frame:}}
+
+\begin{center}
+    \includegraphics[scale=0.33]{images/Notazione SSD5.png}
+\end{center}
+
 \section{Contratti}
 \label{contratti}
 
+\subsection{Pre-condizioni e Post-condizioni}
+
+\dfn{I contratti delle operazioni}{
+    I contratti usano \newfancyglitter{pre-condizioni} e \newfancyglitter{post-condizioni} per descrivere nel
+    dettaglio i cambiamenti agli oggetti in un Modello di Dominio.
+
+    \paragraph{Punto di vista:}
+    \begin{itemize}
+        \item [\textcolor{dkgreen}{\checkmark}] Concettuale;
+        \item [\textcolor{red}{\XSolidBrush}] Implementativo.
+    \end{itemize}
+}
+
+\nt{Possono essere considerati parte del Modello dei Casi d'Uso, ma non sono
+menzionati esplicitamente in UP.}
+
+\ex{Contratto}{
+
+    \begin{center}
+        \includegraphics[scale=0.35]{images/Contratto.png}
+    \end{center}
+}
+
+\subsubsection{Template di un contratto:}
+
+\begin{itemize}
+    \item [$\Rightarrow$] \fancyglitter{Operazione}: Nome e parametri dell'operazione;
+    \item [$\Rightarrow$] \fancyglitter{Riferimenti}: Casi d'Uso in cui può verificarsi l'operazione;
+    \item [$\Rightarrow$] \fancyglitter{Pre-condizioni}: Stato del sistema prima dell'operazione. Sono ipotesi non banali;
+    \item [$\Rightarrow$] \fancyglitter{Post-condizioni}: Stato del sistema dopo l'operazione. 
+\end{itemize}
+
+\dfn{Post-condizioni}{
+    Le \newfancyglitter{post-condizioni} descrivono i cambiamenti nello stato degli oggetti
+    del Modello di Dominio. I cambiamenti comprendono:
+    
+    \begin{itemize}
+        \item [$\Rightarrow$] Oggetti creati;
+        \item [$\Rightarrow$] Collegamenti formati;
+        \item [$\Rightarrow$] Collegamenti rotti;
+        \item [$\Rightarrow$] Attributi modificati.
+    \end{itemize}
+
+}
+
+\nt{Le post-condizioni sono osservazioni al termine dell'operazione.
+Ci si concentra sul "cosa", ma non sul "come".}
+
+\dfn{Pre-condizioni}{
+    Le \newfancyglitter{pre-condizioni} sono ipotesi sullo stato del sistema
+    prima dell'operazione. Sono condizioni che devono essere vere
+    prima che l'operazione possa essere eseguita.
+}
+
+\nt{Le pre-condizioni sono una descrizione sintetica sullo stato
+di avanzamento del Caso d'Uso.}
+
+\subsection{Scrivere contratti}
+
+\subsubsection{Si procede così:}
+
+\begin{enumerate}
+    \item Si identificano le operazioni dagli SSD;
+    \item Si crea un contratto per le operazioni complesse
+    o i cui effetti sono sottili (non chiari dai Casi d'Uso);
+    \item Si scrivono le pre-condizioni e le post-condizioni:
+    \begin{itemize}
+        \item [$\Rightarrow$] creazione o cancellazione di oggetti;
+        \item [$\Rightarrow$] formazione o rottura di collegamenti;
+        \item [$\Rightarrow$] modifica di attributi.
+    \end{itemize}
+\end{enumerate}
+
+\nt{Ogni operazione può avere una componente di:
+
+\begin{itemize}
+    \item [$\Rightarrow$] \fancyglitter{Trasformazione}: modifica lo stato del sistema;
+    \item [$\Rightarrow$] \fancyglitter{Interrogazione}: non modifica lo stato del sistema, vengono restituiti valori.
+\end{itemize}
+
+Un'operazione ha post-condizioni solo se è di trasformazione, mentre
+non le ha se è di interrogazione.
+}
+
+\qs{}{Bisogna scrivere un contratto per ogni evento di sistema trovato nel SSD?}
+
+\paragraph{Risposta:} Non è necessario, si considerano solo quelli più complessi.
+\paragraph{}
+\qs{}{Se si scoprono nuove classi, attributi, si possono aggiungere nel modello di dominio?}
+
+\paragraph{Risposta:} Sì, UP è incrementale.
+\paragraph{}
+\qs{}{Le post-condizioni devono essere in ogni momento le pi`u complete possibili?}
+
+\paragraph{Risposta:} Non è necessario.
