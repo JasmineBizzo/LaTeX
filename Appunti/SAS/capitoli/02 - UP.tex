@@ -784,7 +784,227 @@ I requisiti e le iterazioni sono organizzate in base a:
 
 \section{Modello di Dominio}
 
+\dfn{Modello di Dominio}{
+    Il \newfancyglitter{Modello di Dominio} è una rappresentazione visuale
+    delle classi concettuali (oggetti del dominio). Include:
+    \begin{itemize}
+        \item [\textcolor{green}{\checkmark}] \newfancyglitter{Oggetti} di dominio;
+        \item [\textcolor{green}{\checkmark}] \newfancyglitter{Associazioni} tra classi concettuali;
+        \item [\textcolor{green}{\checkmark}] \newfancyglitter{Attributi} di classi concettuali;
+        \item [\textcolor{red}{\XSolidBrush}] \newfancyglitter{Operazioni}.
+    \end{itemize}
+}
+
+\nt{Non è un modello di dati.}
+
+\ex{Modello di dominio}{
+    \begin{center}
+        \includegraphics[scale=0.5]{images/Modello di dominio.png}
+    \end{center}
+
+}
+
+\subsection{Classi concettuali}
+
+\dfn{Classi concettuali}{
+    Una \newfancyglitter{classe concettuale} rappresenta un concetto
+    del mondo reale o del dominio di interesse di un sistema che si sta modellando.
+
+    \begin{itemize}
+        \item [$\Rightarrow$] Il \newfancyglitter{simbolo} è una parola 
+        o un'immagine usata per rappresentare la classe concettuale;
+        \item [$\Rightarrow$] L'\newfancyglitter{intensione} è la definizione della classe concettuale;
+        \item [$\Rightarrow$] L'\newfancyglitter{estensione} è l'insieme di oggetti che la classe concettuale rappresenta.
+    \end{itemize}
+}
+\pagebreak
+\cor{Associazioni}{
+    Un'associazione è una relazione tra istanze di classi
+    che indica una connessione significativa e interessante.
+}
+
+\ex{Associazione}{
+    \begin{center}
+        \includegraphics[scale=0.5]{images/Associazione.png}
+    \end{center}
+
+
+}
+
+\cor{Attributi}{
+    Un attributo è un valore logico degli oggetti di una classe.
+}
+
+\ex{Attributo}{
+    \begin{center}
+        \includegraphics[scale=0.5]{images/Attributo.png}
+    \end{center}
+}
+
+\subsubsection{Riduzione del "gap di rappresentazione":}
+
+\begin{itemize}
+    \item [$\Rightarrow$] \fancyglitter{Comprendere} il dominio del sistema da realizzare e il suo vocabolario;
+    \item [$\Rightarrow$] \fancyglitter{Definire} un \fancyglitter{linguaggio comune} che abiliti la comunicazione tra le diverse parti;
+    \item [$\Rightarrow$] Come \fancyglitter{fonte di ispirazione} per la progettazione dello strato di dominio.
+\end{itemize}
+
+\qs{}{Come creare un Modello di Dominio}
+
+\begin{itemize}
+    \item [$\Rightarrow$] Trovare le classi concettuali;
+    \item [$\Rightarrow$] Disegnarle come classi in UML;
+    \item [$\Rightarrow$] Aggiungere le associazioni;
+    \item [$\Rightarrow$] Aggiungere gli attributi.
+\end{itemize}
+
+\subsection{Trovare le classi concettuali}
+
+\begin{itemize}
+    \item [$\Rightarrow$] Riuso-modifica di modelli esistenti (pattern);
+    \item [$\Rightarrow$] Utilizzo di elenchi di categorie;
+    \item [$\Rightarrow$] Analisi linguistica delle descrizioni testuali di un dominio. 
+    Si utilizano i Casi d'Uso dettagliati.
+\end{itemize}
+
+\dfn{Classi Descrizione}{
+    Una \newfancyglitter{classe descrizione} contiene informazioni
+    che descrivono qualcos'altro. È utile avere un'associazione
+    che collega la classe descrizione alla classe descritta\footnote{Pattern Item-Descriptor.}.
+}
+
+\ex{Classe descrizione}{
+    \begin{center}
+        \includegraphics[scale=0.5]{images/Classe descrizione.png}
+    \end{center}
+}
+
+\subsection{Associazioni}
+
+\subsubsection{È utile includere:}
+
+\begin{itemize}
+    \item [$\Rightarrow$] Associazioni la cui conoscenza della relazione deve
+    essere mantenuta dal sistema;
+    \item [$\Rightarrow$] Associazioni derivate dall'elenco di associazioni comuni.
+\end{itemize}
+
+\nt{Un'associazione è per natura \fancyglitter{bidirezionale}.}
+
+\begin{center}
+    \includegraphics[scale=0.4]{images/Associazione2.png}
+\end{center}
+
+\subsubsection{Caratteristiche delle associazioni:}
+
+\begin{itemize}
+    \item [$\Rightarrow$] \fancyglitter{Nome significativo}: NomeClasse-FraseVerbale-NomeClasse;
+    \item [$\Rightarrow$] \fancyglitter{Molteplicità e direzione di lettura}.
+\end{itemize}
+
+\dfn{Ruoli}{
+    Un \newfancyglitter{ruolo} è l'estremità di un'associazione. I ruoli possono avere:
+    \begin{itemize}
+        \item [$\Rightarrow$] \newfancyglitter{Nome};
+        \item [$\Rightarrow$] \newfancyglitter{Molteplicità};
+        \item [$\Rightarrow$] \newfancyglitter{Navigabilità}.
+    \end{itemize}
+
+
+}
+
+\cor{Molteplicità}{
+    La molteplicità di un ruolo definisce quante istanze di una classe possono
+    essere associate a un'istanza dell'altra classe.
+}
+
+\ex{Molteplicità}{
+    \begin{center}
+        \includegraphics[scale=0.5]{images/Molteplicità.png}
+    \end{center}
+}
+
+\subsection{Composizione}
+
+\dfn{Composizione}{
+    La \newfancyglitter{composizione}, o aggregazione composta,
+    è un tipo forte di aggregazione intero-parte:
+    \begin{itemize}
+        \item [$\Rightarrow$] Ciascuna istanza della parte appartiene a una sola istanza del composto alla volta;
+        \item [$\Rightarrow$] La parte non può esistere senza il composto;
+        \item [$\Rightarrow$] La vita delle parti è limitata a quella del composto.
+    \end{itemize}
+}
+
+\subsection{Attributi}
+
+\subsubsection{Caratteristiche degli attributi:}
+
+\begin{itemize}
+    \item [$\Rightarrow$] \fancyglitter{Origine}: derivati/non derivati;
+    \item [$\Rightarrow$] \fancyglitter{Tipo di dato}: vincolo sui valori del dominio.
+\end{itemize}
+
+\begin{center}
+    \includegraphics[scale=0.5]{images/Attributi2.png}
+\end{center}
+
+\nt{Se non si pensa a un concetto come a un numero, un testo o un
+valore allora probabilmente è una classe, non un attributo.}
+
+\begin{center}
+    \includegraphics[scale=0.5]{images/Notazione attributi.png}
+\end{center}
+
+
+\subsection{Verifiche del modello}
+
+\begin{itemize}
+    \item [$\Rightarrow$] Verificare le classi concettuali introdotte:
+    \begin{itemize}
+        \item Alternativa classe classe-attributo attributo;
+        \item Classi descrizione.
+    \end{itemize}
+    \item [$\Rightarrow$] Verificare le associazioni:
+    \begin{itemize}
+        \item Indipendenza delle associazioni diverse relative alle stesse classi.
+    \end{itemize}
+    \item [$\Rightarrow$] Verificare gli attributi:
+    \begin{itemize}
+        \item Non intrododurre attributi per riferirsi ad altre classi (chiavi esterne).
+    \end{itemize}
+\end{itemize}
+
+\ex{Modello di Dominio (parziale)}{
+    \begin{center}
+        \includegraphics[scale=0.5]{images/Modello di Dominio.png}
+    \end{center}
+
+}
+\dfn{Generalizzazione}{
+    La \newfancyglitter{generalizzazione} è un'astrazione basata sull'identificazione
+    di caratteristiche comuni tra concetti, che porta a definire un concetto più generale 
+    (superclasse) e concetti più specifici (sottoclassi). Vale il principio di sostituibilità.
+}
+
+\ex{Generalizzazione}{
+    \begin{center}
+        \includegraphics[scale=0.45]{images/Generalizzazione.png}
+    \end{center}
+
+
+}
+
 \section{Diagrammi di sequenza del sistema (DSS)}
+
+\dfn{DSS}{
+    Il \newfancyglitter{Diagramma di Sequenza del Sistema} è un elaborato
+    della disciplina dei requisitiche illustra eventi di input e di output
+    relativi ai sistemi in discussione.
+}
+
+\nt{Di solito si usa un SSD per ogni Caso d'Uso.}
 
 \section{Contratti}
 \label{contratti}
+
