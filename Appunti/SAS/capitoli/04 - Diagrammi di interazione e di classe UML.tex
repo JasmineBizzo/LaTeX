@@ -138,8 +138,196 @@ In questo corso ci concentreremo sui diagrammi di sequenza.
     \end{center}
 }
 
+\ex{Notazione di DSD: messaggi}{
+    \begin{center}
+        \includegraphics[scale=0.35]{images/Messaggi.png}
+    \end{center}
+}
 
+\ex{Notazione di DSD: self (this)}{
+    \begin{center}
+        \includegraphics[scale=0.35]{images/Self.png}
+    \end{center}
+}
+\pagebreak
+\ex{Notazione di DSD: creazione di istanze}{
+    \begin{center}
+        \includegraphics[scale=0.35]{images/Creazione di istanze.png}
+    \end{center}
+}
 
+\ex{Notazione di DSD: distruzione di oggetti}{
+    \begin{center}
+        \includegraphics[scale=0.35]{images/Distruzione di oggetti.png}
+    \end{center}
+}
+
+\ex{Notazione di DSD: collegamenti}{
+    \begin{center}
+        \includegraphics[scale=0.35]{images/Collegamento1.png}
+        \includegraphics[scale=0.35]{images/Collegamento2.png}
+    \end{center}
+
+}
+
+\ex{Notazione di DSD: frame}{
+    \begin{center}
+        \includegraphics[scale=0.35]{images/Frame.png}
+    \end{center}
+}
+
+\ex{Notazione di DSD: condizionale}{
+    \begin{center}
+        \includegraphics[scale=0.35]{images/Condizioni.png}
+    \end{center}
+}
+\pagebreak
+\ex{Notazione di DSD: condizionale mutualmente esclusivo}{
+    \begin{center}
+        \includegraphics[scale=0.35]{images/Alt.png}
+    \end{center}
+}
+
+\ex{Notazione di DSD: iterazione su una collezione}{
+    \begin{center}
+        \includegraphics[scale=0.35]{images/Iterazione.png}
+    \end{center}
+}
+
+\pagebreak
+
+\ex{Notazione di DSD: correlare diagrammi di interazione}{
+    \begin{center}
+        \includegraphics[scale=0.4]{images/Correlare.png}
+    \end{center}
+}
+
+\ex{Notazione di DSD: invocare metodi statici}{
+    \begin{center}
+        \includegraphics[scale=0.35]{images/Static.png}
+    \end{center}
+}
+
+\nt{Nel caso di invocazione di metodi statici l'oggetto ricevente è
+un'istanza di una meta-classe.}
+
+\pagebreak
+
+\ex{Notazione di DSD: chiamate sincrone e asincrone}{
+    \begin{center}
+        \includegraphics[scale=0.45]{images/Chiamate.png}
+    \end{center}
+}
+\pagebreak
 \section{Diagrammi delle classi}
 
+\subsection{Diagrammi di classe del design (DCD)}
 
+\dfn{Design Class Diagram (DCD)}{
+    Un \newfancyglitter{diagramma delle classi} di progetto è un diagramma
+    delle classi utilizzato da un punto di vista software o di progetto.
+}
+
+
+\nt{In UP l'insieme di tutti i DCD fa parte del modello di progetto.}
+
+\ex{Notazione generale di DCD}{
+    \begin{center}
+        \includegraphics[scale=0.5]{images/Generale.png}
+    \end{center}
+}
+
+\nt{
+    \begin{itemize}
+        \item [$\Rightarrow$] \fancyglitter{$+$} indica un attributo pubblico;
+        \item [$\Rightarrow$] \fancyglitter{$-$} indica un attributo privato;
+        \item [$\Rightarrow$] \fancyglitter{\#} indica un attributo protetto;
+        \item [$\Rightarrow$] \fancyglitter{\textasciitilde} indica un attributo package.
+    \end{itemize}
+}
+
+\ex{Notazione di DCD: attributi}{
+    \begin{center}
+        \includegraphics[scale=0.45]{images/Attributi.png}
+    \end{center}
+}
+
+\nt{Se non viene specificata la visibilità di un attributo si intende
+che esso sia privato.}
+
+\ex{Notazione di DCD: parole chiave}{
+    \begin{center}
+        \includegraphics[scale=0.3]{images/Parole chiave.png}
+    \end{center}
+}
+\dfn{Stereotipi}{
+    I \newfancyglitter{stereotipi} sono un raffinamento di un concetto
+    di modellazione esistente.
+}
+
+\ex{Notazione di DCD: stereotipi}{
+    \begin{center}
+        \includegraphics[scale=0.25]{images/Stereotipi.png}
+    \end{center}
+}
+
+\dfn{Generalizzazione}{
+    La \newfancyglitter{generalizzazione} è una relazione tassonomica
+    tra una classe più generale e una classe più specifica. Ogni istanza
+    della classe specifica è anche un'istanza della classe generale.
+}
+
+\nt{La generalizzazione implica \fancyglitter{ereditarietà} nei linguaggi OO.}
+
+\dfn{Linee di dipendenza}{
+    Una \newfancyglitter{linea di dipendenza} è una relazione tra due
+    classi che indica che un cambiamento nella classe dipendente può
+    influenzare la classe dipendente.
+}
+
+\ex{Notazione di DCD: dipendenza}{
+    \begin{center}
+        \includegraphics[scale=0.45]{images/Dipendenza.png}
+    \end{center}
+}
+
+\nt{È importante mantenere un basso accoppiamento tra le classi.}
+
+\subsubsection{Esistono varie tipologie di dipendenze:}
+
+\begin{itemize}
+    \item [$\Rightarrow$] Avere un attributo del tipo del fornitore;
+    \item [$\Rightarrow$] Inviare un messaggio al fornitore;
+    \item [$\Rightarrow$] Ricevere un parametro del tipo del fornitore;
+    \item [$\Rightarrow$] Il fornitore è una superclasse o un'interfaccia implementata.
+\end{itemize}
+
+\dfn{Interfacce}{
+    Un'\newfancyglitter{interfaccia} è un contratto tra un fornitore
+    e un cliente. Un cliente può invocare i metodi definiti nell'interfaccia.
+    Si hanno due notazioni:
+    \begin{itemize}
+        \item [$\Rightarrow$] \newfancyglitter{Notazione a pallina} (lollipop),
+        indica che una classe X implementa (fornisce) un'interfaccia Y;
+        \item [$\Rightarrow$] \newfancyglitter{Notazione a semicerchio} (socket),
+        indica che una classe X richiede (usa) un'interfaccia Y.
+    \end{itemize}
+}
+\pagebreak
+\ex{Notazione di DCD: composizione}{
+    \begin{center}
+        \includegraphics[scale=0.35]{images/Composizione.png}
+    \end{center}
+}
+
+\ex{Notazione di DCD: singleton}{
+    \begin{center}
+        \includegraphics[scale=0.33]{images/Singleton2.png}
+    \end{center}
+}
+
+\ex{Notazione di DCD: tipi a template}{
+    \begin{center}
+        \includegraphics[scale=0.35]{images/Template.png}
+    \end{center}
+}
