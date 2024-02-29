@@ -324,14 +324,90 @@
 	segmentation style={solid, mypropfr},
 }
 {th}
+%================================
+% PATTERN
+%================================
 
+\usepackage[most]{tcolorbox}
 
+\definecolor{mypatternbg}{RGB}{255,248,220} 
+\definecolor{mypatternfr}{RGB}{139,69,19} 
+
+\tcbuselibrary{theorems,skins,hooks}
+
+\newtcbtheorem[number within=chapter]{Pattern}{Pattern}
+{%
+    enhanced,
+    breakable,
+    colback = mypatternbg,
+    boxrule = 0.75mm,
+    colframe = mypatternfr,
+    colbacktitle = mypatternfr!20,
+    coltitle = black,
+    fonttitle = \bfseries,
+    sharp corners,
+    detach title,
+    before upper = \tcbtitle\par\smallskip,
+    description font = \mdseries\itshape,
+    separator sign none,
+    segmentation style={solid, mypatternfr},
+    theorem style=plain,
+}
+{th}
+
+%================================
+% OBSERVATION
+%================================
+
+\definecolor{myg}{RGB}{0,128,0} % Define your color myg
+
+\tcbuselibrary{theorems,skins,hooks}
+\definecolor{mytheorembg}{RGB}{255,248,220}
+\definecolor{mytheoremfr}{RGB}{139,69,19}
+\definecolor{myb}{RGB}{0,0,255}
+
+\tcbuselibrary{theorems,skins,hooks}
+
+\newtcbtheorem[number within=section]{Observation}{Osservazione}
+{%
+    enhanced,
+    breakable,
+    colback = mytheorembg,
+    frame hidden,
+    boxrule = 0sp,
+    borderline west = {2pt}{0pt}{mytheoremfr},
+    sharp corners,
+    detach title,
+    before upper = \tcbtitle\par\smallskip,
+    coltitle = mytheoremfr,
+    fonttitle = \bfseries\sffamily,
+    description font = \mdseries,
+    separator sign none,
+    segmentation style={solid, mytheoremfr},
+    attach boxed title to top left={yshift*=-\tcboxedtitleheight},
+    fonttitle=\bfseries,
+    boxed title size=title,
+    boxed title style={%
+        sharp corners,
+        rounded corners=northwest,
+        colback=myb!80!black,
+        boxrule=0pt,
+    },
+    underlay boxed title={%
+        \path[fill=myb!80!black] (title.south west)--(title.south east)
+        to[out=0, in=180] ([xshift=5mm]title.east)--
+        (title.center-|frame.east)
+        [rounded corners=\kvtcb@arc] |-
+        (frame.north) -| cycle;
+    },
+}
+{th}
 %================================
 % CLAIM
 %================================
 
 \tcbuselibrary{theorems,skins,hooks}
-\newtcbtheorem{claim}{Per gli insegnanti}
+\newtcbtheorem[number within=section]{claim}{Osservazioni}
 {%
 	enhanced
 	,breakable
@@ -569,27 +645,66 @@
 }{def}
 \makeatother
 
-\newtcbtheorem[number within=chapter]{wconc}{Wrong Concept}{
+\newtcbtheorem[number within=chapter]{wconc}{Concetto sbagliato}{
 	breakable,
 	enhanced,
 	colback=white,
-	colframe=BrownPastel,
+	colframe=myr,
 	arc=0pt,
 	outer arc=0pt,
 	fonttitle=\bfseries\sffamily\large,
-	colbacktitle=BrownPastel,
+	colbacktitle=myr,
 	attach boxed title to top left={},
 	boxed title style={
 			enhanced,
 			skin=enhancedfirst jigsaw,
 			arc=3pt,
 			bottom=0pt,
-			interior style={fill=BrownPastel}
+			interior style={fill=myr}
 		},
 	#1
 }{def}
 
 
+%================================
+% CODE BOX
+%================================
+
+\usetikzlibrary{arrows,calc,shadows.blur}
+\tcbuselibrary{skins}
+\newtcolorbox{code}[1][]{%
+	enhanced jigsaw,
+	colback=BrownPastel,%
+	colframe=BrownPastel,
+	size=small,
+	boxrule=1pt,
+	title=\textbf{Codice},
+	halign title=flush center,
+	coltitle=black,
+	breakable,
+	drop shadow=black!50!white,
+	attach boxed title to top center = {yshift=-\tcboxedtitleheight/2},
+	minipage boxed title=1.5cm,
+	boxed title style={%
+			colback=OrangePastel,
+			size=fbox,
+			boxrule=1pt,
+			boxsep=2pt,
+			underlay={%
+					\coordinate (dotA) at ($(interior.west) + (-0.5pt,0)$);
+					\coordinate (dotB) at ($(interior.east) + (0.5pt,0)$);
+					\begin{scope}
+						\clip (interior.north west) rectangle ([xshift=3ex]interior.east);
+						\filldraw [OrangePastel, blur shadow={shadow opacity=60, shadow yshift=-.75ex}, rounded corners=2pt] (interior.north west) rectangle (interior.south east);
+					\end{scope}
+					\begin{scope}[gray!80!black]
+						\fill (dotA) circle (2pt);
+						\fill (dotB) circle (2pt);
+					\end{scope}
+				},
+		},
+	#1,
+}
 
 %================================
 % NOTE BOX
@@ -649,6 +764,9 @@
 \newcommand{\qs}[2]{\begin{question}{#1}{}#2\end{question}}
 \newcommand{\pf}[2]{\begin{myproof}[#1]#2\end{myproof}}
 \newcommand{\nt}[1]{\begin{note}#1\end{note}}
+\newcommand{\cd}[1]{\begin{code}#1\end{code}}
+\newcommand{\mypattern}[2]{\begin{Pattern}{#1}{}#2\end{Pattern}}
+\newcommand{\obs}[2]{\begin{Observation}{#1}{}#2\end{Observation}}
 
 \newcommand*\circled[1]{\tikz[baseline=(char.base)]{
 		\node[shape=circle,draw,inner sep=1pt] (char) {#1};}}
