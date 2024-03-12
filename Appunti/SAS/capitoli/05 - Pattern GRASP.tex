@@ -201,6 +201,105 @@ Dei 9 pattern GRASP si andranno ad analizzare solamente:
     rimanga basso.
 }
 
+\ex{Monopoly}{
+    \begin{center}
+        \includegraphics[scale=0.45]{images/Monopoly6.png}
+    \end{center}
+}
+
+\clm{}{}{
+    \begin{itemize}
+        \item [$\Rightarrow$] Low Coupling aumenta la riusabilità e la comprensione;
+        \item [$\Rightarrow$] Low Coupling è un pattern valutativo (come High Cohesion);
+        \item [$\Rightarrow$] Le classi più generiche devono avere un accoppiamento basso;
+        \item [$\Rightarrow$] È normale avere accoppiamento tra le classi, ma bisogna evitare
+        collaborazioni inutili;
+        \item [$\Rightarrow$] Una sottoclasse è fortemente accoppiata alla sua 
+        superclasse \footnote{Si vedano i pattern GoF, capitolo \ref{GoF}.};
+        \item [$\Rightarrow$] Codice duplicato corrisponde ad alto accoppiamento;
+        \item [$\Rightarrow$] Il problema non è l'accoppiamento alto in sè, ma 
+        l'accoppiamento alto con classi instabili.
+    \end{itemize}
+    \paragraph{Le classi più comuni di accoppiamento da un tipo X a 
+    un tipo Y comprendono:}
+    \begin{itemize}
+        \item [$\Rightarrow$] La classe X ha un attributo di tipo Y
+        o referenzia un'istanza di tipo Y o una collezione di oggetti Y;
+        \item [$\Rightarrow$] Un oggetto di tipo X chiama un metodo di un oggetto Y;
+        \item [$\Rightarrow$] Un oggetto di tipo X crea un oggetto di tipo Y;
+        \item [$\Rightarrow$] Il tipo X ha un metodo che contiene un elemento di tipo Y
+        o che referenzia un oggetto di tipo Y;
+        \item [$\Rightarrow$] Una classe X è sottoclasse (diretta o indiretta) di una classe Y;
+        \item [$\Rightarrow$] Y è un'interfaccia implementata da X.
+    \end{itemize}
+}
+
+\subsection{High Cohesion}
+
+\mypattern{High Cohesion - Coesione alta}{
+    \paragraph{Problema:} Come mantenere gli oggetti focalizzati, comprensibili e gestibili e, come effetto
+    collaterale, sostenere Low Coupling?
+
+    \paragraph{Soluzione:} Assegnare le responsabilità in modo tale che la coesione rimanga alta.
+
+}
+
+\ex{POS NextGen}{
+    
+Siano CashPayment, Register e Sale tre classi di progetto dell’applicazione POS NextGen.
+\begin{itemize}
+    \item [$\Rightarrow$] con il pattern Creator si sceglie Register come creatore di Payment, suggerito dalle
+    responsabilità nel “mondo reale” (registra i pagamenti);
+    \item [$\Rightarrow$] Si usa un metodo addPayment(p) per comunicare con Sale.  
+\end{itemize}
+
+    \begin{center}
+        \includegraphics[scale=0.3]{images/POS.png}
+    \end{center}
+
+    Ma questo significa che Register ha una responsabilità di ricevere
+    l'operazione di sistema makeCashPayment e contemporaneamente
+    soddisfarla (anzichè delegarla). Così facendo si andrà a caricare la 
+    classe Register di compiti rendendola meno coesa.
+
+    \begin{center}
+        \includegraphics[scale=0.3]{images/POS2.png}
+    \end{center}
+    In questo modo la responsabilità della creazione del pagamento è 
+    delegata a Sale, il che rende favorisce maggiore coesione (e anche minore accoppiamento).
+}
+
+\clm{}{}{
+    \begin{itemize}
+        \item [$\Rightarrow$] High Cohesion è un pattern valutativo, come Low Coupling;
+        \item [$\Rightarrow$] Un elemento con responsabilità altamente correlate che 
+        non esegue una quantità eccessiva di compiti è altamente coeso;
+        \item [$\Rightarrow$] \fancyglitter{Coesione di dati}: una classe implementa un tipo
+        di dati (\textit{molto buona});
+        \item [$\Rightarrow$] \fancyglitter{Coesione funzionale}: gli elementi svolgono
+        una singola funzione (\textit{buona} o \textit{molto buona});
+        \item [$\Rightarrow$] \fancyglitter{Coesione sequenziale}: gli elementi sono
+        raggruppati perchè usati nello stesso tempo (a volte \textit{buona}, a volte \textit{meno molto buona}, 
+        dipende dall'utilizzo\footnote{Per esempio il Controller.});
+        \item [$\Rightarrow$] \fancyglitter{Coesione per pura coincidenza}: per esempio
+        una classe che raggruppa tutti i metodi che iniziano con una certa lettera dell'alfabeto (\textit{molto cattiva}).
+        \item [$\Rightarrow$] High Cohesion rappresenta la coesione funzionale.
+    \end{itemize}
+    \paragraph{Problemi della bassa coesione:}
+    \begin{itemize}
+        \item [$\Rightarrow$] Difficoltà di comprensione;
+        \item [$\Rightarrow$] Difficoltà di manutenzione;
+        \item [$\Rightarrow$] Difficoltà di riuso;
+        \item [$\Rightarrow$] Continuamente cambiante.
+    \end{itemize}
+    \paragraph{In alcuni casi è accettabile avere bassa coesione:}
+    \begin{itemize}
+        \item [$\Rightarrow$] Se per un compito di programmazione/manutenzione
+        ci vuole un esperto;
+        \item [$\Rightarrow$] Per gli oggetti distribuiti lato server.
+    \end{itemize}
+}
+
 \subsection{Controller}
 
 \mypattern{Controller - Controllore}{
@@ -209,19 +308,72 @@ Dei 9 pattern GRASP si andranno ad analizzare solamente:
 
     \paragraph{Soluzione:} Assegnare le responsabilità a un oggetto che rappresenta una delle seguenti scelte:
     \begin{itemize}
-        \item [$\Rightarrow$] Un oggetto che rappresenta il sistema;
-        \item [$\Rightarrow$] Un oggetto che rappresenta uno scenario di un Caso d’Uso.
+        \item [$\Rightarrow$] Un oggetto che rappresenta il sistema (facede controller);
+        \item [$\Rightarrow$] Un oggetto che rappresenta uno scenario di un Caso d’Uso
+        (controller di Caso d'Uso o controller di sessione).
     \end{itemize}
 }
 
-\subsection{High Cohesion - Coesione alta}
+\ex{Controller}{
+    \begin{center}
+        \includegraphics[scale=0.3]{images/Controller.png}
+    \end{center}
+    Queste operazioni andranno distribuite dal pattern Controller.
 
-\mypattern{High Cohesion}{
-    \paragraph{Problema:} Come mantenere gli oggetti focalizzati, comprensibili e gestibili e, come effetto
-    collaterale, sostenere Low Coupling?
+    \begin{center}
+        \includegraphics[scale=0.4]{images/Controller2.png}
+    \end{center}
 
-    \paragraph{Soluzione:} Assegnare le responsabilità in modo tale che la coesione rimanga alta
+    Ci sono possibili soluzioni:
+    \begin{itemize}
+        \item [$\Rightarrow$] Un oggetto che rappresenta il sistema, per esempio Register;
+        \item [$\Rightarrow$] Un oggetto che rappresenta uno scenario di un Caso d’Uso, per esempio 
+        ProcessSaleHandler.
+    \end{itemize}
+
+    \begin{center}
+        \includegraphics[scale=0.4]{images/Controller3.png}
+    \end{center}
 
 }
 
-\section{La Progettazione con i pattern GRASP}
+\clm{}{}{
+\begin{itemize}
+    \item [$\Rightarrow$] Il controller è un pattern di delega;
+    \item [$\Rightarrow$] Gli oggetti dell'UI catturano gli eventi e delegano
+    le richieste;
+    \item [$\Rightarrow$] Il controller permette di progettare gli oggetti di dominio 
+    in modo indipendente dall'interfaccia utente;
+    \item [$\Rightarrow$] Il controller coordina/controlla le attività, ma non le esegue.
+\end{itemize}
+
+    \paragraph{Controller di Caso d'Uso o di sessione:}
+    \begin{itemize}
+        \item [$\Rightarrow$] Si utilizza la classe controller per tutti gli 
+        eventi nello stesso scenario;
+        \item [$\Rightarrow$] Una sessione è un'istanza di una conversazione
+        con un attore. Generalmente una sessione corrisponde a un'esecuzione di
+        un Caso d'Uso;
+        \item [$\Rightarrow$] Il controller conserva lo stato della sessione.
+    \end{itemize}
+}
+
+\wc{Il pattern Controller è lo stesso controller del MVC}{
+    Il Controller GRASP e il controller MVC sono due cose diverse. Il controller GRASP è un pattern di progettazione orientato 
+    agli oggetti, mentre il controller MVC è un componente del pattern architetturale MVC.
+    \paragraph{MVC:}
+    \begin{itemize}
+        \item [$\Rightarrow$] Fa parte dell'UI e gestisce gli eventi dell'utente;
+        \item [$\Rightarrow$] La sua implementazione dipende dalla tecnologia UI e della piattaforma.
+    \end{itemize}
+
+    \paragraph{GRASP:}
+    \begin{itemize}
+        \item [$\Rightarrow$] Fa parte del dominio e gestisce le richieste del sistema;
+        \item [$\Rightarrow$] Non dipende dall'UI utilizzata.
+    \end{itemize}
+
+    Generalmente il controller MVC delega le richieste dell'utente al controller GRASP.
+}
+
+
