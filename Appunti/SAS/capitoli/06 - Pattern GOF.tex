@@ -453,43 +453,72 @@
 
 \cd{
     \begin{center}
-        \includegraphics[scale=0.37]{images/Strategy.png}
+        \includegraphics[scale=0.42]{images/Strategy.png}
     \end{center}
 }
 
 \ex{Applicazione di Strategy}{
     \begin{center}
-        \includegraphics[scale=0.4]{images/Applicazione di Strategy.png}
+        \includegraphics[scale=0.45]{images/Applicazione di Strategy.png}
     \end{center}
 }
 
 \cor{Strategy e State}{
-    
+    \begin{itemize}
+        \item [$\Rightarrow$] State si occupa di che cosa (stato o tipo) un oggetto è 
+        (al suo interno) e incapsula un comportamento che dipende dallo stato;
+        \item [$\Rightarrow$] Strategy si occupa di come un oggetto fa qualcosa e incapsula
+        un algoritmo. Un'implementazione diversa che realizza la stessa cosa, in modo che
+        un'implementazione possa sostituire l'altra a seconda della strategia richiesta.
+    \end{itemize}
 }
 
 \subsection{Visitor}
 
 \mypattern{Visitor}{
-    \paragraph{Problema:}
+    \paragraph{Problema:} Come separare l'operazione applicata su un contenitore
+    complesso dalla struttura dati cui è applicata? Come poter aggiungere nuove
+    operazioni e comportamenti senza dover modificare la struttura stessa?
+    Come attraversare il contenitore complesso i cui elementi sono eterogenei
+    applicando azioni dipendenti dal tipo degli elementi?
 
-    \paragraph{Soluzione:}
+    \paragraph{Soluzione:} Si crea un oggetto (ConcreteVisitor) che è in grado di
+    percorrere la collezione, e di applicare un metodo proprio su un oggetto (Element)
+    visitato nella collezione (avendo un riferimento a questi ultimi come parametro).
+    Ogni oggetto della collezione aderisce a un'interfaccia (Visitable) che consente al 
+    ConcreteVisitor di essere accettato da parte di ogni Element. Il Visitor analizza 
+    il tipo di oggetto ricevuto, fa l'invocazione alla particolare operazione che
+    deve eseguire.
 }
 
-\clm{}{}{}
+\clm{}{}{
+    \paragraph{Visitor consente:}
+    \begin{itemize}
+        \item [$\Rightarrow$] Flessibilità delle operazioni;
+        \item [$\Rightarrow$] Organizzazione logica;
+        \item [$\Rightarrow$] Vista di vari tipi di classi;
+        \item [$\Rightarrow$] Mantenimento di uno stato aggiornabile;
+        \item [$\Rightarrow$] Le diverse modalità di vista della struttura
+        possono essere definite come sottoclassi di Visitor.
+    \end{itemize}
+}
 
-\cd{}
+\cd{
+    \begin{center}
+        \includegraphics[scale=0.42]{images/Visitor.png}
+    \end{center}
 
-\ex{Applicazione di Visitor}{} 
+    \nt{La linea tratteggiata della \textit{accept} in realtà 
+    deve essere collegata a \textit{ConcreteElement}.}
+}
 
-\section{GoF in Java}
+\ex{Applicazione di Visitor}{
+    \begin{center}
+        \includegraphics[scale=0.45]{images/Applicazione di Visitor.png}
+    \end{center}
 
-
-
-
-
-
-
-
+    \nt{Nella classe VisitableString \textit{getFloat} è \textit{getString}. }
+} 
 
 
 
