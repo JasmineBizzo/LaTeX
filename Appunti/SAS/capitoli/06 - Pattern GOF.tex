@@ -331,10 +331,166 @@
 
 \subsection{Observer}
 
+\mypattern{Observer}{
+    \paragraph{Problema:} Diversi tipi di oggetti \textit{subscriber} (abbonato)
+    sono interessati ai cambiamenti di stato o agli eventi di un oggetto \textit{publisher}
+    (editore). Ciascun subscriber vuole reagire in modo suo quando il publisher genera 
+    un evento. Inoltre il publisher vuole mantenere un accoppiamento basso
+    (vedi \ref{LowCoupling}) verso i suoi subscriber. Cosa si deve fare?
+
+    \paragraph{Soluzione:} Si definisce un'interfaccia subscriber o listener.
+    Gli oggetti subscriber implementano questa interfaccia. Il publisher
+    registra dinamicamente i subscriber che sono interessati ai suoi eventi e li 
+    notifica quando avvengono.
+}
+
+\nt{Questo pattern è anche chiamato \fancyglitter{publish-subscribe} o \fancyglitter{dependents}.}
+
+\clm{}{}{
+    \begin{itemize}
+        \item [$\Rightarrow$] Definisce una dipendenza uno-a-molti tra oggetti.
+        Quando un oggetto cambia stato, tutti i suoi dipendenti vengono notificati;
+        \item [$\Rightarrow$] L'oggetto che notifica il cambiamento di stato non
+        fa nessuna assunzione sulla natura degli oggetti notificati (sono disaccoppiati);
+        \item [$\Rightarrow$] Il numero degli oggetti affetti dal cambiamento di stato
+        di un oggetto non è noto a priori;
+        \item [$\Rightarrow$] Fornisce un modo per accoppiare in maniera debole degli oggetti
+        che devono comunicare (eventi). I publisher conoscono i subscriber solo attraverso
+        un'interfaccia e i subscriber possono registrarsi (o cancellarsi) dinamicamente con
+        il publisher;
+        \item [$\Rightarrow$] Spesso viene associato al pattern MVC.
+    \end{itemize}
+}
+
+\cd{
+    \begin{center}
+        \includegraphics[scale=0.37]{images/Observer.png}
+    \end{center}
+}
+
+\ex{Funzionamento di Observer}{
+    \begin{center}
+        \includegraphics[scale=0.49]{images/Observer 1.png}
+    \end{center}
+}
+
+\ex{Applicazione di Observer}{
+
+    \begin{center}
+        \includegraphics[scale=0.48]{images/Applicazione di Observer.png}
+    \end{center}
+
+}
+
 \subsection{State}
+
+\mypattern{State}{
+    \paragraph{Problema:} Il comportamento di un oggetto dipende dal suo stato
+    e i suoi metodi contengono logica condizionale per casi che riflette le azioni
+    condizionali che dipendono dallo stato. C'è un'alternativa alla logica condizionale?
+
+    \paragraph{Soluzione:} Si creano delle classi stato per ciascuno stato che implementano
+    un'interfaccia comune. Si delegano le operazioni che dipendono dallo stato dell'oggetto
+    contesto all'oggetto stato corrispondente. Si assicura che l'oggetto contesto referenzi 
+    sempre un oggetto stato che riflette il suo stato corrente.
+}
+
+\clm{}{}{
+    \begin{itemize}
+        \item [$\Rightarrow$] Permette a un oggetto di modificare il suo comportamento
+        quando il suo stato interno cambia.
+    \end{itemize}
+}
+
+\cd{
+    \begin{center}
+        \includegraphics[scale=0.37]{images/State.png}
+    \end{center}
+}
+
+\ex{Funzionamento di State}{
+    \begin{center}
+        \includegraphics[scale=0.4]{images/State 1.png}
+    \end{center}
+
+}
+
+\ex{Applicazione di State}{
+    \begin{center}
+        \includegraphics[scale=0.37]{images/Applicazione di State.png}
+    \end{center}
+}
 
 \subsection{Strategy}
 
+\mypattern{Strategy}{
+    \paragraph{Problema:} Come progettare per gestire un insieme di algoritmi 
+    o politiche variabili ma correlati? Come progettare per consentire di
+    modificare questi algoritmi o politiche?
+
+    \paragraph{Soluzione:} Si definisce ciascun algoritmo/politica/strategia in una
+    classe separata, con un'interfaccia comune.
+}
+
+\nt{Il pattern Strategy è anche chiamato \fancyglitter{policy}.}
+
+\clm{}{}{
+    \begin{itemize}
+        \item [$\Rightarrow$] L'oggetto contesto è l'oggetto a cui va applicato
+        l'algoritmo;
+        \item [$\Rightarrow$] L'oggetto contesto è associato a un oggetto strategia, che
+        è l'oggetto che implementa l'algoritmo;
+        \item [$\Rightarrow$] Strategy consente la definizione di una famiglia di algoritmi,
+        li incapsula e li rende intercambiabili;
+        \item [$\Rightarrow$] Strategy consente di variare l'algoritmo indipendentemente
+        dagli oggetti che lo usano;
+        \item [$\Rightarrow$] Disaccoppia gli algoritmi dai clienti che vogliono usarli dinamicamente;
+        \item [$\Rightarrow$] Permette al cliente di scegliere l'algoritmo più adatto;
+        \item [$\Rightarrow$] È usato per modificare il comportamento di un oggetto a tempo di esecuzione;
+        \item [$\Rightarrow$] Usa la composizione invece dell'ereditarietà.
+    \end{itemize}
+}
+
+\cd{
+    \begin{center}
+        \includegraphics[scale=0.37]{images/Strategy.png}
+    \end{center}
+}
+
+\ex{Applicazione di Strategy}{
+    \begin{center}
+        \includegraphics[scale=0.4]{images/Applicazione di Strategy.png}
+    \end{center}
+}
+
+\cor{Strategy e State}{
+    
+}
+
 \subsection{Visitor}
 
+\mypattern{Visitor}{
+    \paragraph{Problema:}
+
+    \paragraph{Soluzione:}
+}
+
+\clm{}{}{}
+
+\cd{}
+
+\ex{Applicazione di Visitor}{} 
+
 \section{GoF in Java}
+
+
+
+
+
+
+
+
+
+
+
+
