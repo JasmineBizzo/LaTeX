@@ -14,16 +14,148 @@
 \end{usecase}
 
 \section*{\huge\textbf{\textcolor{castletongreen}{Scenario principale di successo}}}
+\begin{flushleft}
+    \begin{center}
 
-\begin{center}
+        \begin{longtable}{ | p{1.3cm} | p{7.5cm} | p{7.5cm} |}
+            \hline\hline
+            \rowcolor{mintgreen}
+            \multicolumn{1}{|>{\centering\arraybackslash}m{13mm}|}{\textbf{\huge\textcolor{castletongreen}{\texttt{\#}}}} & \multicolumn{1}{|>{\centering\arraybackslash}m{75mm}|}{\huge\textcolor{castletongreen}{\textbf{Attore}}} &\multicolumn{1}{|>{\centering\arraybackslash}m{75mm}|}{\huge\textcolor{castletongreen}{\textbf{Sistema}}} \\ \hline
 
-    \begin{longtable}{ | p{0.75cm} | p{7cm} | p{7cm} |}
-        \hline\hline
-        \rowcolor{mintgreen}
-        \multicolumn{1}{|>{\centering\arraybackslash}m{7.5mm}|}{\textbf{\huge\textcolor{castletongreen}{\texttt{\#}}}} & \multicolumn{1}{|>{\centering\arraybackslash}m{70mm}|}{\huge\textcolor{castletongreen}{\textbf{Attore}}} &\multicolumn{1}{|>{\centering\arraybackslash}m{70mm}|}{\huge\textcolor{castletongreen}{\textbf{Sistema}}} \\ \hline
-        \textbf{1} & Esempio & Esempio \\\hline
-    
-        \hline
-        \end{longtable}
-      
-\end{center}
+            \centering\textbf{1} & Genera il foglio riepilogativo per un servizio di un evento (di cui ha ricevuto l’incarico)   & Precompila il foglio riepilogativo per il servizio dell'evento in modo che siano aggiunte le ricette e i menù a esso associati \\\hline
+            
+            & \textit{Se desidera prosegue con il passo 2, in alternativa termina il Caso d’Uso} & \\\hline
+
+            \centering\textbf{2} & \textbf{\textit{Opzionalmente}}, aggiunge preparazioni e ricette all’elenco delle cose da fare & Aggiunge le nuove preparazioni e ricette al foglio riepilogativo\\\hline
+
+            \centering\textbf{3} & \textbf{\textit{Opzionalmente}}, ordina l’elenco & Aggiunge l'ordinamento al foglio riepilogativo\\\hline
+
+            & \textit{Se vuole lavorare su più fogli riepilogativi ripete dal passo 1} & \\\hline
+
+            \centering\textbf{4} & \textbf{\textit{Opzionalmente}}, consulta il tabellone dei turni & Visualizza il tabellone dei turni\\\hline
+
+            \centering\textbf{5} & Assegna un compito specificando una ricetta o una preparazione, un turno e, \textbf{\textit{opzionalmente}}, un cuoco & Registra l'assegnazione sul foglio riepilogativo e sul tabellone dei turni\\\hline
+
+            \centering\textbf{6} & \textbf{\textit{Opzionalmente}}, indica sul tabellone una stima del tempo richiesto per lo svolgimento del compito assegnato, e la quantità/porzioni preparate in un dato assegnamento & Registra le modifiche sul foglio riepilogativo e sul tabellone dei turni \\\hline
+
+            & \textit{Ripete dal passo 4 finchè non è soddisfatto} & \\\hline
+
+            \hline
+            \end{longtable}
+          
+    \end{center}
+\end{flushleft}
+
+\section*{\huge\textbf{\textcolor{castletongreen}{Estensione 1a}}}
+
+\begin{flushleft}
+    \begin{center}
+
+        \begin{longtable}{ | p{1.3cm} | p{7.5cm} | p{7.5cm} |}
+            \hline\hline
+            \rowcolor{mintgreen}
+            \multicolumn{1}{|>{\centering\arraybackslash}m{13mm}|}{\textbf{\huge\textcolor{castletongreen}{\texttt{\#}}}} & \multicolumn{1}{|>{\centering\arraybackslash}m{75mm}|}{\huge\textcolor{castletongreen}{\textbf{Attore}}} &\multicolumn{1}{|>{\centering\arraybackslash}m{75mm}|}{\huge\textcolor{castletongreen}{\textbf{Sistema}}} \\ \hline
+
+            \centering\textbf{6a.1} & Apre un foglio riepilogativo esistente per modificarlo & Visualizza il foglio riepilogativo specificato\\\hline
+
+            \hline
+            \end{longtable}
+          
+    \end{center}
+\end{flushleft}
+
+\section*{\huge\textbf{\textcolor{2}{Eccezione 1a}}}
+
+\begin{flushleft}
+    \begin{center}
+
+        \begin{longtable}{ | p{1.3cm} | p{7.5cm} | p{7.5cm} |}
+            \hline\hline
+            \rowcolor{mintgreen}
+            \multicolumn{1}{|>{\centering\arraybackslash}m{13mm}|}{\textbf{\huge\textcolor{castletongreen}{\texttt{\#}}}} & \multicolumn{1}{|>{\centering\arraybackslash}m{75mm}|}{\huge\textcolor{castletongreen}{\textbf{Attore}}} &\multicolumn{1}{|>{\centering\arraybackslash}m{75mm}|}{\huge\textcolor{castletongreen}{\textbf{Sistema}}} \\ \hline
+
+            \centering\textbf{\textcolor{2}{1a.1}} & Genera il foglio riepilogativo per un servizio di un evento (di cui ha ricevuto l’incarico)  & \cellcolor{RedPastel}L'attore che sta tentando di creare il foglio riepilogativo non è lo Chef incaricato dell'evento\\\hline
+
+            & \textit{Termina il Caso d'Uso} & \\\hline
+
+            \hline
+            \end{longtable}
+          
+    \end{center}
+\end{flushleft}
+
+\section*{\huge\textbf{\textcolor{2}{Eccezione 1a.1a}}}
+
+\begin{flushleft}
+    \begin{center}
+
+        \begin{longtable}{ | p{1.3cm} | p{7.5cm} | p{7.5cm} |}
+            \hline\hline
+            \rowcolor{mintgreen}
+            \multicolumn{1}{|>{\centering\arraybackslash}m{13mm}|}{\textbf{\huge\textcolor{castletongreen}{\texttt{\#}}}} & \multicolumn{1}{|>{\centering\arraybackslash}m{75mm}|}{\huge\textcolor{castletongreen}{\textbf{Attore}}} &\multicolumn{1}{|>{\centering\arraybackslash}m{75mm}|}{\huge\textcolor{castletongreen}{\textbf{Sistema}}} \\ \hline
+
+            \centering\textbf{\textcolor{2}{1a.1a.1}} & Apre un foglio riepilogativo esistente per modificarlo & \cellcolor{RedPastel}L'attore che vuole aprire il foglio riepilogativo non ha i permessi per farlo\\\hline
+
+            & \textit{Termina il Caso d'Uso} & \\\hline
+
+            \hline
+            \end{longtable}
+          
+    \end{center}
+\end{flushleft}
+
+\section*{\huge\textbf{\textcolor{castletongreen}{Estensione 5a}}}
+
+\begin{flushleft}
+    \begin{center}
+
+        \begin{longtable}{ | p{1.3cm} | p{7.5cm} | p{7.5cm} |}
+            \hline\hline
+            \rowcolor{mintgreen}
+            \multicolumn{1}{|>{\centering\arraybackslash}m{13mm}|}{\textbf{\huge\textcolor{castletongreen}{\texttt{\#}}}} & \multicolumn{1}{|>{\centering\arraybackslash}m{75mm}|}{\huge\textcolor{castletongreen}{\textbf{Attore}}} &\multicolumn{1}{|>{\centering\arraybackslash}m{75mm}|}{\huge\textcolor{castletongreen}{\textbf{Sistema}}} \\ \hline
+
+            \centering\textbf{5a.1} & Modifica un assegnamento & Registra la nuova assegnazione sul foglio riepilogativo e sul tabellone dei turni\\\hline
+
+            \hline
+            \end{longtable}
+          
+    \end{center}
+\end{flushleft}
+
+\section*{\huge\textbf{\textcolor{2}{Eccezione 5a}}}
+
+\begin{flushleft}
+    \begin{center}
+
+        \begin{longtable}{ | p{1.3cm} | p{7.5cm} | p{7.5cm} |}
+            \hline\hline
+            \rowcolor{mintgreen}
+            \multicolumn{1}{|>{\centering\arraybackslash}m{13mm}|}{\textbf{\huge\textcolor{castletongreen}{\texttt{\#}}}} & \multicolumn{1}{|>{\centering\arraybackslash}m{75mm}|}{\huge\textcolor{castletongreen}{\textbf{Attore}}} &\multicolumn{1}{|>{\centering\arraybackslash}m{75mm}|}{\huge\textcolor{castletongreen}{\textbf{Sistema}}} \\ \hline
+
+            \centering\textbf{\textcolor{2}{5a.1}} & Assegna un compito specificando una ricetta o una preparazione, un turno e, \textbf{\textit{opzionalmente}}, un cuoco & \cellcolor{RedPastel}Il cuoco selezionato non è disponibile\\\hline
+
+            \centering\textbf{\textcolor{2}{5a.1}} & \textit{Torna al passo 5} & \cellcolor{RedPastel} \\\hline
+
+            \hline
+            \end{longtable}
+          
+    \end{center}
+\end{flushleft}
+
+\section*{\huge\textbf{\textcolor{castletongreen}{Estensione 5b}}}
+
+\begin{flushleft}
+    \begin{center}
+
+        \begin{longtable}{ | p{1.3cm} | p{7.5cm} | p{7.5cm} |}
+            \hline\hline
+            \rowcolor{mintgreen}
+            \multicolumn{1}{|>{\centering\arraybackslash}m{13mm}|}{\textbf{\huge\textcolor{castletongreen}{\texttt{\#}}}} & \multicolumn{1}{|>{\centering\arraybackslash}m{75mm}|}{\huge\textcolor{castletongreen}{\textbf{Attore}}} &\multicolumn{1}{|>{\centering\arraybackslash}m{75mm}|}{\huge\textcolor{castletongreen}{\textbf{Sistema}}} \\ \hline
+
+            \centering\textbf{5b.1} & Elimina un assegnamento & Elimina l'assegnazione dal foglio riepilogativo e dal tabellone dei turni\\\hline
+
+            \hline
+            \end{longtable}
+          
+    \end{center}
+\end{flushleft}

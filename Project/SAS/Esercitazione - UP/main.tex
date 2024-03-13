@@ -53,7 +53,6 @@
     \renewcommand{\headrulewidth}{0pt}
     \renewcommand{\chaptermark}[1]{{\markboth{#1}{}}}
 
-    \fancyhead[LE]{\nouppercase{\textbf{\textcolor{seagreen}{\chaptername}}~ \thechapter~ |~ \leftmark}}
     \fancyhead[RO]{\nouppercase{ \rightmark}}
     \fancyfoot[LE,RO]{\thepage}
     \fancypagestyle{plain}{         
@@ -65,6 +64,7 @@
     \textcolor{red}{\fancyhead[C]{\nouppercase{ \leftmark}}}
     \fancyfoot[C]{\thepage}
 \fi
+\fancyhead[LE, RO]{\nouppercase{\textbf{\textcolor{chaptergrey}{\chaptername}}~ \thechapter~ |~ \leftmark}}
 
 \include{artefatti/UseCase}
 
@@ -89,6 +89,8 @@
     \fancyfoot[C]{\thepage}
 \fi
 
+\fancyhead[LE, RO]{\nouppercase{\textbf{\textcolor{chaptergrey}{\chaptername}}~ \thechapter~ |~ \leftmark}}
+
 \include{artefatti/ModelloDiDominio}
 
 \afterpage{\blankpage}
@@ -111,6 +113,8 @@
     \fancyhead[C]{\nouppercase{ \leftmark}}
     \fancyfoot[C]{\thepage}
 \fi
+
+\fancyhead[LE, RO]{\nouppercase{\textbf{\textcolor{chaptergrey}{\chaptername}}~ \thechapter~ |~ \leftmark}}
 
 \include{artefatti/SSD}
 
@@ -135,7 +139,7 @@
     \fancyfoot[C]{\thepage}
 \fi
 
-
+\fancyhead[LE, RO]{\nouppercase{\textbf{\textcolor{chaptergrey}{\chaptername}}~ \thechapter~ |~ \leftmark}}
 \include{artefatti/Contratti}
 \definecolor{chaptergrey}{rgb}{0.18,0.55,0.34}
 
@@ -156,6 +160,8 @@
     \fancyhead[C]{\nouppercase{ \leftmark}}
     \fancyfoot[C]{\thepage}
 \fi
+
+\fancyhead[LE, RO]{\nouppercase{\textbf{\textcolor{chaptergrey}{\chaptername}}~ \thechapter~ |~ \leftmark}}
 
 \afterpage{\blankpage}
 \include{artefatti/DCD}
@@ -178,7 +184,7 @@
     \fancyhead[C]{\nouppercase{ \leftmark}}
     \fancyfoot[C]{\thepage}
 \fi
-
+\fancyhead[LE, RO]{\nouppercase{\textbf{\textcolor{chaptergrey}{\chaptername}}~ \thechapter~ |~ \leftmark}}
 \afterpage{\blankpage}
 \include{artefatti/DSD}
 
