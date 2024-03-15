@@ -241,3 +241,69 @@ misura minore, nel corso di "Linguaggi e paradigmi di programmazione".}
     \item [$\Rightarrow$] Si studiano modelli di processi trasformazionali;
     \item [$\Rightarrow$] Si studiano modelli di calcolo (sequenziali, paralleli, distribuiti);
 \end{itemize}
+
+
+\section{Kleene e le funzioni ricorsive}
+
+Nel 1981 Stephen Cole Kleene, matematico e logico statunitense,
+pubblicò l'articolo "\fancyglitter{Origins of recursive function theory}" in cui
+descrisse l'attività di ricerca svolta da alcuni matematici
+e logici negli anni '30. In particolare, Kleene descrisse
+una serie di lezioni di G\"odel tenute nel 1934 a Princeton
+sullo sviluppo di definizioni ricorsive primitive di funzioni 
+numeriche. Lo \fancyglitter{schema di ricorsione primitiva} permette di
+definire una funzione di numeri naturali f(\textbf{x}, n) a partire da funzioni 
+predefinite b(\textbf{x}) e h(\textbf{x}, n, m) mediante lo schema:
+
+$$f(x, 0) = b(x)$$
+
+$$f(x, n + 1) = h(x, n , f(x, n))$$
+\subsubsection*{}
+Inoltre si ha la composizione:
+
+$$f(x) = h(g_1(x), \cdot\cdot\cdot, g_k(x))$$
+
+\subsubsection*{}
+
+G\"odel usava la nozione di \newfancyglitter{sistema matematico formale} basata
+sulla nozione informale di \newfancyglitter{regola costruttiva} la cui
+applicazione si basava su una \newfancyglitter{procedura finita} del tipo
+necessario per calcolare funzioni definite mediante ricorsioni generali.
+
+Nasce il problema della caratterizzazione delle ricorsioni ammissibili.
+Kleene aggiunse un \fancyglitter{operatore di ricerca} non limitato
+che dato un predicato P(x, y) restituisce il valore minimo che soddisfa
+il predicato. 
+
+Nel 1938, Kleene ammise la possibilità di definire funzioni
+parziali.
+
+\section{Curry e la logica combinatoria}
+
+Nel 1927, Haskell Brooks Curry, matematico e logico statunitense,
+riscopri la nozione di \fancyglitter{combinatore} (introdotta da
+Moses Sch\"onfinkel nel 1920).
+
+\dfn{Combinatore}{
+    Un \newfancyglitter{combinatore} è una funzione senza variabili libere.
+}
+
+\nt{I sistemi di combinatori attuali usano K e S come combinatori,
+perchè sono sufficienti a generare tutti gli altri combinatori.}
+
+\subsubsection*{}
+
+Inoltre riprende anche la possibilità di trattare funzioni a più argomenti
+come funzioni a un solo argomento che verrà chiamata \newfancyglitter{curryficazione}.
+
+$$f(x, y) = f'(x)(y)$$
+
+\subsubsection*{}
+
+Nello stesso tempo, Alonzo Church, sviluppa il \newfancyglitter{lambda calcolo}.
+
+\dfn{Lambda calcolo}{
+    Il \newfancyglitter{lambda calcolo} è un sistema formale per la definizione di funzioni
+    intese come regole di corrispondenza. $\lambda x.M$ descrive la regola che assegna
+    a un argomento $x$ il valore $M$.
+}
