@@ -291,6 +291,17 @@ Moses Sch\"onfinkel nel 1920).
 \nt{I sistemi di combinatori attuali usano K e S come combinatori,
 perchè sono sufficienti a generare tutti gli altri combinatori.}
 
+\ex{Combinatori}{
+    \begin{itemize}
+        \item [$\Rightarrow$] K(x, y) = x;
+        \item [$\Rightarrow$] S(x, y, z) = x(z)(y(z)).;
+        \item [$\Rightarrow$] B(x, y, z) = x(y(z));
+        \item [$\Rightarrow$] C(x, y, z) = x(z)(y);
+        \item [$\Rightarrow$] W(x, y) = x(y)(y).
+        \item [$\Rightarrow$] I(x) = x.
+    \end{itemize}
+}
+
 \subsubsection*{}
 
 Inoltre riprende anche la possibilità di trattare funzioni a più argomenti
@@ -300,10 +311,114 @@ $$f(x, y) = f'(x)(y)$$
 
 \subsubsection*{}
 
-Nello stesso tempo, Alonzo Church, sviluppa il \newfancyglitter{lambda calcolo}.
+Nello stesso tempo, Alonzo Church, sviluppa il \newfancyglitter{lambda calcolo}\footnote{Visto approfonditamente nei corsi 
+"Metodi formali dell'informatica" e "Linguaggi e paradigmi di programmazione, per cui in questi appunti non andrò
+in dettaglio dato che esula gli obiettivi del corso}.
 
 \dfn{Lambda calcolo}{
     Il \newfancyglitter{lambda calcolo} è un sistema formale per la definizione di funzioni
     intese come regole di corrispondenza. $\lambda x.M$ descrive la regola che assegna
     a un argomento $x$ il valore $M$.
 }
+
+\subsection{Paradosso di Russell e combinatori}
+
+$$WS(BWB) = Y = \lambda x.(\lambda z.x(zz)) (\lambda z.x(zz))$$
+
+\nt{Si tratta del combinatore di punto fisso.
+Permette di definire funzioni ricorsive.}
+
+\dfn{Paradosso di Russell}{
+
+    $$(\lambda x.(\lambda z.x(zz)) (\lambda z.x(zz))) \neg = 
+     (\lambda z.\neg(zz)) (\lambda z.\neg(zz))$$
+
+    In cui $\{z | \neg (z \in z)\} \in \{z | \neg (z \in z)\}$.
+    Ciò vuol dire che qualcosa appartiene a se stesso, ma
+    non può appartenere a se stesso.
+
+}
+
+\section{L'analisi dei processi di calcolo di Turing}
+
+Nel paragrafo 9 del suo articolo del 1936, Turing introduce
+il comportamento di un \fancyglitter{computor}. Lo esemplifica con un
+foglio di carta che viene astratto come un "nastro infinito" suddiviso in
+caselle (quadratini):
+\begin{itemize}
+    \item [$\Rightarrow$] Il numero di simboli che si possono stampare è finito,
+    perchè se ci fossero infiniti simboli ci si potrebbe confondere\footnote{Un po'
+    come il fatto che molti caratteri Unicode non possono essere usati nei
+    nomi dei siti web in quanto troppo "simili".};
+    \item [$\Rightarrow$] Il comportamento è determinato dallo stato mentale
+    e dal simbolo osservato, c'è un limite alla percezione delle caselle per lo stesso
+    motivo di prima;
+    \item [$\Rightarrow$] Le operazioni sono elementari, cioè non possono essere
+    ulteriormente scomposte. Esse consistono in cambiamenti di stato mentale e  
+    del simbolo osservato\footnote{Un solo simbolo viene alterato.}.
+\end{itemize}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale = 0.35]{images/Turing.png}
+    \caption{Macchine di Turing come Computer.}
+\end{figure}
+
+\dfn{Macchina universale}{
+    Una \newfancyglitter{macchina universale} ($U$) è una macchina di Turing
+    che può simulare il comportamento di qualsiasi altra macchina di Turing ($M$)
+    dato il suo programma ($I_M$) per ogni dato $x$:
+
+    $$U(I_M, x) = M(x)$$
+
+    È possibile che $U$ sia più complessa di $M$. In informatica, il
+    programma di $U$ è chiamato \newfancyglitter{interprete}. 
+
+    }
+
+    \nt{Questo risultato suggerirà a von Neumann la possibilità di
+    automi che generano automi di pari o maggiore complessità.}
+
+
+\subsection{Non tutte le funzioni sono calcolabili da una macchina di Turing}
+
+Per dimostare che non tutte le funzioni sono calcolabili da una macchina di Turing  si può
+utilizzare la \fancyglitter{diagonalizzazione di Cantor}:
+\begin{itemize}
+    \item [$\Rightarrow$] Si immagina di poter numerare le funzioni da $\bbN$ in $\bbN$;
+    \item [$\Rightarrow$] Si considera una funzione da $\bbN$ in $\{0,1\}^\bbN$;
+    \item [$\Rightarrow$] Questo elenco può essere visto come una tabella;
+    \item [$\Rightarrow$] Si vuole dimostrare che esiste una sequenza che non è in questa tabella;
+    \item [$\Rightarrow$] Si prende la diagonale, che interseca tutte le righe in un punto;
+    \item [$\Rightarrow$] Si cambiano tutti i valori della diagonale (0 diventa 1 e viceversa);
+    \item [$\Rightarrow$] La diagonale trasformata può essere una riga dell'originale?
+    \item [$\Rightarrow$] No, perchè differisce da ogni riga in almeno un punto.
+\end{itemize}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale = 0.5]{images/Diagonalizzazione.png}
+    \caption{Diagonalizzazione di Cantor.}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale = 0.5]{images/Diagonalizzazione 2.png}
+    \caption{Diagonalizzazione di Cantor, inversione della diagonale.}
+\end{figure}
+
+\cor{Problemi indecidibili}{
+    Non esiste una macchina di Turing $M$ che, operando su un nastro che contiene:
+    \begin{itemize}
+        \item [$\Rightarrow$] La descrizione di una qualsiasi macchina di Turing $T$;
+        \item [$\Rightarrow$] Un input $x$;
+    \end{itemize}
+    termina sempre i suoi calcoli scrivendo sul nastro il valore $M(T, x)$ dove:
+    \begin{itemize}
+        \item [$\Rightarrow$] $M(T, x) = 1$ se $T(x)$ termina;
+        \item [$\Rightarrow$] $M(T, x) = 0$ se $T(x)$ non termina.
+    \end{itemize}
+}
+\nt{Il problema della fermata è indecidibile.}
+
+
