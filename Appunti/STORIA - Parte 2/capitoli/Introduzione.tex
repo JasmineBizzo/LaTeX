@@ -1,4 +1,4 @@
-\chapter{Introduzione}
+\chapter{Dalla preistoria a von Neumann}
 
 Il corso si divide in una serie di sezioni:
 \begin{itemize}
@@ -11,7 +11,7 @@ Il corso si divide in una serie di sezioni:
     of the future;
     \item [$\Rightarrow$] La cybernetica: originata da Norbert Wiener, ci si concentra sugli
     aspetti matematici della neurofisiologia che portarono al modello formale di
-    neurone (McCulloch e Pitts, 1943) utilizzato da Von Neumann per la
+    neurone (McCulloch e Pitts, 1943) utilizzato da von Neumann per la
     definizione della sua architettura di calcolatore;
     \item [$\Rightarrow$] Gli hippies e la controcultura: si parla di come la controcultura 
     abbia influenzato la nascita dell'informatica;
@@ -421,4 +421,112 @@ utilizzare la \fancyglitter{diagonalizzazione di Cantor}:
 }
 \nt{Il problema della fermata è indecidibile.}
 
+\section{Von Neumann: il Computer come Organismo Artificiale}
 
+Von Neumann, matematico e fisico ungherese\footnote{Già visto
+nella prima parte del corso.}, fu influenzato dalle idee di
+McCulloch e Pitts\footnote{
+    \textit{A logical calculus of the ideas immanent in nervous activity}.
+}, che avevano definito un modello di neurone
+le cui reti potevano essere caratterizzate come \fancyglitter{automi finiti}\footnote{Notato ù
+da Kleene nel 1951}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale = 0.5]{images/McCulloch-Pitts.png}
+    \caption{Il neurone di McCulloch e Pitts.}
+\end{figure}
+
+\subsubsection{}
+
+Nel 1945, von Neumann pubblicò il "First Draft of a Report on the EDVAC" in cui
+descriveva gli elementi di un calcolatore in termini "biologici" utilizzando
+il modello di McCulloch e Pitts:
+
+\begin{itemize}
+    \item [$\Rightarrow$] \fancyglitter{CPU}: neuroni di associazione;
+    \item [$\Rightarrow$] \fancyglitter{Input}: neuroni sensoriali;
+    \item [$\Rightarrow$] \fancyglitter{Output}: neuroni motori.
+\end{itemize}
+
+\subsubsection{}
+
+L'obiettivo di von Neumann era quello di \fancyglitter{unificare}, tramite una
+teoria generale degli automi, il lavoro di Turing sulle macchine teoriche,
+il lavoro di McCulloch e Pitts sui neuroni e il lavoro di Shannon sulla
+teoria dell'informazione\footnote{Si vedrà nel prossimo capitolo.}.
+
+\nt{Questo tentativo verrà criticato dai neurofisiologi perché
+tentava di descrivere computer e cervello assiomatizzando il comportamento
+di \fancyglitter{scatole nere}.}
+
+\subsection{Automi cellulari}
+
+Negli anni '40, a Los Alamos, von Neumann e Ulam ebbero l'idea di
+automi che operino su una griglia di celle infinita (bidirezionale).
+Ogni cella ha un proprio stato e lo stato di una cella in un'istante $T$
+dipende dallo stato delle celle adiacenti in un istante $T - 1$. Il modello
+di von Neumann e Ulam aveva 29 stati.
+
+\clm{}{}{
+    Da notare che la nozione di \fancyglitter{celle adiacenti} è relativa:
+    per von Neumann erano solo 4 (nord, sud, est, ovest), mentre per Moore
+    erano 8 (aggiungeva anche le diagonali). Oltre a questo esistono altri modelli con
+    celle esagonali e con forme diverse.
+}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale = 0.45]{images/Automi cellulari.png}
+    \caption{Ci sono differenti versioni.}
+\end{figure}
+
+\subsubsection{}
+
+Per von Neumann c'erano due modi di descrivere gli automi cellulari:
+
+\begin{itemize}
+    \item [$\Rightarrow$] \fancyglitter{McCulloch-Pitts (modo sintetico)}: strutture
+    costruite a partire da elementi più semplici. Bisogna solo definire gli elementi e le loro connessioni (può essere complesso);
+    \item [$\Rightarrow$] \fancyglitter{Turing (modo integrale)}: si descrive, tramite assiomi, l'intero automa senza descrivere
+    gli elementi da cui è composto, ma solo il loro comportamento.
+\end{itemize}
+
+\begin{figure}
+    \centering
+    \includegraphics[scale = 0.3]{images/V1.png}
+    \caption{Sommario.}
+\end{figure}
+
+\subsection{La Vita Artificiale secondo Conway (Game of Life)}
+
+\dfn{Game of Life}{
+    Il \newfancyglitter{Game of Life} è un automa cellulare ideato da John Conway nel 1970.
+    Si basa su una griglia bidimensionale di celle quadrate, ognuna delle quali può essere
+    in uno di due stati: vivo o morto. Le celle comunicano con le otto celle adiacenti.
+    È un gioco a zero giocatori, cioè il suo sviluppo è determinato solo dallo stato iniziale.
+}
+
+\cor{Regole}{
+    Le regole sono le seguenti:
+    \begin{itemize}
+        \item [$\Rightarrow$] Una cella morta con esattamente tre celle vive adiacenti diventa viva;
+        \item [$\Rightarrow$] Una cella viva con due o tre celle vive adiacenti rimane viva;
+        \item [$\Rightarrow$] In tutti gli altri casi la cella muore.
+    \end{itemize}
+}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale = 0.3]{images/Conway.png}
+    \caption{Game of Life.}
+\end{figure}
+
+\nt{Una configurazione famosa è il \fancyglitter{glider} (aliante), che si muove
+nella griglia.}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale = 0.3]{images/Glider.png}
+    \caption{Glider.}
+\end{figure}
