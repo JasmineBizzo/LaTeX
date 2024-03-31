@@ -71,14 +71,340 @@ espressione logica con un numero finito di operazioni.
 \qs{}{Perché Turing richiede che i simboli che possono essere scritti sul nastro 
 di una macchina di Turing siano elementi di un insieme finito?}
 
-\paragraph{Risposta:} 
+\paragraph{Risposta:} Perché se l'insieme dei simboli fosse infinito, ci sarebbero un numero infinito di 
+simboli molto simili tra loro, rendendo impossibile distinguerli.
 
 \subsubsection{}
 
+\qs{}{Perché Turing richiede che gli stati che possono essere assunti dall'unità
+ di controllo di una macchina di Turing siano elementi di un insieme finito?}
+
+\paragraph{Risposta:} Perché c'è un limite alla percezione delle caselle del nastro determinato dallo stato mentale.
+
+\subsubsection{}
+
+\qs{}{Che cosa stabilisce il procedimento diagonale di Cantor?}
+
+\paragraph{Risposta:} Il procedimento diagonale di Cantor stabilisce che non tutte le funzioni 
+sono calcolabili da una macchina di Turing.
+
+\subsubsection{}
+
+\qs{}{Qual è la relazione tra una macchina di Turing generale ed un automa finito?}
+
+\paragraph{Risposta:} Un automa finito è una macchina di Turing generale con un nastro finito.
+
+\subsubsection{}
+
+\qs{}{Quali sono state le tappe fondamentali della formalizzazione degli automi finiti?}
+
+\paragraph{Risposta:}
+
+\begin{itemize}
+    \item [$\Rightarrow$] Reti di neuroni di McCulloch e Pitts;
+    \item [$\Rightarrow$] Eventi regolari di Kleene;
+    \item [$\Rightarrow$] Lavoro di Rabin e Scott.
+\end{itemize}
+
+\subsubsection{}
+
+\qs{}{Che cos'è il gioco della vita di Conway?}
+
+\paragraph{Risposta:} Il gioco della vita di Conway è un automa cellulare bidimensionale (gioco a zero giocatori).
+Il risultato di ogni generazione è determinato dallo stato della precedente secondo semplici regole.
+
+\subsubsection{}
+
+\qs{}{Qual è la relazione tra termodinamica e teoria dell'informazione?}
+
+\paragraph{Risposta:} Von Neumann cercò di valutare il costo energetico minimo 
+per un atto elementare di generazione di informazione ($kT \ln N$).
+
+\subsubsection{}
+
+\qs{}{Che cos'è il Principio di Landauer?}
+
+\paragraph{Risposta:} Le operazioni logicamente irreversibili (cancellazione di bit) 
+generano entropia pari alla quantità di informazione cancellata.
+
+\subsubsection{}
+
+\qs{}{Quali sono le difficoltà nell'applicazione della logica matematica classica alla formalizzazione di automi 
+che descrivano sia i computer che il cervello umano?}
+
+\paragraph{Risposta:} L'assiomatizzazione a scatole nere non è sufficiente per descrivere
+il comportamento di un computer in relazione al comportamento del cervello umano.
+
+\subsubsection{}
+
+\qs{}{Quali sono, secondo Landauer, le operazioni che aumentano l'entropia nel processo di calcolo?}
+
+\paragraph{Risposta:} Le operazioni che aumentano l'entropia sono quelle che comportano la cancellazione di bit.
+
 \section{Funzioni calcolabili e combinatori}
+
+\qs{}{Quali sono gli ingredienti principali di un sistema formale nella formulazione di Curry?}
+
+\paragraph{Risposta:} I combinatori, la trattazione di funzioni a più argomenti
+come funzioni a un solo argomento e la sostituzione.
+
+\subsubsection{}
+
+\qs{}{Quando una regola è ammissibile in un sistema formale?}
+
+\paragraph{Risposta:} Una regola è ammissibile in un sistema formale se è possibile
+dimostrare che essa è derivabile dalle regole di base del sistema.
+
+\subsubsection{}
+
+\qs{}{Indicare almeno due applicazioni dei sistemi formali alla formalizzazione di processi di riscrittura.}
+
+\paragraph{Risposta:}
+
+\begin{itemize}
+    \item [$\Rightarrow$] Combinatori;
+    \item [$\Rightarrow$] Lambda calcolo.
+\end{itemize}
+
+\subsubsection{}
+
+\qs{}{Come si può caratterizzare la ricorsione strutturale?}
+
+\paragraph{Risposta:} Con una teoria generale della sostituzione.
+
+\subsubsection{}
+
+\qs{}{Come può essere utilizzata la ricorsione strutturale in un linguaggio di programmazione?}
+
+\paragraph{Risposta:} La ricorsione strutturale può essere utilizzata per definire funzioni ricorsive e tipi induttivi\footnote{Visto in "Metodi Formali dell'informatica".}.
+
+\subsubsection{}
+
+\qs{}{Quando è opportuno usare la coricorsione per la definizione di funzioni?}
+
+\paragraph{Risposta:} Per esempio con iteratori o generatori.
+
+\subsubsection{}
+
+\qs{}{Che cosa è lo schema di ricorsione primitiva?}
+
+\paragraph{Risposta:} Lo schema di ricorsione primitiva è un metodo per definire funzioni di numeri 
+naturali $f(x, n)$ a partire da funzioni predefinite $g(x)$ e $h(x, n, f(x, n))$ mediante lo schema:
+
+$$
+\begin{cases}
+    f(x, 0) = g(x) \\
+    f(x, n+1) = h(x, n, f(x, n))
+\end{cases}
+$$
+
+\subsubsection{}
+
+\qs{}{Che cosa è l'operatore di ricerca non limitato utilizzato da Kleene per definire le funzioni ricorsive generali?}
+
+\paragraph{Risposta:} Dato un predicato $P(x, y)$, viene restituito il più piccolo $y$ tale che $P(x, y)$:
+
+$$
+f(x) = \mu y P(x, y)
+$$
+
+\subsubsection{}
+\pagebreak
+\qs{}{Dare un esempio di almeno due combinatori con le relative uguaglianze caratteristiche.}
+
+\paragraph{Risposta:}
+
+\begin{itemize}
+    \item [$\Rightarrow$] $K x y = x$;
+    \item [$\Rightarrow$] $Y f = f (Y f)$.
+    \item [$\Rightarrow$] $I x = x$;
+    \item [$\Rightarrow$] $B x y z = x (y z)$;
+    \item [$\Rightarrow$] $C x y z = x z y$;
+    \item [$\Rightarrow$] $S x y z = x z (y z)$.
+\end{itemize}
+
+\subsubsection{}
+
+\qs{}{Perché Curry chiamava il combinatore Y il "combinatore paradossale"?}
+
+\paragraph{Risposta:} Perché il combinatore Y è un combinatore che si autoapplica.
+
+\subsubsection{}
+
+\qs{}{Come si può motivare il tipo a $\rightarrow$ (b $\rightarrow$ a) per il combinatore K? }
+
+\paragraph{Risposta:} Prendiamo un qualsiasi x di tipo a e un qualsiasi y di tipo b: poiché Kxy = x, il tipo di Kxy deve essere lo stesso del tipo di x, cioè a. Poichè Kx prende come argomento un b e restituisce un a, il suo tipo è b $\rightarrow$ a. Poiché K prende come argomento un a e restituisce un b $\rightarrow$ a, ha tipo a $\rightarrow$ (b $\rightarrow$ a).
+
+\subsubsection{}
+
+\qs{}{Che cosa si intende con "isomorfismo di Curry-Howard"?}
+
+\paragraph{Risposta:} L'isomorfismo di Curry-Howard è una corrispondenza tra dimostrazioni logiche
+e programmi informatici.
 
 \section{"As we may think"}
 
+\subsection{Sezione 1}
+
+\qs{}{Formulare sinteticamente il complesso delle problematiche relative all'organizzazione dell'informazione.}
+
+\paragraph{Risposta:} Si ha difficoltà nel trovare le informazioni che si stanno cercando.
+Il problema deriva dal fatto che si utilizza l'indicizzazione (per nome, autore, etc.), ma 
+la mente umana funziona per associazione, collegando idee tra loro.
+
+\subsection{Sezione 6}
+
+\qs{}{Isolare quattro problemi fondamentali delle classificazioni tradizionali (e dei relativi processi di indicizzazione).}
+
+\paragraph{Risposta:}
+
+\begin{itemize}
+    \item [$\Rightarrow$] Artificiosità dei sistemi di indicizzazione;
+    \item [$\Rightarrow$] L'informazione deve essere cercata da sottoclasse a sottoclasse;
+    \item [$\Rightarrow$] Bisogna avere delle regole per localizzare le informazioni;
+    \item [$\Rightarrow$] Dopo aver trovato l'elemento cercato bisogna tornare indietro.
+\end{itemize}
+
+\subsubsection{}
+
+\qs{}{Caratterizzare l'operazione di associazione secondo Bush.}
+
+\paragraph{Risposta:} 
+
+\begin{itemize}
+    \item [$\Rightarrow$] La mente umana scatta istantaneamente da un'idea all'altra;
+    \item [$\Rightarrow$] Gli elementi non sono fissi, ma si modificano;
+    \item [$\Rightarrow$] La memoria umana è associativa, ma transitoria.
+\end{itemize}
+
+\subsection{Sezione 7}
+
+\qs{}{Elencare in modo analitico le operazioni compiute nel collegare due elementi mediante il memex. Qual è la funzione del codice e del libro dei codici?}
+
+\paragraph{Risposta:} Un utente che crea un percorsolo nomina, lo inserisce nel libro dei codici e 
+lo batte sulla sua tastiera. L'utente preme un singolo tasto e il memex collega i due elementi.
+Da quel momento in poi, ogni volta che l'utente preme un elemento del percorso, il memex richiama
+l'elemento collegato.
+
+\subsubsection{}
+
+\qs{}{Discutere la seguente affermazione: la creazione di percorsi associativi contraddice la struttura lineare del testo scritto.}
+
+\paragraph{Risposta:} Il testo scritto è, per sua natura, immutabile, fissato in un ordine lineare. Mentre l'associazione è 
+un processo dinamico, che si evolve nel tempo. Si possono creare percorsi associativi, ma il testo scritto rimane invariato.
+
+\subsubsection{}
+
+\pagebreak
+
+\qs{}{Descrivere una struttura di dati che permetta una implementazione (astratta) delle piste (trails).}
+
+\paragraph{Risposta:} Una struttura dati che permetta di implementare le piste è un grafo. In un grafo
+ogni nodo rappresenta un'idea e ogni arco rappresenta un collegamento tra due idee\footnote{Per esempio, su Obsidian (tool per MarkDown), esistono dei grafi che mostrano i collegamenti tra i propri appunti.}.
+
+\subsubsection{}
+
+\qs{}{Quali sono le principali operazioni di organizzazione della conoscenza compiute dall'utilizzatore del memex nell'esempio dell'arco?}
+
+\paragraph{Risposta:} L'utente del memex, nell'esempio dell'arco:
+
+\begin{itemize}
+    \item [$\Rightarrow$] Apre un'enciclopedia, trova un articolo e lo lascia proiettato;
+    \item [$\Rightarrow$] Apre un libro di storia, trova un articolo pertinente;
+    \item [$\Rightarrow$] Collega i due articoli;
+    \item [$\Rightarrow$] Continua a creare collegamenti;
+    \item [$\Rightarrow$] Occasionalmente lascia dei commenti e aggiunge note scritte a mano da lui;
+    \item [$\Rightarrow$] Diversi anni dopo e in grado di mostrare a un suo amico i percorsi che ha creato;
+    \item [$\Rightarrow$] Trasferisce i percorsi sul Memex del suo amico in modo che egli possa continuare il lavoro.
+\end{itemize}
+
+\subsubsection{}
+
+\qs{}{In quale senso le enciclopedie generate con il memex sono di un tipo totalmente nuovo?}
+
+\paragraph{Risposta:} Sono personalizzabili e non sono statiche, ma dinamiche.
+
+\subsubsection{}
+
+\qs{}{In che cosa consiste la nuova professione di "apripista" (trail blazer)\footnote{Honkai Star Rail reference}?}
+
+\paragraph{Risposta:} Gli apripista sono persone che esplorano nuovi collegamenti tra idee.
+\pagebreak
 \section{Engelbart e Nelson}
 
+\qs{}{Quali sono le caratteristiche dei problemi che hanno motivato il lavoro di Engelbart sul progetto di aumentazione dell'intelligenza umana?} 
+
+\paragraph{Risposta:} I problemi wicked.
+
+\begin{itemize}
+    \item [$\Rightarrow$] I problemi sono mal definiti;
+    \item [$\Rightarrow$] Non c'è un punto in cui si possa dire che il problema è risolto;
+    \item [$\Rightarrow$] Le soluzioni sono soggettive (non giuste o sbagliate);
+    \item [$\Rightarrow$] Non si può procedere per tentativi;
+    \item [$\Rightarrow$] Ogni problema è un caso a sé;
+    \item [$\Rightarrow$] Non c'è una soluzione alterntiva preassegnata.
+\end{itemize}
+
+\subsubsection{}
+
+\qs{}{Fare almeno due esempi di problema wicked e due esempi di problema tame.}
+
+\paragraph{Problemi wicked:}
+
+\begin{itemize}
+    \item [$\Rightarrow$] Problemi urbanistici;
+    \item [$\Rightarrow$] Organizzare una mostra.
+\end{itemize}
+
+\paragraph{Problemi tame:}
+
+\begin{itemize}
+    \item [$\Rightarrow$] Risolvere un'equazione;
+    \item [$\Rightarrow$] Racimolare 10.000 euro.
+\end{itemize}
+
+\subsubsection{}
+
+\qs{}{Che cosa intende Engelbart con "problema complesso"?}
+
+\paragraph{Risposta:} Un problema complesso è un problema che non può essere affrontato ricorrendo a trucchetti, ma deve essere compreso.
+
+\subsubsection{}
+
+\qs{}{Che cosa intende Engelbart con "incremento delle capacità" (increased capability)?}
+
+\paragraph{Risposta:} L'incremento delle capacità intellettuali umane che porti alla simbiosi
+tra uomo e macchina.
+
+\subsubsection{}
+
+\qs{}{Che cosa intende Engelbart con "sistema H-LAM/T"? Spiegare sinteticamente ciascuno dei termini coinvolti nell'acronimo.}
+
+\paragraph{Risposta:} Il sistema H-LAM/T\footnote{I termini sono spiegati nella sezione \ref{augmentation}.} è un sistema che permette di aumentare le capacità umane.
+
+\begin{itemize}
+    \item [$\Rightarrow$] H: Human;
+    \item [$\Rightarrow$] L: Language;
+    \item [$\Rightarrow$] A: Artefacts;
+    \item [$\Rightarrow$] M: Methodology;
+    \item [$\Rightarrow$] T: Training.
+\end{itemize}
+
+
+
+
+
+
+
+
+\subsection{Engelbart}
+
+\subsection{Nelson}
+
 \section{Otlet, Lickider e Kay}
+
+\subsection{Otlet}
+
+\subsection{Licklider}
+
+\subsection{Alan Kay}
