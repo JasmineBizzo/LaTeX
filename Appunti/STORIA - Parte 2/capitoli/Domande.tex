@@ -13,7 +13,7 @@ In questo modo si potevano raggiungere verità in ogni campo del sapere.
 \qs{}{Quali sono le funzioni della combinatoria di Lullo?}
 
 \paragraph{Risposta:} L'Ars Combinatoria di Lullo è un metodo inventivo
-che permette di elaborare dimostrazioni allo scopo di convertire gli "infedeli" al cristianesimo.   
+che permette di elaborare dimostrazioni allo scopo di convertire gli "infedeli" al cristianesimo\footnote{Sì, lo scopo era proprio quello.}.   
 
 \subsubsection{}
 
@@ -26,7 +26,7 @@ che permette di elaborare dimostrazioni allo scopo di convertire gli "infedeli" 
     \item [$\Rightarrow$] L'analisi termina con le idee primitive;
     \item [$\Rightarrow$] Le idee possono essere rappresentate da simboli;
     \item [$\Rightarrow$] Le relazioni tra le idee possono essere rappresentate da simboli;
-    \item [$\Rightarrow$] Le idee possono essere combinate per ottenere nuove idee tramite opportune regole.
+    \item [$\Rightarrow$] Le idee possono essere combinate, tramite opportune regole, per ottenere nuove idee.
 \end{itemize}
 
 \subsubsection{}
@@ -37,7 +37,7 @@ che permette di elaborare dimostrazioni allo scopo di convertire gli "infedeli" 
 
 \begin{itemize}
     \item [$\Rightarrow$] Segni che rappresentano direttamente le nozioni e le cose, non le parole;
-    \item [$\Rightarrow$] Segni composti di figure geometiche e di pitture;
+    \item [$\Rightarrow$] Segni composti da figure geometiche e da pitture;
     \item [$\Rightarrow$] Direttamente collegata con l'enciclopedia;
     \item [$\Rightarrow$] Connessioni tra i caratteri corrispondono alle connessioni tra le cose;
     \item [$\Rightarrow$] I caratteri della lingua universale esprimono relazioni tra pensieri.
@@ -61,7 +61,7 @@ per cui vale la proprietà di distributività.
 
 \qs{}{Che cosa è lo Entscheidungsproblem formulato da Hilbert e Ackermann nel 1928?}
 
-\paragraph{Risposta:} L'Entscheidungsproblem è un problema matematico che consiste nel determinare
+\paragraph{Risposta:} L'Entscheidungs problem è un problema matematico che consiste nel determinare
 un modo combinatorio finito per il quale combinazioni di simboli primitivi conducono a dimostrazioni.
 In altre parole, trovare una procedura che consente di decidere la validità di una data
 espressione logica con un numero finito di operazioni.
@@ -85,12 +85,13 @@ simboli molto simili tra loro, rendendo impossibile distinguerli.
 
 \qs{}{Che cosa stabilisce il procedimento diagonale di Cantor?}
 
-\paragraph{Risposta:} Il procedimento diagonale di Cantor stabilisce che non tutte le funzioni 
-sono calcolabili da una macchina di Turing.
+\paragraph{Risposta:} Il procedimento diagonale di Cantor stabilisce che non esiste una corrispondenza biunivoca tra
+l'insieme dei numeri naturali e l'insieme dei numeri reali. Serve a dimostrare il fatto che non tutte le funzioni 
+siano calcolabili\footnote{E, per estensione, calcolabili da una macchina di Turing.}.
 
 \subsubsection{}
 
-\qs{}{Qual è la relazione tra una macchina di Turing generale ed un automa finito?}
+\qs{}{Qual è la relazione tra una macchina di Turing generale e un automa finito?}
 
 \paragraph{Risposta:} Un automa finito è una macchina di Turing generale con un nastro finito.
 
@@ -118,7 +119,8 @@ Il risultato di ogni generazione è determinato dallo stato della precedente sec
 \qs{}{Qual è la relazione tra termodinamica e teoria dell'informazione?}
 
 \paragraph{Risposta:} Von Neumann cercò di valutare il costo energetico minimo 
-per un atto elementare di generazione di informazione ($kT \ln N$).
+per un atto elementare di generazione di informazione ($kT \ln N$), ma Landauer
+non riuscì a provarlo.
 
 \subsubsection{}
 
@@ -162,6 +164,7 @@ dimostrare che essa è derivabile dalle regole di base del sistema.
 \paragraph{Risposta:}
 
 \begin{itemize}
+    \item [$\Rightarrow$] Deduzione naturale di Gentzen;
     \item [$\Rightarrow$] Combinatori;
     \item [$\Rightarrow$] Lambda calcolo.
 \end{itemize}
@@ -176,7 +179,7 @@ dimostrare che essa è derivabile dalle regole di base del sistema.
 
 \qs{}{Come può essere utilizzata la ricorsione strutturale in un linguaggio di programmazione?}
 
-\paragraph{Risposta:} La ricorsione strutturale può essere utilizzata per definire funzioni ricorsive e tipi induttivi\footnote{Visto in "Metodi Formali dell'informatica".}.
+\paragraph{Risposta:} La ricorsione strutturale può essere utilizzata per definire funzioni ricorsive e tipi induttivi\footnote{Visto in "Metodi formali dell'informatica" e nella parte da +3 CFU di "Linguaggi e paradigmi di programmazione".}.
 
 \subsubsection{}
 
@@ -209,7 +212,7 @@ f(x) = \mu y P(x, y)
 $$
 
 \subsubsection{}
-\pagebreak
+
 \qs{}{Dare un esempio di almeno due combinatori con le relative uguaglianze caratteristiche.}
 
 \paragraph{Risposta:}
@@ -233,9 +236,16 @@ $$
 
 \qs{}{Come si può motivare il tipo a $\rightarrow$ (b $\rightarrow$ a) per il combinatore K? }
 
-\paragraph{Risposta:} Prendiamo un qualsiasi x di tipo a e un qualsiasi y di tipo b: poiché Kxy = x, il tipo di Kxy deve essere lo stesso del tipo di x, cioè a. Poichè Kx prende come argomento un b e restituisce un a, il suo tipo è b $\rightarrow$ a. Poiché K prende come argomento un a e restituisce un b $\rightarrow$ a, ha tipo a $\rightarrow$ (b $\rightarrow$ a).
+\paragraph{Risposta:} Prendiamo un qualsiasi x di tipo \fancyglitter{a} e un qualsiasi y di tipo \evidence{b}: 
+poiché Kxy = x, il tipo di Kxy deve essere lo stesso del tipo di x, cioè \fancyglitter{a}. 
+Poichè Kx prende come argomento y (un \evidence{b}) e restituisce x (un \fancyglitter{a}),
+il suo tipo è y $\rightarrow$ a (ossia \evidence{b} $\rightarrow$ \fancyglitter{a}). 
+Poiché K prende come argomento x (un \fancyglitter{a}) e restituisce un \evidence{b}
+$\rightarrow$ \fancyglitter{a}, ha tipo \fancyglitter{a} $\rightarrow$ (\evidence{b}
+$\rightarrow$ \fancyglitter{a}).
 
-\subsubsection{}
+\nt{Il motivo per cui si prende sempre un argomento è perché le funzioni sono considerate
+currificate.}
 
 \qs{}{Che cosa si intende con "isomorfismo di Curry-Howard"?}
 
@@ -294,8 +304,6 @@ l'elemento collegato.
 un processo dinamico, che si evolve nel tempo. Si possono creare percorsi associativi, ma il testo scritto rimane invariato.
 
 \subsubsection{}
-
-\pagebreak
 
 \qs{}{Descrivere una struttura di dati che permetta una implementazione (astratta) delle piste (trails).}
 
@@ -396,7 +404,7 @@ tra uomo e macchina.
 
 \qs{}{In quale modo la manipolazione di simboli entra nelle considerazioni di Engelbart sulla aumentazione?}
 
-\paragraph{Risposta:} La manipolazione di simboli è importante perchè la concettualizzazione del 
+\paragraph{Risposta:} La manipolazione di simboli è importante perché la concettualizzazione del 
 mondo dipende dal linguaggio e dai simboli che si usano per rappresentare le idee.
 
 \subsubsection{}
