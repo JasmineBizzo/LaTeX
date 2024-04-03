@@ -57,14 +57,15 @@ Nei meccanismi illustrati nella sezione precedente i segni hanno un ruolo import
     \item [$\Rightarrow$] Il significato dei segni (studiati dalla semantica).
 \end{itemize}
 }
-\paragraph{}
 
-La semiotica è direttamente collegata all'informatica (computer semiotics):
+\paragraph{La semiotica è direttamente collegata all'informatica (computer semiotics):}
 
 \begin{itemize}
     \item [$\Rightarrow$] Un computer è spesso utilizzato per generare, trasformare e visualizzare segni (il PC come medium);
     \item [$\Rightarrow$] Un computer viene programmato utilizzando un linguaggio.
 \end{itemize}
+
+\subsection{Kenneth Iverson e Raimondo Lullo}
 
 \newfancyglitter{Kenneth Iverson} fu un importate semiotico e fu il fondatore del linguaggio esoterico APL, che nacque come linguaggio logico. APL influenzo molti linguaggi funzionali, come Haskell, e il paradigma di parallelismo.
 
@@ -72,6 +73,10 @@ La semiotica è direttamente collegata all'informatica (computer semiotics):
     \includegraphics[scale = 1]{images/iverson.jpg}
 \end{center}
 
+\subsubsection{}
+
+Un altro personaggio importante fu Raimondo Lullo, un filosofo, teologo e missionario catalano. Egli fu il primo a proporre un sistema di combinazione di segni per ottenere nuove conoscenze. Il suo sistema era basato su un insieme di simboli che rappresentavano le nozioni e le relazioni tra di esse. Questo sistema era chiamato \newfancyglitter{Ars Magna}.
+Oltre a ciò si occupò di \newfancyglitter{logica combinatoria} nella sua opera \newfancyglitter{Ars Combinatoria}.
 
 \section{Leibniz}
 
@@ -129,7 +134,7 @@ La \newfancyglitter{caratteristica universale}, concepita come lingua o scrittur
 \end{itemize}
 
 \dfn{Caratteristica universale}{
-La \newfancyglitter{caratteristica universale} è un sistema di segni che rappresentano
+La \newfancyglitter{caratteristica universale}\footnote{Ispirata da Lullo e dal "Lullismo", da Atanasio Kircher e da uno scrittore anonimo del 1963.} è un sistema di segni che rappresentano
 nozioni e cose, ma non parole. Le connessioni tra i segni rappresentano le relazioni tra le nozioni e le cose.
 Il nome di una nozione serve a:
 \begin{itemize}
@@ -146,14 +151,14 @@ Il nome di una nozione serve a:
 
 \dfn{Calculus ratiocinator}{Il \newfancyglitter{calculus ratiocinator} è un insieme di tecniche per manipolare i segni della caratteristica universale. Può essere considerato come un \newfancyglitter{sistema formale}. Il frammento XX offre un'idea di questo calcolo: in esso vengono trattati molti assiomi e teoremi come il principio degli indiscernibili, la simmetria, la transitività, etc.}
 
-\subsection{La mereologia}
+\subsection{La mereologia del Frammento XX}
 
 \dfn{Mereologia}{
     La \newfancyglitter{mereologia} è la "dottrina delle parti".
 }
 
 \dfn{Principio di identità degli indiscernibili}{
-    Soo identici i termini che possono essere sostituiti a vicenda
+    Sono identici i termini che possono essere sostituiti a vicenda
     senza alterare la verità degli enunciati in cui compaiono. Si scrive A = B 
     quando A e B sono identici.
     \begin{itemize}
@@ -179,7 +184,9 @@ Il nome di una nozione serve a:
     Se $A = B$ allora $A + L = B + L$.
 }
 \pagebreak
-\section{Peano}
+\section{Ulteriori sviluppi}
+
+\subsection{Peano e i numeri naturali}
 
 Peano nacque a Cuneo il 27 agosto 1858. Si laureò in matematica nel 1880 e divenne professore di analisi matematica a Torino nel 1890. Nel 1889 pubblicò i suoi famosi \newfancyglitter{Principi di aritmetica}, in cui formulò un sistema assiomatico per i numeri naturali.
 
@@ -192,10 +199,25 @@ Peano nacque a Cuneo il 27 agosto 1858. Si laureò in matematica nel 1880 e dive
     di assiomi che definiscono i numeri naturali.
 }
 
-\subsection{Sistemi formali}
+\subsection{Hilbert e lo Entscheidungsproblem}
+
+Hilbert fu un matematico tedesco nato a Königsberg il 23 gennaio 1862. Egli fu uno dei più grandi matematici del XX secolo e fu uno dei fondatori della logica matematica.
+Nel 1928, insieme ad Ackermann, pubblicò il libro \newfancyglitter{Grundzüge der theoretischen Logik} in cui si venne enunciato il \newfancyglitter{problema della decisione} (
+    o \newfancyglitter{Entscheidungsproblem}).
+
+\dfn{Entscheidungsproblem}{
+    L'\newfancyglitter{Entscheidungsproblem} è un problema che consiste nel trovare una procedura che consente di decidere la validità di una data espressione logica con un 
+    numero finito di operazioni.
+}
+
+\pagebreak
+
+\section{La logica matematica}
 
 \nt{Sono trattati più in dettaglio nel corso "Metodi formali dell'Informatica" e, in
 misura minore, nel corso di "Linguaggi e paradigmi di programmazione".}
+
+\subsection{Sistemi formali}
 
 \dfn{Sistema formale}{
     In un \newfancyglitter{sistema formale} si definiscono:
@@ -213,8 +235,13 @@ misura minore, nel corso di "Linguaggi e paradigmi di programmazione".}
 
 \qs{}{Come si usano le regole di inferenza?}
 
-\paragraph{Risposta:} Per costruire derivazioni: $$\frac{\frac{
-    A_1 \:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\:\: A_2}{A}\:\:\:\:\:\:\:\:\: B}{C}$$
+\paragraph{Risposta:} Per costruire derivazioni: 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale = 0.35]{images/Inferenza.png}
+    \caption{Derivazione.}
+\end{figure}
 
 \ex{Numeri naturali}{
     \begin{itemize}
@@ -223,6 +250,12 @@ misura minore, nel corso di "Linguaggi e paradigmi di programmazione".}
         \item [$\Rightarrow$] \fancyglitter{Regole di inferenza}: $\frac{}{\text{Num\{0\}}}$ e 
         $\frac{\text{Num\{n\}}}{\text{Num\{S(n)\}}}$.
     \end{itemize}
+}
+
+\ex{Grammatiche formali}{
+    \begin{center}
+        \includegraphics[scale = 0.35]{images/Gram.png}
+    \end{center}
 }
 
 \subsection{Confronto tra logica e informatica}
@@ -239,11 +272,11 @@ misura minore, nel corso di "Linguaggi e paradigmi di programmazione".}
 
 \begin{itemize}
     \item [$\Rightarrow$] Si studiano modelli di processi trasformazionali;
-    \item [$\Rightarrow$] Si studiano modelli di calcolo (sequenziali, paralleli, distribuiti);
+    \item [$\Rightarrow$] Si studiano modelli di calcolo (sequenziali, paralleli, distribuiti).
 \end{itemize}
 
 
-\section{Kleene e le funzioni ricorsive}
+\subsection{Kleene e le funzioni ricorsive}
 
 Nel 1981 Stephen Cole Kleene, matematico e logico statunitense,
 pubblicò l'articolo "\fancyglitter{Origins of recursive function theory}" in cui
@@ -269,12 +302,11 @@ G\"odel usava la nozione di \newfancyglitter{sistema matematico formale} basata
 sulla nozione informale di \newfancyglitter{regola costruttiva} la cui
 applicazione si basava su una \newfancyglitter{procedura finita} del tipo
 necessario per calcolare funzioni definite mediante ricorsioni generali.
-
+\subsubsection{}
 Nasce il problema della caratterizzazione delle ricorsioni ammissibili.
 Kleene aggiunse un \fancyglitter{operatore di ricerca} non limitato
 che dato un predicato P(x, y) restituisce il valore minimo che soddisfa
 il predicato. 
-
 Nel 1938, Kleene ammise la possibilità di definire funzioni
 parziali.
 
@@ -313,7 +345,7 @@ $$f(x, y) = f'(x)(y)$$
 
 Nello stesso tempo, Alonzo Church, sviluppa il \newfancyglitter{lambda calcolo}\footnote{Visto approfonditamente nei corsi 
 "Metodi formali dell'informatica" e "Linguaggi e paradigmi di programmazione, per cui in questi appunti non andrò
-in dettaglio dato che esula gli obiettivi del corso}.
+in dettaglio dato che esula gli obiettivi del corso.}.
 
 \dfn{Lambda calcolo}{
     Il \newfancyglitter{lambda calcolo} è un sistema formale per la definizione di funzioni
@@ -383,7 +415,7 @@ caselle (quadratini):
 \subsection{Non tutte le funzioni sono calcolabili da una macchina di Turing}
 
 Per dimostare che non tutte le funzioni sono calcolabili da una macchina di Turing  si può
-utilizzare la \fancyglitter{diagonalizzazione di Cantor}:
+utilizzare la \fancyglitter{diagonalizzazione di Cantor}\footnote{Visto nel corso "Matematica discreta".}:
 \begin{itemize}
     \item [$\Rightarrow$] Si immagina di poter numerare le funzioni da $\bbN$ in $\bbN$;
     \item [$\Rightarrow$] Si considera una funzione da $\bbN$ in $\{0,1\}^\bbN$;
@@ -397,13 +429,13 @@ utilizzare la \fancyglitter{diagonalizzazione di Cantor}:
 
 \begin{figure}[h]
     \centering
-    \includegraphics[scale = 0.5]{images/Diagonalizzazione.png}
+    \includegraphics[scale = 0.38]{images/Diagonalizzazione.png}
     \caption{Diagonalizzazione di Cantor.}
 \end{figure}
 
 \begin{figure}[h]
     \centering
-    \includegraphics[scale = 0.5]{images/Diagonalizzazione 2.png}
+    \includegraphics[scale = 0.38]{images/Diagonalizzazione 2.png}
     \caption{Diagonalizzazione di Cantor, inversione della diagonale.}
 \end{figure}
 
@@ -411,7 +443,7 @@ utilizzare la \fancyglitter{diagonalizzazione di Cantor}:
     Non esiste una macchina di Turing $M$ che, operando su un nastro che contiene:
     \begin{itemize}
         \item [$\Rightarrow$] La descrizione di una qualsiasi macchina di Turing $T$;
-        \item [$\Rightarrow$] Un input $x$;
+        \item [$\Rightarrow$] Un input $x$.
     \end{itemize}
     termina sempre i suoi calcoli scrivendo sul nastro il valore $M(T, x)$ dove:
     \begin{itemize}
@@ -428,8 +460,7 @@ nella prima parte del corso.}, fu influenzato dalle idee di
 McCulloch e Pitts\footnote{
     \textit{A logical calculus of the ideas immanent in nervous activity}.
 }, che avevano definito un modello di neurone
-le cui reti potevano essere caratterizzate come \fancyglitter{automi finiti}\footnote{Notato ù
-da Kleene nel 1951}.
+le cui reti potevano essere caratterizzate come \fancyglitter{automi finiti}\footnote{Notato da Kleene nel 1951}.
 
 \begin{figure}[h]
     \centering
@@ -477,13 +508,11 @@ di von Neumann e Ulam aveva 29 stati.
 
 \begin{figure}[h]
     \centering
-    \includegraphics[scale = 0.45]{images/Automi cellulari.png}
+    \includegraphics[scale = 0.3]{images/Automi cellulari.png}
     \caption{Ci sono differenti versioni.}
 \end{figure}
 
-\subsubsection{}
-
-Per von Neumann c'erano due modi di descrivere gli automi cellulari:
+\paragraph{Per von Neumann c'erano due modi di descrivere gli automi cellulari:}
 
 \begin{itemize}
     \item [$\Rightarrow$] \fancyglitter{McCulloch-Pitts (modo sintetico)}: strutture
@@ -492,9 +521,9 @@ Per von Neumann c'erano due modi di descrivere gli automi cellulari:
     gli elementi da cui è composto, ma solo il loro comportamento.
 \end{itemize}
 
-\begin{figure}
+\begin{figure}[h]
     \centering
-    \includegraphics[scale = 0.3]{images/V1.png}
+    \includegraphics[scale = 0.33]{images/V1.png}
     \caption{Sommario.}
 \end{figure}
 
