@@ -1,0 +1,26 @@
+\documentclass{report}
+
+\input{enviroment/preamble}
+\input{enviroment/macros}
+\input{enviroment/letterfonts}
+
+\renewcommand{\contentsname}{Indice}
+
+\title{\Huge{\textbf{Raccolta di prove d'esame}}}
+\date{}
+\begin{document}
+
+\maketitle
+\newpage% or \cleardoublepage
+% \pdfbookmark[<level>]{<title>}{<dest>}
+\pdfbookmark[section]{\contentsname}{toc}
+\afterpage{\blankpage}
+\pagenumbering{Roman}
+\tableofcontents
+\cleardoublepage\pagenumbering{arabic}
+\pagebreak
+\afterpage{\blankpage}
+
+\include{capitoli/Gennaio 2024}
+
+\end{document}
