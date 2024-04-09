@@ -1,1 +1,76 @@
 \chapter{Il linguaggio IMP}
+
+Per studiare il problema della verifica in programmi imperativi si utilizzerà un piccolo linguaggio di programmazione chiamato \evidence{IMP}\footnote{A volte viene chiamato "while".}. 
+
+\section{Introduzione a IMP}
+
+\dfn{Comandi di IMP}{
+  Un programma, in IMP, è un comando con la seguente sintassi:
+  
+  \begin{center}
+    Com $\in$ c, c' ::= \evidence{SKIP} | x := a | c :: c' | \evidence{IF} b \evidence{THEN} c \evidence{ELSE} c' | \evidence{WHILE} b \evidence{DO} c
+  \end{center}
+
+}
+
+\nt{La sintassi è simile al Pascal o al C, ma:
+\begin{itemize}
+  \item [$\Rightarrow$] \evidence{SKIP}: termina l'esecuzione senza effetti collaterali;
+  \item [$\Rightarrow$] c :: c' : la composizione (in AGDA è c ; c').
+\end{itemize}
+}
+
+\cor{Stati di un programma IMP}{
+  Un comando, in IMP, è una trasformazione della memoria. 
+  Uno \evidence{stato della memoria} (o stato) è una mappatura del tipo \texttt{s : State} con \texttt{State = Varname $\rightarrow$ Val} ossia l'assegnazione di un valore (\texttt{Val}) a ogni variabile (\texttt{Varname}). 
+}
+
+\subsection{Le relazioni in IMP}
+
+In IMP esistono due possibili relazioni:
+
+\begin{itemize}
+  \item \fancyglitter{Big-step}:  $(\!(c , s)\!)  \Rightarrow t$, dove $(\!(\underline{\hspace{0.4cm}} , \underline{\hspace{0.4cm}})\!) \Rightarrow \underline{\hspace{0.4cm}} \subseteq (\texttt{Com} \times \texttt{State }) \times \texttt{State}$;
+  \item \fancyglitter{Small-step}: $(\!( c , s )\!) \rightarrow (\!( c' , t )\!)$, dove $(\!(\underline{\hspace{0.4cm}},\underline{\hspace{0.4cm}})\!) \rightarrow (\!(\underline{\hspace{0.4cm}},\underline{\hspace{0.4cm}})\!) \subseteq (\texttt{Com} \times \texttt{State}) \times (\texttt{Com} \times \texttt{State})$.
+\end{itemize}
+
+\thm{Equivalenza di Big-step e Small-step}{
+  Big-step e Small-step sono legate dalla seguente relazione:
+
+  $$\forall \text{\textit{c s t . }} (\!( c , s )\!) \Rightarrow t \Longleftrightarrow (\!( c , s )\!) \rightarrow^* (\!( \evidence{SKIP} , t )\!)$$
+
+}
+
+\nt{Dove $\rightarrow^*$ è la relazione meno riflessiva e transitiva che includa $\rightarrow$.}
+
+\subsection{La logica di Floyd-Hoare}
+
+Per compiere la verifica formale di programmi sono necessarie le \fancyglitter{specificazioni}. In questo corso si utilizzano le \fancyglitter{asserzioni}. 
+
+\dfn{Asserzioni}{
+  Un'\evidence{asserzione} (\texttt{P : Assn}), dove \texttt{Assn = State $\to$ Set}, è un predicato di stati.
+}
+
+\cor{Pre-condizioni e Post-condizioni}{
+  Un paio di asserzioni \texttt{P} e \texttt{Q} sono pre-condizioni e post-condizioni di un programma \texttt{c} nella tripla $[\texttt{P}]$ c $[\texttt{Q}]$.
+}
+
+\nt{Nei libri di testo le pre-condizioni e le post-condizioni sono segnate come \{\texttt{P}\} c \{\texttt{Q}\}, ma questa notazione \textbf{non} è permessa da AGDA.}
+
+\thm{Correttezza parziale}{
+  Una tripla $[\texttt{P}]$ c $[\texttt{Q}]$ è \evidence{valida} ($\models [\texttt{P}]$ c $[\texttt{Q}]$) se per ogni stato \texttt{s} e \texttt{t} se \texttt{P s} e $(\!(c , s)\!)  \Rightarrow t$ allora \texttt{Q t}. 
+
+  In simboli:
+      $$\forall \text{\textit{s t . }} P\;\; s \land (\!(c , s)\!)  \Rightarrow t \Longrightarrow Q\;\;t$$
+
+}
+
+\nt{Questa correttezza è solo parziale, perchè le pre-condizioni non sono richieste per dire che il programma c termini partendo da uno stato s}
+
+\section{Espressioni aritmetiche e booleane}
+
+In questa sezione si introducono le espressioni \fancyglitter{aritmetiche} (\texttt{Aexp}) e le espressioni \fancyglitter{booleane} (\texttt{Bexpr}). 
+
+\dfn{Variabili}{
+  Prendiamo \{$X_0, X_1, \dots$ \} come insieme numerabile di variabili. In AGDA formalizziamo $X_i$ con \texttt{Vn i} ossia la variabile il cui nome ha indice \texttt{i} (\texttt{i} $\in$ \texttt{Index}\footnote{\texttt{Index} è $\bbN$}).
+}
