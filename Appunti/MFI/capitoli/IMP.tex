@@ -376,8 +376,52 @@ prodotto. La relazione $\longrightarrow$ è chiamata \evidence{riduzione in un p
 
 }
 
+\begin{center}
+  \includegraphics[scale = 0.5]{images/IMP/R1.png}
+  \includegraphics[scale = 0.51]{images/IMP/R2.png}
+\end{center}
+
+\begin{itemize}
+  \item \fancyglitter{SKIP} è il comando terminale, quindi non riduce a niente e tutti i comandi che lo raggiungono sono terminati;
+  \item \fancyglitter{Comp$_1$} indica che il primo comando è terminato e quindi l'esecuzione continua con il prossimo;
+  \item \fancyglitter{Comp$_2$} indica che il primo comando si può ridurre a un comando diverso da SKIP;
+  \item \fancyglitter{IfTrue} e \fancyglitter{IfFalse} sono banali, perché IfTrue esegue il ramo THEN e IfFalse esegue il ramo ELSE;
+  \item \fancyglitter{While} si comporta come in un generico linguaggio di programmazione in cui controlla (mediante If) a ogni iterazione. Se è true continua, mentre se è false diventa SKIP (termina).
+\end{itemize}
+
+\pagebreak
+
 \subsection{Chiusure}
 
-\subsection{Relazione tra semantica Big-step e semantica Small-step}
+\dfn{Riduzione in più passi}{
+  La \evidence{riduzione in più passi} (o riduzione) è la chiusura transitiva e riflessiva della riduzione in un passo.
+}
+
+
+\begin{center}
+  \includegraphics[scale = 0.55]{images/IMP/C1.png}
+\end{center}
+
+\begin{itemize}
+  \item La regola \fancyglitter{$\longrightarrow$*-refl} postula la riflessività;
+  \item La regola \fancyglitter{$\longrightarrow$*-incl} concatena la riduzione in un passo alla riduzione in più passi\footnote{Ricorda il cons nelle liste.}.
+\end{itemize}
+
+\nt{Da queste si deriva la regola di transitività.}
+
+\begin{center}
+  \includegraphics[scale = 0.55]{images/IMP/C2.png}
+\end{center}
+
+\paragraph{In AGDA andremo a utilizzare le seguenti macro.}
+
+\begin{center}
+  \includegraphics[scale = 0.75]{images/IMP/Macro.png}
+\end{center}
+
+\pagebreak
+
+\section{Relazione tra semantica Big-step e semantica Small-step}
+
 
 
