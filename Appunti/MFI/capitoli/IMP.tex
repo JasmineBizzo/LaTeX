@@ -423,5 +423,47 @@ prodotto. La relazione $\longrightarrow$ è chiamata \evidence{riduzione in un p
 
 \section{Relazione tra semantica Big-step e semantica Small-step}
 
+\thm{Equivalenza tra Big-step e Small-step}{
+  Dati qualsiasi:
+  \begin{itemize}
+    \item $c \in$ \texttt{Com}.
+    \item $s,\;t \in$ \texttt{State}.
+  \end{itemize}
 
+  $(\!(c , s)\!)  \Rightarrow t$ se e solo se  $(\!(c , s)\!)  \longrightarrow *(\!(\text{SKIP} , t)\!) $ 
+
+}
+
+\subsection{Da Small-step a Big-step}
+
+\mlenma{Small-Big}{
+  Se una configurazione riduce in un passo a un'altra che converge in uno stato allora la configurazione iniziale converge a quello stato.
+}
+
+\begin{center}
+  \includegraphics[scale = 0.55]{images/IMP/Small-Big1.png}
+  \includegraphics[scale = 0.55]{images/IMP/Small-Big2.png}
+\end{center}
+
+\nt{Il teorema Small-Big è una semplice induzione sulla definizione di $\longrightarrow *$.}
+
+\pagebreak
+
+\subsection{Da Big-step a Small-step}
+
+\mlenma{Big-Small}{
+  Si estende la regola Comp$_2$ a $\longrightarrow *$ nella definizione di $\longrightarrow$.
+}
+\begin{center}
+  \includegraphics[scale = 0.55]{images/IMP/Big-Small1.png}
+\end{center}
+
+\nt{Il teorema Big-Small fa induzione su $(\!(c , s)\!)  \Rightarrow t$ }
+
+\begin{center}
+  \includegraphics[scale = 0.6]{images/IMP/Big-Small2.png}
+  \includegraphics[scale = 0.55]{images/IMP/Big-Small3.png}
+\end{center}
+
+\nt{Le due semantiche sono semi-decidibili, ma non decidibili secondo la teoria della computabilità.}
 
