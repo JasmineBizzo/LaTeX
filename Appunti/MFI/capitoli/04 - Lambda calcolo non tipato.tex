@@ -1,4 +1,4 @@
-\chapter{Il \texorpdfstring{$\mathcal{\lambda}$}--calcolo non tipato}
+\chapter{Il \texorpdfstring{$\mathcal{\lambda}$}--calcolo}
 
 \nt{Questo capitolo è concettualmente affine al capitolo "Il $\lambda$-calcolo" negli appunti del corso di "Linguaggi e paradigmi di programmazione"}
 
@@ -14,7 +14,9 @@ $$M, N\:::= x \:\:\:|\:\:\: (\lambda x.M)\:\:\: |\:\:\: (M N)$$}
 \nt{$\lambda x.M$ è un'astrazione o funzione con parametro formale x e corpo M}
 \nt{$(M N)$ è l'applicazione delle funzione $M$ al parametro attuale $N$}
 
-\section{Semantica}
+\section{Il \texorpdfstring{$\mathcal{\lambda}$}--calcolo non tipato}
+
+\subsection{Semantica}
 
 \nt{Applicare una funzione $\lambda x.M$ a un argomento N significa valutare il corpo della funzione (M) in cui ogni occorrenza libera dell'argomento (x) è stata sostituita da N}
 
@@ -80,7 +82,7 @@ Partendo da ciò: $\text{\underline{if-then-else}} \equiv \lambda x\:\:y\:\:z.x\
 \end{itemize}
 }
 
-\section{Numerali di Church}
+\subsection{Numerali di Church}
 
 \dfn{Numerale di Church}{
 $$\underline{n}\equiv \lambda x\:\:y.x(...(x\:\:y)...)$$
@@ -196,8 +198,45 @@ $$f\:(n_1,\:...,\:n_k) \simeq m \Leftrightarrow F\:\:n_1 .... n_k \br \underline
 Dove $f(n^\rightarrow)\simeq m$ significa che $f(n^\rightarrow)$ è definita uguale a $(n^\rightarrow = n_1,\:...,\:n_k)$
 }
 
+\section{Il \texorpdfstring{$\mathcal{\lambda}$}--calcolo tipato}
 
+\subsection{Tipi}
 
+\qs{}{Come si interpreta un termine $X\:\:X$?}
+
+\paragraph{Risposta:} nel $\lambda$-calcolo non tipato si può anche scrivere una cosa come l'autoapplicazione. Ma in generale una funzione non dovrebbe appartenere al proprio dominio.
+
+\ex{}{
+Se il primo $X \:\in\:A\rightarrow A$ e il secondo $X\rightarrow A$ non esiste alcun $A \not= \{*\}$ tale che $A \simeq A \rightarrow A$ in Set\footnote{Categoria degli insiemi}
+}
+
+\dfn{Tipi semplici}{
+$$A,\:\:B ::= \alpha | A\rightarrow B$$
+dove $\alpha \in \{\text{bool, nat, ...}\}$ è \underline{atomico} fissate l'interpretazione $[\alpha]$ (es. [nat] = $\bbN$)
+
+$$[A \rightarrow B] = [B]^{[A]}$$ 
+
+dove il dominio è $[A]$ e il codominio è $[B]$
+}
+
+\dfn{Sistema di tipo}{
+$$\Gamma \vdash M : A \text{ "$M$ ha tipo $A$ in $\Gamma$"}$$
+}
+
+\dfn{Contesto}{
+Un contesto è un insieme finito di giudizi di tipo ($x_i : A_i$):
+$$\Gamma = x_1 : A_1,\:\:...,x_n : A_n, \text{con $x_i \not = x_j$ se $i\not=j$}$$
+}
+
+\cor{}{
+Valgono le seguenti proprietà:
+\begin{itemize}
+    \item ax$\frac{}{\Gamma,\:\:x : A \vdash x : A}$;
+    \item $\rightarrow E \frac{\Gamma \vdash M : A\rightarrow B \:\:\:\:\:\Gamma\vdash N : A}{\Gamma \vdash M\:\:N : B}$;
+    \item $\rightarrow I\frac{\Gamma, \:\: x : A \vdash M : B}{\Gamma \vdash \lambda x: A.M : A \rightarrow B}$
+\end{itemize}
+Dove $\Gamma,\:\:x\:\:\in\:\:A = \Gamma \cup \{x : A\}$ e $x\:\: \not\in$ Dom($\Gamma$)
+}
 
 
 
