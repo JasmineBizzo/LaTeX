@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <help_text/>
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>200</x>
+      <y>0</y>
+      <w>48</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>Attore</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLDeployment</id>
+    <coordinates>
+      <x>456</x>
+      <y>32</y>
+      <w>88</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Sistema</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>216</x>
+      <y>72</y>
+      <w>24</w>
+      <h>544</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;660.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>488</x>
+      <y>72</y>
+      <w>24</w>
+      <h>536</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;650.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>216</x>
+      <y>96</y>
+      <w>296</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;
+1. generaFoglioRiepilogativo(evento, servizio) 	</panel_attributes>
+    <additional_attributes>10.0;20.0;350.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>216</x>
+      <y>120</y>
+      <w>296</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+foglio riepilogativo</panel_attributes>
+    <additional_attributes>10.0;20.0;350.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>216</x>
+      <y>176</y>
+      <w>296</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;
+2. aggiungiPrepRic(prepRic)	</panel_attributes>
+    <additional_attributes>10.0;20.0;350.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>184</x>
+      <y>176</y>
+      <w>336</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>LOOP
+fg=blue
+bg=#8CB4FF
+layer=-1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>216</x>
+      <y>200</y>
+      <w>296</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+ok</panel_attributes>
+    <additional_attributes>10.0;20.0;350.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>216</x>
+      <y>248</y>
+      <w>296</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;
+3. ordinaElenco(elenco)</panel_attributes>
+    <additional_attributes>10.0;20.0;350.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>216</x>
+      <y>272</y>
+      <w>296</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+ok</panel_attributes>
+    <additional_attributes>10.0;20.0;350.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>184</x>
+      <y>248</y>
+      <w>336</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>OPT
+fg=#128C86
+bg=#B8E0E0
+layer=-1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>104</x>
+      <y>96</y>
+      <w>520</w>
+      <h>248</h>
+    </coordinates>
+    <panel_attributes>LOOP
+fg=blue
+bg=#8CB4FF
+layer=-1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>160</x>
+      <y>152</y>
+      <w>400</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>LOOP
+fg=blue
+bg=#8CB4FF
+layer=-1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>184</x>
+      <y>384</y>
+      <w>344</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>OPT
+fg=#128C86
+bg=#B8E0E0</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>216</x>
+      <y>384</y>
+      <w>296</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;
+4. consultaTabellone()</panel_attributes>
+    <additional_attributes>10.0;20.0;350.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>216</x>
+      <y>408</y>
+      <w>296</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+tabellone dei turni</panel_attributes>
+    <additional_attributes>10.0;20.0;350.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>216</x>
+      <y>440</y>
+      <w>296</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;
+5. assegnaCompito(prepRic, turno, cuoco?)</panel_attributes>
+    <additional_attributes>10.0;20.0;350.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>216</x>
+      <y>464</y>
+      <w>296</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+compito</panel_attributes>
+    <additional_attributes>10.0;20.0;350.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>184</x>
+      <y>488</y>
+      <w>344</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>OPT
+fg=#128C86
+bg=#B8E0E0</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>216</x>
+      <y>496</y>
+      <w>296</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;
+6. stima(compito, tempoRichiesto, quantPorz)</panel_attributes>
+    <additional_attributes>10.0;20.0;350.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>216</x>
+      <y>520</y>
+      <w>296</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+ok</panel_attributes>
+    <additional_attributes>10.0;20.0;350.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>160</x>
+      <y>360</y>
+      <w>400</w>
+      <h>208</h>
+    </coordinates>
+    <panel_attributes>LOOP
+fg=blue
+bg=#8CB4FF</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>112</x>
+      <y>144</y>
+      <w>488</w>
+      <h>432</h>
+    </coordinates>
+    <panel_attributes>LOOP
+fg=blue
+bg=#8CB4FF</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
