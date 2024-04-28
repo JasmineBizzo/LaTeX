@@ -4,12 +4,191 @@
 
 \section{Passo 1}
 
+\section*{1. generaFoglioRiepilogativo(\underline{evento}: Evento, \underline{servizio}: Servizio):}
+
+\paragraph{Pre-condizioni:}
+
+\begin{itemize}
+  \item \underline{\textit{servizio}} \textbf{è previsto da} \underline{\textit{evento}};
+  \item \underline{\textit{evento}} \textbf{è assegnato a} \underline{\textit{ch}};
+  \item il Menù $m$ \textbf{è in uso per} \underline{\textit{servizio}}.
+\end{itemize}
+
+\paragraph{Post-condizioni:}
+
+\begin{itemize}
+  \item è stata creata un'istanza $f$ di FoglioRiepilogativo;
+  \item è stata creata una lista $mc$ di MansioneDiCucina;
+  \item $f$ \textbf{riferito a un} \underline{\textit{servizio}};
+  \item \textlangle $ $ per ogni istanza di MansioneDiCucina $mc$ \textbf{presente in} $m$ \textrangle:
+    \begin{itemize}
+      \item è stata creata un'istanza di Compito $c$;
+      \item $c.daPreparare$ = sì;
+      \item $c.completato$ = no;
+      \item $c.fuoriMenu$ = no;
+      \item $f$ \textbf{contiene} $c$;
+      \item $c$ \textbf{consiste in} $mc$.
+    \end{itemize}
+  \item $ch$ \textbf{ha creato} $f$. 
+\end{itemize}
+
+\section*{1a.1. apriFoglioPerModifica(\underline{unFoglio}: Foglio riepilogativo):}
+
+\paragraph{Pre-condizioni:}
+
+\begin{itemize}
+  \item \underline{\textit{unFoglio}} \textbf{è riferito a un} \textit{servizio};
+  \item \textit{servizio} \textbf{è previsto da} \textit{evento}.
+\end{itemize}
+
+\paragraph{Post-condizioni:}
+
+\begin{itemize}
+  \item se $ch$ è assegnato a \textit{evento} e \textit{s.stato} == confermato.
+\end{itemize}
+
 \section{Passo 2}
+
+\section*{2. aggiungiPrepRic(\underline{prepRic}: Mansione di cucina):}
+
+\paragraph{Pre-condizioni:}
+
+\begin{itemize}
+  \item è in corso la modifica del FoglioRiepilogativo $f$.
+\end{itemize}
+
+\paragraph{Post-condizioni:}
+
+\begin{itemize}
+  \item è stata creata l'associazione \textbf{elencata} tra $f$ e \underline{\textit{prepRic}};
+  \item è stata creata un'istanza di Compito $c$;
+  \item $c.daPreparare$ = sì;
+  \item $c.completato$ = no;
+  \item $c.fuoriMenu$ = sì;
+  \item $f$ \textbf{contiene} $c$;
+  \item $c$ \textbf{consiste in} $mc$.
+\end{itemize}
+
+\section*{2a.1. rimuoviPrepRic(\underline{prepRic}: Mansione di cucina):}
+
+\paragraph{Pre-condizioni:}
+
+\begin{itemize}
+  \item è in corso la modifica del FoglioRiepilogativo $f$;
+  \item il Compito $c$ è \textbf{contenuto in} $f$ e \textbf{consiste in} \underline{\textit{prepRic}}.    
+\end{itemize}
+
+\paragraph{Post-condizioni:}
+
+\begin{itemize}
+  \item l'associazione \textbf{elencata} tra $f$ e \underline{\textit{prepRic}} è rimossa.
+\end{itemize}
 
 \section{Passo 3}
 
+\section*{3. ordinaElenco(\underline{prepRic}: Mansione di cucina, \underline{posizione}: numerico):}
+
+\paragraph{Pre-condizioni:}
+
+\begin{itemize}
+  \item è in corso la modifica del FoglioRiepilogativo $f$;
+\end{itemize}
+
+\paragraph{Post-condizioni:}
+
+\begin{itemize}
+  \item l'associazione \textbf{elencata} tra $f$ e \underline{\textit{prepRic}} è modificata in accordo alla nuova \underline{\textit{posizione}}.
+\end{itemize}
+
 \section{Passo 4}
+
+\section*{4. consultaTabellone():}
+
+\paragraph{Pre-condizioni:}
+
+\begin{itemize}
+  \item --------------
+\end{itemize}
+
+\paragraph{Post-condizioni:}
+
+\begin{itemize}
+  \item --------------
+\end{itemize}
+
+\nt{Trattandosi di un'interrogazione di sistema non ha pre-condizioni o post-condizioni perché può essere fatta in qualsiasi momento.}
 
 \section{Passo 5}
 
+\section*{5. assegnaCompito(\underline{prepRic}: Mansione di cucina, \underline{turno}: Turno, \underline{cuoco?}: Cuoco):}
+
+\paragraph{Pre-condizioni:}
+
+\begin{itemize}
+  \item 
+\end{itemize}
+
+\paragraph{Post-condizioni:}
+
+\begin{itemize}
+  \item 
+\end{itemize}
+
+\section*{5a.1. modificaCompito(\underline{compito}: Compito, \underline{prepRic?}: Mansione di cucina, \underline{turno?}: Turno, \underline{cuoco?}: Cuoco):}
+
+\paragraph{Pre-condizioni:}
+
+\begin{itemize}
+  \item 
+\end{itemize}
+
+\paragraph{Post-condizioni:}
+
+\begin{itemize}
+  \item 
+\end{itemize}
+
+\section*{5b.1. eliminaCompito(\underline{compito}: Compito)}
+
+\paragraph{Pre-condizioni:}
+
+\begin{itemize}
+  \item 
+\end{itemize}
+
+\paragraph{Post-condizioni:}
+
+\begin{itemize}
+  \item 
+\end{itemize}
+
+\section*{5c.1. specificaPronta(\underline{prepRic}: Mansione di cucina)}
+
+\paragraph{Pre-condizioni:}
+
+\begin{itemize}
+  \item 
+\end{itemize}
+
+\paragraph{Post-condizioni:}
+
+\begin{itemize}
+  \item 
+\end{itemize}
+
 \section{Passo 6}
+
+\section*{6. stima(\underline{compito}: Compito, \underline{tempoRichiesto}: numerico, \underline{quantPorz}: testo)}
+
+\paragraph{Pre-condizioni:}
+
+\begin{itemize}
+  \item 
+\end{itemize}
+
+\paragraph{Post-condizioni:}
+
+\begin{itemize}
+  \item 
+\end{itemize}
+
