@@ -23,8 +23,7 @@
   \item \textlangle $ $ per ogni istanza di MansioneDiCucina $mc$ \textbf{presente in} $m$ \textrangle:
     \begin{itemize}
       \item è stata creata un'istanza di Compito $c$;
-      \item $c.daPreparare$ = sì;
-      \item $c.completato$ = no;
+      \item $c.completato$ = sì;
       \item $c.fuoriMenu$ = no;
       \item $f$ \textbf{contiene} $c$;
       \item $c$ \textbf{consiste in} $mc$.
@@ -32,12 +31,12 @@
   \item $ch$ \textbf{ha creato} $f$. 
 \end{itemize}
 
-\section*{1a.1. apriFoglioPerModifica(\underline{unFoglio}: Foglio riepilogativo):}
+\section*{1a.1. apriFoglio(\underline{evento}: Evento, \underline{servizio}: Servizio):}
 
 \paragraph{Pre-condizioni:}
 
 \begin{itemize}
-  \item \underline{\textit{unFoglio}} \textbf{è riferito a un} \textit{servizio};
+  \item un FoglioRiepilogativo $f$ \textbf{è riferito a un} \textit{servizio};
   \item \textit{servizio} \textbf{è previsto da} \textit{evento}.
 \end{itemize}
 
@@ -120,32 +119,39 @@
 
 \section{Passo 5}
 
-\section*{5. assegnaCompito(\underline{prepRic}: Mansione di cucina, \underline{turno}: Turno, \underline{cuoco?}: Cuoco):}
+\section*{5. assegnaCompito(\underline{compito}: Compito, \underline{turno}: TurnoDiCucina, \underline{cuoco?}: Cuoco):}
 
 \paragraph{Pre-condizioni:}
 
 \begin{itemize}
-  \item 
+  \item è in corso la modifica del FoglioRiepilogativo $f$;
+  \item $f$ \textbf{contiene} \underline{\textit{compito}};
+  \item \underline{\textit{turno}} non è concluso.
 \end{itemize}
 
 \paragraph{Post-condizioni:}
 
 \begin{itemize}
-  \item 
+  \item \underline{\textit{compito}}.turno = \underline{\textit{turno}};
+  \item $[$se è specificato \underline{\textit{cuoco}} e \underline{\textit{cuoco}}.disponibile == sì $]$ \underline{\textit{compito}}.cuoco = \underline{\textit{cuoco}}.
 \end{itemize}
 
-\section*{5a.1. modificaCompito(\underline{compito}: Compito, \underline{prepRic?}: Mansione di cucina, \underline{turno?}: Turno, \underline{cuoco?}: Cuoco):}
+\section*{5a.1. modificaCompito(\underline{compito}: Compito, \underline{prepRic?}: Mansione di cucina, \underline{turno?}: TurnoDiCucina, \underline{cuoco?}: Cuoco):}
 
 \paragraph{Pre-condizioni:}
 
 \begin{itemize}
-  \item 
+  \item è in corso la modifica del FoglioRiepilogativo $f$;
+  \item $f$ \textbf{contiene} \underline{\textit{compito}};
+  \item $[$se è specificato \underline{\textit{turno}}$]$ \underline{\textit{turno}} non è concluso.
 \end{itemize}
 
 \paragraph{Post-condizioni:}
 
 \begin{itemize}
-  \item 
+  \item $[$se è specificata \underline{\textit{prepRic}}$]$ \underline{\textit{compito}}.prepRic = \underline{\textit{prepRic}};
+  \item $[$se è specificato \underline{\textit{turno}}$]$ \underline{\textit{compito}}.turno = \underline{\textit{turno}};
+  \item $[$se è specificato \underline{\textit{cuoco}} e \underline{\textit{cuoco}}.disponibile == sì$]$ \underline{\textit{compito}}.cuoco = \underline{\textit{cuoco}};
 \end{itemize}
 
 \section*{5b.1. eliminaCompito(\underline{compito}: Compito)}
@@ -153,42 +159,50 @@
 \paragraph{Pre-condizioni:}
 
 \begin{itemize}
-  \item 
+  \item è in corso la modifica del FoglioRiepilogativo $f$;
+  \item $f$ \textbf{contiene} \underline{\textit{compito}}.
 \end{itemize}
 
 \paragraph{Post-condizioni:}
 
 \begin{itemize}
-  \item 
+  \item $[$se $turno$ \textbf{in cui è svolto} \underline{\textit{compito}} non è concluso$]$ 
+\begin{itemize}
+  \item l'associazione \textbf{contiene} tra $f$ e \underline{\textit{compito}} è eliminata;
+  \item l'istanza \underline{\textit{compito}} è eliminata.
+\end{itemize}
 \end{itemize}
 
-\section*{5c.1. specificaPronta(\underline{prepRic}: Mansione di cucina)}
+\section*{5c.1. specificaPronto(\underline{compito}: Compito)}
 
 \paragraph{Pre-condizioni:}
 
 \begin{itemize}
-  \item 
+  \item è in corso la modifica del FoglioRiepilogativo $f$;
+  \item $f$ \textbf{contiene} \underline{\textit{compito}}.
 \end{itemize}
 
 \paragraph{Post-condizioni:}
 
 \begin{itemize}
-  \item 
+  \item \underline{\textit{compito}}.completato = sì.
 \end{itemize}
 
 \section{Passo 6}
 
-\section*{6. stima(\underline{compito}: Compito, \underline{tempoRichiesto}: numerico, \underline{quantPorz}: testo)}
+\section*{6. stima(\underline{compito}: Compito, \underline{tempoRichiesto?}: numerico, \underline{quantPorz?}: testo)}
 
 \paragraph{Pre-condizioni:}
 
 \begin{itemize}
-  \item 
+  \item è in corso la modifica del FoglioRiepilogativo $f$;
+\item \underline{\textit{compito}} \textbf{è svolto in} un TurnoDiCucina $t$ non concluso.
 \end{itemize}
 
 \paragraph{Post-condizioni:}
 
 \begin{itemize}
-  \item 
+  \item $[$se è specificato \underline{\textit{tempoRichiesto}}$]$ \underline{\textit{compito}}.tempoStimato = \underline{\textit{tempoRichiesto}};
+  $[$se è specificato \underline{\textit{quantPorz}}$]$ \underline{\textit{quantità}}.tempoStimato = \underline{\textit{quantPorz}}.
 \end{itemize}
 

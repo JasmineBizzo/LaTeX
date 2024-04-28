@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<diagram program="umlet" version="15.0.0">
+<diagram program="umlet" version="15.1">
   <zoom_level>7</zoom_level>
   <element>
     <id>UMLActor</id>
@@ -98,7 +98,7 @@ fg=GRAY</panel_attributes>
       <h>28</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
-ok	
+foglio riepilogativo aggiornato
 fg=GRAY</panel_attributes>
     <additional_attributes>10.0;20.0;350.0;20.0</additional_attributes>
   </element>
@@ -111,7 +111,7 @@ fg=GRAY</panel_attributes>
       <h>28</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;&gt;
-3. ordinaElenco(elenco)
+3. ordinaElenco(compito, posizione)
 fg=GRAY</panel_attributes>
     <additional_attributes>10.0;20.0;350.0;20.0</additional_attributes>
   </element>
@@ -124,7 +124,7 @@ fg=GRAY</panel_attributes>
       <h>28</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
-ok
+foglio riepilogativo aggiornato
 fg=GRAY</panel_attributes>
     <additional_attributes>10.0;20.0;350.0;20.0</additional_attributes>
   </element>
@@ -214,7 +214,7 @@ fg=GRAY</panel_attributes>
       <h>28</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;&gt;
-5. assegnaCompito(prepRic, turno, cuoco?)
+5. assegnaCompito(compito, turno, cuoco?)
 fg=GRAY</panel_attributes>
     <additional_attributes>10.0;20.0;350.0;20.0</additional_attributes>
   </element>
@@ -227,7 +227,7 @@ fg=GRAY</panel_attributes>
       <h>28</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
-compito
+ok
 fg=GRAY</panel_attributes>
     <additional_attributes>10.0;20.0;350.0;20.0</additional_attributes>
   </element>
@@ -252,7 +252,7 @@ fg=GRAY</panel_attributes>
       <h>28</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;&gt;
-6. stima(compito, tempoRichiesto, quantPorz)
+6. stima(compito, tempoRichiesto?, quantPorz?)
 fg=GRAY</panel_attributes>
     <additional_attributes>10.0;20.0;350.0;20.0</additional_attributes>
   </element>
@@ -278,6 +278,7 @@ fg=GRAY</panel_attributes>
       <h>182</h>
     </coordinates>
     <panel_attributes>LOOP
+
 fg=GRAY</panel_attributes>
     <additional_attributes/>
   </element>
@@ -303,7 +304,7 @@ fg=GRAY</panel_attributes>
       <h>28</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
-ok
+foglio riepilogativo associato
 fg=#9E1C8C</panel_attributes>
     <additional_attributes>10.0;20.0;350.0;20.0</additional_attributes>
   </element>
@@ -316,7 +317,7 @@ fg=#9E1C8C</panel_attributes>
       <h>28</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;&gt;
-1a.1 apriFoglioPerModifica(unFoglio) 	
+1a.1. apriFoglio(evento, servizio) 	
 fg=#9E1C8C</panel_attributes>
     <additional_attributes>10.0;20.0;350.0;20.0</additional_attributes>
   </element>
@@ -359,7 +360,7 @@ layer=-2
       <h>28</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
-1a.1a.1 Errore permessi mancanti
+1a.1a.1. Errore permessi mancanti
 fg=#D3001B</panel_attributes>
     <additional_attributes>10.0;20.0;350.0;20.0</additional_attributes>
   </element>

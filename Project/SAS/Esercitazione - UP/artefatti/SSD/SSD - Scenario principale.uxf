@@ -6,7 +6,7 @@
     <id>UMLActor</id>
     <coordinates>
       <x>208</x>
-      <y>64</y>
+      <y>56</y>
       <w>48</w>
       <h>88</h>
     </coordinates>
@@ -17,7 +17,7 @@
     <id>UMLDeployment</id>
     <coordinates>
       <x>464</x>
-      <y>96</y>
+      <y>88</y>
       <w>88</w>
       <h>40</h>
     </coordinates>
@@ -28,7 +28,7 @@
     <id>Relation</id>
     <coordinates>
       <x>224</x>
-      <y>136</y>
+      <y>128</y>
       <w>24</w>
       <h>544</h>
     </coordinates>
@@ -39,7 +39,7 @@
     <id>Relation</id>
     <coordinates>
       <x>496</x>
-      <y>136</y>
+      <y>128</y>
       <w>24</w>
       <h>536</h>
     </coordinates>
@@ -50,7 +50,7 @@
     <id>Relation</id>
     <coordinates>
       <x>224</x>
-      <y>160</y>
+      <y>152</y>
       <w>296</w>
       <h>32</h>
     </coordinates>
@@ -62,7 +62,7 @@
     <id>Relation</id>
     <coordinates>
       <x>224</x>
-      <y>184</y>
+      <y>176</y>
       <w>296</w>
       <h>32</h>
     </coordinates>
@@ -74,7 +74,7 @@ foglio riepilogativo</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>224</x>
-      <y>240</y>
+      <y>232</y>
       <w>296</w>
       <h>32</h>
     </coordinates>
@@ -86,7 +86,7 @@ foglio riepilogativo</panel_attributes>
     <id>UMLFrame</id>
     <coordinates>
       <x>192</x>
-      <y>240</y>
+      <y>232</y>
       <w>336</w>
       <h>64</h>
     </coordinates>
@@ -100,43 +100,43 @@ layer=-1</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>224</x>
-      <y>264</y>
+      <y>256</y>
       <w>296</w>
       <h>32</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
-ok	</panel_attributes>
+foglio riepilogativo aggiornato</panel_attributes>
     <additional_attributes>10.0;20.0;350.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>224</x>
-      <y>312</y>
+      <y>304</y>
       <w>296</w>
       <h>32</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;&gt;
-3. ordinaElenco(elenco)</panel_attributes>
+3. ordinaElenco(compito, posizione)</panel_attributes>
     <additional_attributes>10.0;20.0;350.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>224</x>
-      <y>336</y>
+      <y>328</y>
       <w>296</w>
       <h>32</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
-ok</panel_attributes>
+foglio riepilogativo aggiornato</panel_attributes>
     <additional_attributes>10.0;20.0;350.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLFrame</id>
     <coordinates>
       <x>192</x>
-      <y>312</y>
+      <y>304</y>
       <w>336</w>
       <h>56</h>
     </coordinates>
@@ -150,7 +150,7 @@ layer=-1</panel_attributes>
     <id>UMLFrame</id>
     <coordinates>
       <x>112</x>
-      <y>160</y>
+      <y>152</y>
       <w>520</w>
       <h>248</h>
     </coordinates>
@@ -164,7 +164,7 @@ layer=-2</panel_attributes>
     <id>UMLFrame</id>
     <coordinates>
       <x>168</x>
-      <y>216</y>
+      <y>208</y>
       <w>400</w>
       <h>168</h>
     </coordinates>
@@ -178,7 +178,7 @@ layer=-1</panel_attributes>
     <id>UMLFrame</id>
     <coordinates>
       <x>192</x>
-      <y>448</y>
+      <y>440</y>
       <w>344</w>
       <h>56</h>
     </coordinates>
@@ -191,7 +191,7 @@ bg=#B8E0E0</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>224</x>
-      <y>448</y>
+      <y>440</y>
       <w>296</w>
       <h>32</h>
     </coordinates>
@@ -203,7 +203,7 @@ bg=#B8E0E0</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>224</x>
-      <y>472</y>
+      <y>464</y>
       <w>296</w>
       <h>32</h>
     </coordinates>
@@ -215,31 +215,31 @@ tabellone dei turni</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>224</x>
-      <y>504</y>
+      <y>496</y>
       <w>296</w>
       <h>32</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;&gt;
-5. assegnaCompito(prepRic, turno, cuoco?)</panel_attributes>
+5. assegnaCompito(compito, turno, cuoco?)</panel_attributes>
     <additional_attributes>10.0;20.0;350.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>224</x>
-      <y>528</y>
+      <y>520</y>
       <w>296</w>
       <h>32</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
-compito</panel_attributes>
+ok</panel_attributes>
     <additional_attributes>10.0;20.0;350.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLFrame</id>
     <coordinates>
       <x>192</x>
-      <y>552</y>
+      <y>544</y>
       <w>344</w>
       <h>64</h>
     </coordinates>
@@ -252,19 +252,19 @@ bg=#B8E0E0</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>224</x>
-      <y>560</y>
+      <y>552</y>
       <w>296</w>
       <h>32</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;&gt;
-6. stima(compito, tempoRichiesto, quantPorz)</panel_attributes>
+6. stima(compito, tempoRichiesto?, quantPorz?)</panel_attributes>
     <additional_attributes>10.0;20.0;350.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>224</x>
-      <y>584</y>
+      <y>576</y>
       <w>296</w>
       <h>32</h>
     </coordinates>
@@ -276,7 +276,7 @@ ok</panel_attributes>
     <id>UMLFrame</id>
     <coordinates>
       <x>168</x>
-      <y>424</y>
+      <y>416</y>
       <w>400</w>
       <h>208</h>
     </coordinates>
@@ -289,7 +289,7 @@ bg=#8CB4FF</panel_attributes>
     <id>UMLFrame</id>
     <coordinates>
       <x>128</x>
-      <y>208</y>
+      <y>200</y>
       <w>488</w>
       <h>432</h>
     </coordinates>
