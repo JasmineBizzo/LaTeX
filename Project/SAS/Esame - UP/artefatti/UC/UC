@@ -77,7 +77,13 @@ Se ci fosse un’app che gestisce tutto ciò vorrei poter mettere sui turni una 
 
 + Può modificare dei turni di cucina esistenti (singoli turni o multipli).
 
++ Se modifica tutti i turni deve consultarsi con i cuochi.
+
 + Può aggiungere dei turni di cucina nei giorni liberi.
+
++ Può eliminare dei turni.
+
++ Se modifica manda mail per chiedere la disponibilità.
 
 + I turni di servizio hanno un orario più tempo per preparare e il tempo per sistemare a evento concluso. Se un evento è ricorrente sarebbe bello poterne tenere conto.
 
@@ -93,14 +99,48 @@ Se ci fosse un’app che gestisce tutto ciò vorrei poter mettere sui turni una 
 -- Viola, organizzatrice di eventi e wedding planner --
 -------------------------------------------------------
 
+**se non vuole impostare i turni della cucina passa al passo 2**
 
+1) Imposta i turni della cucina e, opzionalmente, segna il luogo.
 
+2) Opzionalmente, raggruppa i turni consecutivi.
+
+3) Opzionalmente, modifica o cancella dei turni.
+
+4) Opzionalmente, controlla gli eventi.
+
+**se non vuole lavorare su nessun evento termina il Caso d'Uso**
+
+5) Scegli un evento su cui lavorare.
+
+6) Imposta un orario per il turno di servizio.
+
+**se ci sono turni di servizio senza orario ritorna al passo 6*
+
+7) Se l'evento è ricorrente si segna lo schema.
+
+**se ci sono altri eventi senza turni di servizio organizzati torna al passo 4, altrimenti termina il Caso d'Uso**
 
 -----------------------------------------------------------------------------
 -- Alex, ex-chef in un ristorante, ora titolare di una società di catering --
 -----------------------------------------------------------------------------
 
+**se ha già impostato i turni standard per il semestre passa al passo 2**
 
+1) Imposta i turni standard della cucina per il semestre successivo.
 
+2) Se deve modificare tutti i turni si consulta con i cuochi.
 
+3) Opzionalmente, modifica dei turni di cucina esistenti.
 
+4) Opzionalmente, aggiunge dei turni di cucina nei giorni liberi.
+
+5) Opzionalmente, cancella dei turni di cucina.
+
+6) Se ha fatto delle modifiche, aggiunte, cancellazioni notifica i cuochi.
+
+7) Per ogni servizio si segna un turno di servizio mettendo una scadenza oltre la quale non si può più togliere la disponibilità.
+
+8) Se l'evento è ricorrente si segna lo schema.
+
+9) Opzionalmente, modifica/rimuove/riaggiunge la scadenza.
