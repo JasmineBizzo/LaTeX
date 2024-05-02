@@ -85,7 +85,7 @@
 
 \section{Passo 3}
 
-\section*{3. ordinaElenco(\underline{prepRic}: Mansione di cucina, \underline{posizione}: numerico):}
+\section*{3. ordinaElenco(\underline{compito}: Compito, \underline{posizione}: numerico):}
 
 \paragraph{Pre-condizioni:}
 
@@ -96,7 +96,7 @@
 \paragraph{Post-condizioni:}
 
 \begin{itemize}
-  \item l'associazione \textbf{elencata} tra $f$ e \underline{\textit{prepRic}} è modificata in accordo alla nuova \underline{\textit{posizione}}.
+  \item l'associazione \textbf{contiene} tra $f$ e \underline{\textit{compito}} è modificata in accordo alla nuova \underline{\textit{posizione}}.
 \end{itemize}
 
 \section{Passo 4}
@@ -132,7 +132,7 @@
 \paragraph{Post-condizioni:}
 
 \begin{itemize}
-  \item \underline{\textit{compito}}.turno = \underline{\textit{turno}};
+  \item \underline{\textit{compito}} \textbf{è svolto in} \underline{\textit{turno}};
   \item $[$se è specificato \underline{\textit{cuoco}} e \underline{\textit{cuoco}}.disponibile == sì $]$ \underline{\textit{compito}}.cuoco = \underline{\textit{cuoco}}.
 \end{itemize}
 
