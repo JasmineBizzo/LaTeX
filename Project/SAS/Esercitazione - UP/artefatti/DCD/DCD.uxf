@@ -44,7 +44,7 @@ fg=gray</panel_attributes>
     <coordinates>
       <x>900</x>
       <y>171</y>
-      <w>270</w>
+      <w>396</w>
       <h>288</h>
     </coordinates>
     <panel_attributes>RecipeManagement
@@ -148,7 +148,8 @@ description: String
     <panel_attributes>Recipe
 fg=gray
 --
--name: String</panel_attributes>
+-name: String
+-quantity: String</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -413,8 +414,8 @@ fg=gray</panel_attributes>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>1350</x>
-      <y>252</y>
+      <x>1314</x>
+      <y>243</y>
       <w>1062</w>
       <h>774</h>
     </coordinates>
@@ -437,6 +438,8 @@ fg=gray</panel_attributes>
 -notifySheetGenerate(sh: SummarySheet)
 -notifySummarySheetOpened(sh: SummarySheet)
 -notifyConsultBoard(shifts: HashMap\&lt;KitchenShift, List&lt;User&gt;\&gt;)
+-notifyPrepRicAdded(j: Job)
+-notifyPrepRicRemoved(j: Job)
 --
 *operations methods*
 +generateSummarySheet (event: Event, service: Service): 
@@ -471,6 +474,7 @@ SummarySheet
 create(owner: User, service : Service): SummarySheet
 +isOwner(user: User): boolean
 +addDuty(duty: KitchenDuty): Job
++deleteDuty(duty: KitchenDuty)
 +addJob(job: Job)</panel_attributes>
     <additional_attributes/>
   </element>
@@ -490,8 +494,8 @@ m1=0..1</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2196</x>
-      <y>882</y>
+      <x>1125</x>
+      <y>207</y>
       <w>117</w>
       <h>54</h>
     </coordinates>
@@ -510,6 +514,7 @@ m1=0..1</panel_attributes>
     </coordinates>
     <panel_attributes>Job
 --
+-cook: User
 -duty: KitchenDuty
 -extra: boolean
 -quantity: String
@@ -583,26 +588,27 @@ m1=0..n</panel_attributes>
       <x>918</x>
       <y>207</y>
       <w>108</w>
-      <h>45</h>
+      <h>54</h>
     </coordinates>
     <panel_attributes>Preparation
 fg=gray
 --
--name: String</panel_attributes>
+-name: String
+-quantity: String</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2250</x>
-      <y>756</y>
-      <w>63</w>
-      <h>144</h>
+      <x>1224</x>
+      <y>252</y>
+      <w>1053</w>
+      <h>675</h>
     </coordinates>
     <panel_attributes>consist
 m1=0..1
 lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;140.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;730.0;1150.0;730.0;1150.0;570.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -735,5 +741,29 @@ getSummarySheet( ): SummarySheet</panel_attributes>
 lt=&lt;-
 m1=0..1</panel_attributes>
     <additional_attributes>340.0;250.0;340.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1017</x>
+      <y>216</y>
+      <w>126</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+</panel_attributes>
+    <additional_attributes>120.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1017</x>
+      <y>252</y>
+      <w>171</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+</panel_attributes>
+    <additional_attributes>170.0;10.0;170.0;30.0;10.0;30.0</additional_attributes>
   </element>
 </diagram>

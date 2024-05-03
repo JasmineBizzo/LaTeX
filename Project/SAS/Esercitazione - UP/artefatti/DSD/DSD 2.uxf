@@ -366,7 +366,7 @@ bg=#e7bfff</panel_attributes>
       <x>370</x>
       <y>660</y>
       <w>980</w>
-      <h>70</h>
+      <h>60</h>
     </coordinates>
     <panel_attributes>LOOP
 for all kter in eventReceivers
@@ -436,6 +436,18 @@ bg=#8CB4FF</panel_attributes>
     <panel_attributes>lt=&lt;.
 throw UseCaseLogicException
 fg=red</panel_attributes>
+    <additional_attributes>10.0;20.0;320.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>290</x>
+      <y>710</y>
+      <w>340</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+job</panel_attributes>
     <additional_attributes>10.0;20.0;320.0;20.0</additional_attributes>
   </element>
 </diagram>
