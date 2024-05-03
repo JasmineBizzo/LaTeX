@@ -435,7 +435,8 @@ fg=gray</panel_attributes>
 +addReceiver(er: KitchenTaskEventReceiver)
 +removeReceiver(er: KitchenTaskEventReceiver)
 -notifySheetGenerate(sh: SummarySheet)
--notifyJobAdded(sh: SummarySheet, j: Job)
+-notifySummarySheetOpened(sh: SummarySheet)
+-notifyConsultBoard(shifts: HashMap\&lt;KitchenShift, List&lt;User&gt;\&gt;)
 --
 *operations methods*
 +generateSummarySheet (event: Event, service: Service): 
@@ -463,11 +464,13 @@ SummarySheet
     </coordinates>
     <panel_attributes>SummarySheet
 --
-owner: User
-service: Service
+-owner: User
+-service: Service
+-jobs: List&lt;Job&gt;
 --
-summarySheet (owner: User, service : Service): SummarySheet
+create(owner: User, service : Service): SummarySheet
 +isOwner(user: User): boolean
++addDuty(duty: KitchenDuty): Job
 +addJob(job: Job)</panel_attributes>
     <additional_attributes/>
   </element>
@@ -512,7 +515,8 @@ m1=0..1</panel_attributes>
 -quantity: String
 -time: int
 -done: boolean
---</panel_attributes>
+--
+create(kd: KitchenDuty)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -527,7 +531,8 @@ m1=0..1</panel_attributes>
 {interface}
 --
 /+updateSheetGenerate(sh: SummarySheet)/
-/+updateJobAdded(sh: SummarySheet, j: Job)/</panel_attributes>
+/+updateSummarySheetOpened(sh: SummarySheet)/
+/+updateConsultBoard(shifts: HashMap\&lt;KitchenShift, List&lt;User&gt;\&gt;)/</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -609,7 +614,7 @@ lt=&lt;-</panel_attributes>
     </coordinates>
     <panel_attributes>Jobs
 lt=&lt;-
-m1=0..n</panel_attributes>
+m1=1..n</panel_attributes>
     <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
   </element>
   <element>
@@ -678,9 +683,9 @@ m1=0..n</panel_attributes>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>1332</x>
+      <x>1341</x>
       <y>0</y>
-      <w>441</w>
+      <w>522</w>
       <h>180</h>
     </coordinates>
     <panel_attributes>ServiceManagement</panel_attributes>
@@ -701,16 +706,34 @@ m1=0..n</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1620</x>
-      <y>45</y>
-      <w>90</w>
-      <h>27</h>
+      <x>1557</x>
+      <y>36</y>
+      <w>261</w>
+      <h>135</h>
     </coordinates>
     <panel_attributes>Service
 --
+event: Event
 menu: Menu
+summarySheet: SummarySheet
 --
-getMenu( )</panel_attributes>
+setSummarySheet(sheet: SummarySheet)
+getEvent( ): Event
+getMenu( ): Menu
+getSummarySheet( ): SummarySheet</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1809</x>
+      <y>99</y>
+      <w>342</w>
+      <h>243</h>
+    </coordinates>
+    <panel_attributes>sheet
+lt=&lt;-
+m1=0..1</panel_attributes>
+    <additional_attributes>340.0;250.0;340.0;20.0;10.0;20.0</additional_attributes>
   </element>
 </diagram>
