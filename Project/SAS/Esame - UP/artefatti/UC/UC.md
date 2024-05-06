@@ -105,9 +105,9 @@ Se ci fosse un’app che gestisce tutto ciò vorrei poter mettere sui turni una 
 
 2) Opzionalmente, raggruppa i turni consecutivi.
 
-3) Opzionalmente, modifica o cancella dei turni.
+3) Opzionalmente, modifica oppure cancella dei turni.
 
-4) Opzionalmente, controlla gli eventi.
+4) Controlla gli eventi.
 
 **se non vuole lavorare su nessun evento termina il Caso d'Uso**
 
@@ -129,18 +129,63 @@ Se ci fosse un’app che gestisce tutto ciò vorrei poter mettere sui turni una 
 
 1) Imposta i turni standard della cucina per il semestre successivo.
 
-2) Se deve modificare tutti i turni si consulta con i cuochi.
+2) Modifica dei turni di cucina esistenti oppure aggiunge dei turni di cucina nei giorni liberi oppure cancella dei turni di cucina.
 
-3) Opzionalmente, modifica dei turni di cucina esistenti.
+3) Per ogni servizio si segna un turno di servizio mettendo una scadenza oltre la quale non si può più togliere la disponibilità.
 
-4) Opzionalmente, aggiunge dei turni di cucina nei giorni liberi.
+4) Se l'evento è ricorrente si segna lo schema.
 
-5) Opzionalmente, cancella dei turni di cucina.
+5) Opzionalmente, modifica/rimuove/riaggiunge la scadenza.
 
-6) Se ha fatto delle modifiche, aggiunte, cancellazioni notifica i cuochi.
 
-7) Per ogni servizio si segna un turno di servizio mettendo una scadenza oltre la quale non si può più togliere la disponibilità.
+--------------------------
+4 ----------- REQUISITI
+--------------------------
 
-8) Se l'evento è ricorrente si segna lo schema.
+1) Imposta i turni della cucina e, opzionalmente, segna un luogo.
 
-9) Opzionalmente, modifica/rimuove/riaggiunge la scadenza.
+2) Modifica un turno della cucina.
+
+**ripete il passo 2 finché non è soddisfatto**
+
+3) Opzionalmente, controlla gli eventi.
+
+**se non vuole lavorare su nessun evento termina il Caso d'Uso**
+
+4) Sceglie un evento su cui lavorare.
+
+5) Imposta un orario per un turno di servizio e, opzionalmente, mette una scadenza oltre la quale non si può più togliere la disponibilità.
+
+**se vuole lavorare su altri servizi torna al punto 5**
+
+**se vuole lavorare su altri eventi torna al punto 3**
+
+6) Opzionalmente, si segna lo schema.
+
+7) Opzionalmente, modifica la scadenza.
+
+8) Opzionalmente, cambia l'orario del turno di servizio, modificando tutte le ricorrenze.
+
+**se vuole lavorare su altri eventi torna al passo 3, altrimenti termina il Caso d'Uso**
+
+--------------------------
+5 ----------- ESTENSIONI
+--------------------------
+
+1a) Visualizza i turni della cucina.
+
+2a) Aggiunge un turno di cucina.
+
+2b) Cancella un turno di cucina.
+
+2c) Raggruppa i turni consecutivi.
+
+2d) Modifica tutti i turni di cucina in un determinato giorno, settimana.
+
+2e) Elimina tutti i turni di cucina in un determinato giorno, settimana.
+
+7a) Rimuove la scadenza.
+
+7b) Aggiunge una scadenza.
+
+8a) Cancella un turno di servizio, modificando tutte le ricorrenze.
