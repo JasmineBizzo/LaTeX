@@ -6,7 +6,7 @@
     <id>UMLActor</id>
     <coordinates>
       <x>336</x>
-      <y>208</y>
+      <y>232</y>
       <w>48</w>
       <h>88</h>
     </coordinates>
@@ -17,23 +17,23 @@
     <id>Relation</id>
     <coordinates>
       <x>344</x>
-      <y>304</y>
+      <y>296</y>
       <w>24</w>
-      <h>656</h>
+      <h>664</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;800.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;810.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>616</x>
-      <y>312</y>
+      <y>296</y>
       <w>24</w>
-      <h>648</h>
+      <h>664</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;790.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;810.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -267,7 +267,7 @@ fg=GRAY</panel_attributes>
     <id>UMLDeployment</id>
     <coordinates>
       <x>584</x>
-      <y>224</y>
+      <y>248</y>
       <w>88</w>
       <h>40</h>
     </coordinates>
@@ -308,7 +308,7 @@ lw=2
       <h>32</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;&gt;
-1a.1. apriFoglio(servizio) 	
+1a.1. apriFoglio(evento, servizio) 	
 fg=#9E1C8C</panel_attributes>
     <additional_attributes>10.0;20.0;350.0;20.0</additional_attributes>
   </element>
@@ -364,7 +364,7 @@ fg=red</panel_attributes>
       <h>32</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
-1b.1. ripristinaFoglio(servizio)
+1b.1. ripristinaFoglio(evento, servizio)
 fg=#9E1C8C</panel_attributes>
     <additional_attributes>350.0;20.0;10.0;20.0</additional_attributes>
   </element>

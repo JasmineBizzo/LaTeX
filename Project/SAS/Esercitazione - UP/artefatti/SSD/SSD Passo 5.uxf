@@ -321,7 +321,7 @@ lw=2
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
-5.a.1 modificaCompito(compito, turno?, cuoco?,
+5.a.1. modificaCompito(compito, turno?, cuoco?,
 stima?, dosi?)
 fg=#9E1C8C</panel_attributes>
     <additional_attributes>360.0;20.0;10.0;20.0</additional_attributes>
@@ -408,7 +408,7 @@ fg=red</panel_attributes>
       <h>32</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
-eliminaCompito(compito)
+5b.1. eliminaCompito(compito)
 fg=#9E1C8C</panel_attributes>
     <additional_attributes>360.0;20.0;10.0;20.0</additional_attributes>
   </element>
@@ -465,7 +465,7 @@ fg=red</panel_attributes>
       <h>32</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
-specificaPronto(compito)
+5c.1. specificaPronto(compito)
 fg=#9E1C8C</panel_attributes>
     <additional_attributes>360.0;20.0;10.0;20.0</additional_attributes>
   </element>

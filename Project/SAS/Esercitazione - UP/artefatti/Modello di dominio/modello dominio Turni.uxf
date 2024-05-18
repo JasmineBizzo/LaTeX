@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>42</x>
-      <y>252</y>
+      <x>98</x>
+      <y>161</y>
       <w>126</w>
       <h>105</h>
     </coordinates>
@@ -13,15 +13,22 @@
 --
 titolo: testo
 pubblicato: sì/no
+richiede cuoco: sì/no
+piatti caldi: sì/no
+richiede cucina: sì/no
+buffet: sì/no
+finger food: sì/no
+style=wordwrap
 layer=-1
-fg=blue</panel_attributes>
+fg=blue
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>315</x>
-      <y>91</y>
+      <x>371</x>
+      <y>0</y>
       <w>98</w>
       <h>63</h>
     </coordinates>
@@ -29,28 +36,28 @@ fg=blue</panel_attributes>
 --
 nome: testo
 
-fg=blue</panel_attributes>
+fg=gray</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>553</x>
-      <y>462</y>
+      <x>609</x>
+      <y>371</y>
       <w>91</w>
       <h>49</h>
     </coordinates>
     <panel_attributes>Ricettario
 --
 
-fg=black</panel_attributes>
+fg=gray</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>315</x>
-      <y>350</y>
+      <x>371</x>
+      <y>259</y>
       <w>84</w>
       <h>56</h>
     </coordinates>
@@ -63,51 +70,52 @@ nome: testo</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>308</x>
-      <y>231</y>
+      <x>364</x>
+      <y>140</y>
       <w>98</w>
       <h>77</h>
     </coordinates>
     <panel_attributes>Voce
 --
 descrizione: testo
-fg=blue</panel_attributes>
+fg=gray</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>7</x>
-      <y>434</y>
+      <x>140</x>
+      <y>455</y>
       <w>98</w>
       <h>42</h>
     </coordinates>
     <panel_attributes>Evento
 --
 informazioni
+
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>91</x>
-      <y>98</y>
+      <x>147</x>
+      <y>7</y>
       <w>238</w>
       <h>168</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
-contiene ^
+contiene &gt;
 m2=*
 m1=1
-fg=blue</panel_attributes>
+fg=gray</panel_attributes>
     <additional_attributes>10.0;220.0;10.0;20.0;320.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>357</x>
-      <y>147</y>
+      <x>413</x>
+      <y>56</y>
       <w>77</w>
       <h>98</h>
     </coordinates>
@@ -115,15 +123,15 @@ fg=blue</panel_attributes>
 appartiene ^
 m2=0..1
 m1=*
-fg=blue
+fg=gray
 </panel_attributes>
     <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>168</x>
-      <y>252</y>
+      <x>224</x>
+      <y>161</y>
       <w>154</w>
       <h>35</h>
     </coordinates>
@@ -131,30 +139,30 @@ fg=blue
 appartiene &gt;
 m2=*
 m1=0..1
-fg=blue
+fg=gray
 </panel_attributes>
     <additional_attributes>10.0;20.0;200.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>42</x>
-      <y>350</y>
+      <x>98</x>
+      <y>259</y>
       <w>70</w>
-      <h>98</h>
+      <h>70</h>
     </coordinates>
     <panel_attributes>lt=-
 in uso in v
 m2=*
-m1=*
+m1=0..1
 fg=black</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>336</x>
-      <y>301</y>
+      <x>392</x>
+      <y>210</y>
       <w>105</w>
       <h>63</h>
     </coordinates>
@@ -162,14 +170,14 @@ fg=black</panel_attributes>
 fa riferimento a v
 m2=*
 m1=1
-fg=blue</panel_attributes>
+fg=gray</panel_attributes>
     <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>455</x>
-      <y>476</y>
+      <x>511</x>
+      <y>385</y>
       <w>112</w>
       <h>35</h>
     </coordinates>
@@ -177,63 +185,44 @@ fg=blue</panel_attributes>
 &lt; si trova in 
 m2=1
 m1=*
-fg=black</panel_attributes>
+fg=gray</panel_attributes>
     <additional_attributes>10.0;20.0;140.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Text</id>
-    <coordinates>
-      <x>42</x>
-      <y>287</y>
-      <w>140</w>
-      <h>84</h>
-    </coordinates>
-    <panel_attributes>richiede cuoco: sì/no
-piatti caldi: sì/no
-richiede cucina: sì/no
-buffet: sì/no
-finger food: sì/no
-style=wordwrap
-layer=-1
-fg=blue</panel_attributes>
-    <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>175</x>
-      <y>434</y>
+      <x>133</x>
+      <y>588</y>
       <w>98</w>
       <h>42</h>
     </coordinates>
     <panel_attributes>Chef
 --
-
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>98</x>
-      <y>441</y>
-      <w>91</w>
-      <h>42</h>
+      <x>182</x>
+      <y>490</y>
+      <w>84</w>
+      <h>112</h>
     </coordinates>
     <panel_attributes>lt=-
-assegnato a &gt;
+assegnato a ^
 m2=0..1
 m1=*
 
 </panel_attributes>
-    <additional_attributes>10.0;20.0;110.0;20.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
   </element>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>469</x>
-      <y>161</y>
-      <w>147</w>
+      <x>189</x>
+      <y>56</y>
+      <w>168</w>
       <h>63</h>
     </coordinates>
     <panel_attributes>Una voce puo' comparire in un 
@@ -241,29 +230,29 @@ menu' all'interno di una sezione
 oppure come voce "libera" quindi 
 verrà valorizzata  una e una sola 
 delle due  relazioni appartiene
-fg=blue
+fg=gray
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>42</x>
-      <y>469</y>
-      <w>70</w>
-      <h>84</h>
+      <x>91</x>
+      <y>357</y>
+      <w>112</w>
+      <h>112</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 
 m2=1..n
-prevede v</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+prevede ^</panel_attributes>
+    <additional_attributes>140.0;140.0;140.0;60.0;10.0;60.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
-      <y>539</y>
+      <x>63</x>
+      <y>315</y>
       <w>98</w>
       <h>49</h>
     </coordinates>
@@ -275,22 +264,22 @@ prevede v</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>91</x>
-      <y>553</y>
-      <w>133</w>
-      <h>35</h>
+      <x>154</x>
+      <y>329</y>
+      <w>196</w>
+      <h>140</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
 m2=0..1
-riferito a &gt;</panel_attributes>
-    <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
+riferito a v</panel_attributes>
+    <additional_attributes>10.0;20.0;240.0;20.0;240.0;180.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>210</x>
-      <y>546</y>
+      <x>266</x>
+      <y>455</y>
       <w>98</w>
       <h>49</h>
     </coordinates>
@@ -302,8 +291,8 @@ riferito a &gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>301</x>
-      <y>553</y>
+      <x>357</x>
+      <y>462</y>
       <w>133</w>
       <h>35</h>
     </coordinates>
@@ -316,13 +305,15 @@ contiene &gt;</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>420</x>
-      <y>546</y>
+      <x>476</x>
+      <y>455</y>
       <w>126</w>
-      <h>49</h>
+      <h>77</h>
     </coordinates>
     <panel_attributes>Compito
 --
+extra: sì/no
+completato: sì/no
 Porzioni/Quantità: testo
 Tempo: numero</panel_attributes>
     <additional_attributes/>
@@ -330,8 +321,8 @@ Tempo: numero</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>539</x>
-      <y>553</y>
+      <x>595</x>
+      <y>462</y>
       <w>161</w>
       <h>133</h>
     </coordinates>
@@ -344,21 +335,21 @@ eseguito da v</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>623</x>
-      <y>672</y>
+      <x>679</x>
+      <y>581</y>
       <w>98</w>
       <h>49</h>
     </coordinates>
     <panel_attributes>Cuoco
 --
-</panel_attributes>
+Disponibile: sì/no</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>504</x>
-      <y>686</y>
+      <x>560</x>
+      <y>595</y>
       <w>133</w>
       <h>35</h>
     </coordinates>
@@ -371,49 +362,50 @@ m2=*
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>413</x>
-      <y>672</y>
+      <x>469</x>
+      <y>581</y>
       <w>98</w>
       <h>49</h>
     </coordinates>
     <panel_attributes>Turno di cucina
 --
-</panel_attributes>
+Orario: numero
+Concluso: sì/no</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>455</x>
-      <y>588</y>
+      <x>511</x>
+      <y>525</y>
       <w>70</w>
-      <h>98</h>
+      <h>70</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=*
 m2=0..1
 svolto in v</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>294</x>
-      <y>686</y>
-      <w>133</w>
+      <x>357</x>
+      <y>588</y>
+      <w>126</w>
       <h>35</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
 m2=*
 contiene &gt;</panel_attributes>
-    <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
+    <additional_attributes>10.0;20.0;160.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>203</x>
-      <y>679</y>
+      <x>266</x>
+      <y>581</y>
       <w>98</w>
       <h>49</h>
     </coordinates>
@@ -425,8 +417,8 @@ contiene &gt;</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>455</x>
-      <y>350</y>
+      <x>511</x>
+      <y>259</y>
       <w>98</w>
       <h>49</h>
     </coordinates>
@@ -438,8 +430,8 @@ contiene &gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>329</x>
-      <y>399</y>
+      <x>385</x>
+      <y>308</y>
       <w>84</w>
       <h>49</h>
     </coordinates>
@@ -450,8 +442,8 @@ contiene &gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>392</x>
-      <y>392</y>
+      <x>448</x>
+      <y>301</y>
       <w>126</w>
       <h>56</h>
     </coordinates>
@@ -462,8 +454,8 @@ contiene &gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>406</x>
-      <y>427</y>
+      <x>462</x>
+      <y>336</y>
       <w>21</w>
       <h>35</h>
     </coordinates>
@@ -475,8 +467,8 @@ contiene &gt;</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>364</x>
-      <y>448</y>
+      <x>420</x>
+      <y>357</y>
       <w>98</w>
       <h>49</h>
     </coordinates>
@@ -488,23 +480,25 @@ contiene &gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>455</x>
-      <y>371</y>
+      <x>511</x>
+      <y>280</y>
       <w>189</w>
-      <h>98</h>
+      <h>105</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=*
 m2=*
 
-&lt; è ingrediente di </panel_attributes>
+&lt; è ingrediente di 
+
+fg=gray</panel_attributes>
     <additional_attributes>140.0;10.0;210.0;10.0;210.0;110.0;10.0;110.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>427</x>
-      <y>490</y>
+      <x>483</x>
+      <y>399</y>
       <w>77</w>
       <h>70</h>
     </coordinates>
@@ -513,5 +507,115 @@ m1=1
 consiste in ^
 m2=*</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>322</x>
+      <y>0</y>
+      <w>63</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>{ordered}
+style=wordwrap
+layer=-2
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>371</x>
+      <y>119</y>
+      <w>63</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>{ordered}
+style=wordwrap
+layer=-2
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>427</x>
+      <y>483</y>
+      <w>63</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>{ordered}
+style=wordwrap
+layer=-2
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>210</x>
+      <y>259</y>
+      <w>70</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>lt=-
+/in uso in v
+m2=*
+m1=*
+fg=black</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;280.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>231</x>
+      <y>259</y>
+      <w>112</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>Un Menu è /in uso in un Evento se e solo se è in uso in uno dei Servizi previsti dall'Evento stesso
+style=wordwrap
+
+
+bg=#A7C7E7</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>504</x>
+      <y>91</y>
+      <w>182</w>
+      <h>161</h>
+    </coordinates>
+    <panel_attributes>una Procedura di Cucina proc /serve per un Menù m se e solo se vale una delle seguenti condizioni:
+--
+ - esiste una Voce v appartenente a m tale che v fa riferimento a proc
+ 
+ - esistono una Sezione s e una Voce v tali che m contiene s, v appartiene a s e v fa riferimento a proc
+
+ - esiste un’altra Procedura proc2 che /serve per m tale che proc è ingrediente di proc2
+
+
+style=wordwrap
+
+bg=#A7C7E7</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>35</x>
+      <y>210</y>
+      <w>112</w>
+      <h>413</h>
+    </coordinates>
+    <panel_attributes>lt=-
+è proprietario di v
+m2=1
+m1=*
+
+</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;10.0;10.0;560.0;140.0;560.0</additional_attributes>
   </element>
 </diagram>
