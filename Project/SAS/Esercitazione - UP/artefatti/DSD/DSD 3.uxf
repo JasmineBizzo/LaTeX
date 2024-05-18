@@ -4,8 +4,8 @@
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>184</x>
-      <y>208</y>
+      <x>128</x>
+      <y>232</y>
       <w>80</w>
       <h>56</h>
     </coordinates>
@@ -15,44 +15,44 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>392</x>
-      <y>224</y>
+      <x>336</x>
+      <y>248</y>
       <w>128</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>KitTaskMgr:
+    <panel_attributes>ktMgr:
 KitchenTaskManager</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>576</x>
-      <y>224</y>
+      <x>520</x>
+      <y>248</y>
       <w>168</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>KitTaskMgr.summarySheet:
+    <panel_attributes>ktMgr.summarySheet:
 SummarySheet</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>952</x>
-      <y>224</y>
+      <x>896</x>
+      <y>248</y>
       <w>144</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>kter:
+    <panel_attributes>er:
 KitchenTaskEventReceiver</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>208</x>
-      <y>256</y>
+      <x>152</x>
+      <y>280</y>
       <w>24</w>
       <h>392</h>
     </coordinates>
@@ -63,8 +63,8 @@ KitchenTaskEventReceiver</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>448</x>
-      <y>256</y>
+      <x>392</x>
+      <y>280</y>
       <w>24</w>
       <h>392</h>
     </coordinates>
@@ -75,8 +75,8 @@ KitchenTaskEventReceiver</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>648</x>
-      <y>256</y>
+      <x>592</x>
+      <y>280</y>
       <w>24</w>
       <h>392</h>
     </coordinates>
@@ -87,8 +87,8 @@ KitchenTaskEventReceiver</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1016</x>
-      <y>256</y>
+      <x>960</x>
+      <y>280</y>
       <w>24</w>
       <h>392</h>
     </coordinates>
@@ -99,46 +99,33 @@ KitchenTaskEventReceiver</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>208</x>
-      <y>272</y>
+      <x>152</x>
+      <y>296</y>
       <w>256</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;&gt;
-sortJob 
-(job: Job, position: int)</panel_attributes>
+sortTask
+(task, position)</panel_attributes>
     <additional_attributes>10.0;20.0;300.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>56</x>
-      <y>304</y>
+      <x>0</x>
+      <y>328</y>
       <w>1040</w>
       <h>304</h>
     </coordinates>
     <panel_attributes>ALT
-[ KitTaskMgr.summarySheet != null
-&amp;&amp; summarySheet.hasJob(job)
-&amp;&amp; position &gt; 0 &amp;&amp; position &lt;=
+[ KitTaskMgr.summarySheet == null
+|| position &lt; 0 || position &gt;=
 summarySheet.jobsSize() ]
 fg=#761C8C
-bg=#e7bfff
+
 lw=2
 layer=-3
 --
-
-
-
-
-
-
-
-
-
-
-
-
 
 -.</panel_attributes>
     <additional_attributes/>
@@ -146,8 +133,8 @@ layer=-3
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>448</x>
-      <y>288</y>
+      <x>392</x>
+      <y>312</y>
       <w>16</w>
       <h>288</h>
     </coordinates>
@@ -157,87 +144,60 @@ layer=-3
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>456</x>
-      <y>312</y>
+      <x>400</x>
+      <y>408</y>
       <w>208</w>
-      <h>32</h>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;&gt;
-sortJob(job, position)
-fg=#761C8C
-bg=#e7bfff</panel_attributes>
+sortTask(task, position)
+</panel_attributes>
     <additional_attributes>10.0;20.0;240.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLGeneric</id>
-    <coordinates>
-      <x>648</x>
-      <y>328</y>
-      <w>16</w>
-      <h>56</h>
-    </coordinates>
-    <panel_attributes/>
-    <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>656</x>
-      <y>328</y>
+      <x>600</x>
+      <y>416</y>
       <w>208</w>
-      <h>32</h>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;&gt;
-remove(job)
-fg=#761C8C
-bg=#e7bfff</panel_attributes>
+remove(task)
+</panel_attributes>
     <additional_attributes>10.0;20.0;240.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLGeneric</id>
-    <coordinates>
-      <x>848</x>
-      <y>336</y>
-      <w>16</w>
-      <h>16</h>
-    </coordinates>
-    <panel_attributes/>
-    <additional_attributes/>
   </element>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>280</x>
-      <y>440</y>
+      <x>224</x>
+      <y>544</y>
       <w>768</w>
       <h>56</h>
     </coordinates>
     <panel_attributes>LOOP
-for all kter in eventReceivers
-fg=blue
-bg=#8CB4FF
-layer=-2</panel_attributes>
+[for each kter in eventReceivers]
+fg=blue</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>456</x>
-      <y>400</y>
-      <w>280</w>
-      <h>48</h>
+      <x>400</x>
+      <y>496</y>
+      <w>288</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;&gt;
-fg=#761C8C
-bg=#e7bfff
-notifyJobsRearranged(summarySheet)</panel_attributes>
-    <additional_attributes>10.0;10.0;80.0;10.0;80.0;40.0;20.0;40.0</additional_attributes>
+
+notifyTasksRearranged(summarySheet)</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;10.0;80.0;50.0;20.0;50.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>456</x>
-      <y>424</y>
+      <x>400</x>
+      <y>528</y>
       <w>16</w>
       <h>56</h>
     </coordinates>
@@ -247,58 +207,46 @@ notifyJobsRearranged(summarySheet)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>464</x>
-      <y>448</y>
+      <x>408</x>
+      <y>552</y>
       <w>568</w>
-      <h>32</h>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;&gt;
-updateJobsRearranged(summarySheet)
-fg=blue
-bg=#8CB4FF</panel_attributes>
+updateTasksRearranged(summarySheet)
+</panel_attributes>
     <additional_attributes>10.0;20.0;690.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLGeneric</id>
-    <coordinates>
-      <x>1016</x>
-      <y>456</y>
-      <w>16</w>
-      <h>16</h>
-    </coordinates>
-    <panel_attributes/>
-    <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>208</x>
-      <y>552</y>
+      <x>152</x>
+      <y>384</y>
       <w>256</w>
       <h>32</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
-throw UseCaseLogicException
+throw KitchenTaskException
 fg=red</panel_attributes>
     <additional_attributes>10.0;20.0;300.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>784</x>
-      <y>224</y>
+      <x>728</x>
+      <y>248</y>
       <w>136</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>summarySheet.jobs:
-ArrayList&lt;Job&gt;</panel_attributes>
+    <panel_attributes>summarySheet.tasks:
+ArrayList&lt;Task&gt;</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>848</x>
-      <y>256</y>
+      <x>792</x>
+      <y>280</y>
       <w>24</w>
       <h>392</h>
     </coordinates>
@@ -309,22 +257,54 @@ ArrayList&lt;Job&gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>656</x>
-      <y>360</y>
+      <x>600</x>
+      <y>448</y>
       <w>208</w>
-      <h>32</h>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;&gt;
-add(job, position)
-fg=#761C8C
-bg=#e7bfff</panel_attributes>
+add(task, position)
+</panel_attributes>
     <additional_attributes>10.0;20.0;240.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>848</x>
-      <y>368</y>
+      <x>960</x>
+      <y>568</y>
+      <w>16</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>592</x>
+      <y>424</y>
+      <w>16</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>792</x>
+      <y>432</y>
+      <w>16</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>792</x>
+      <y>464</y>
       <w>16</w>
       <h>16</h>
     </coordinates>
