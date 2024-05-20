@@ -3,7 +3,7 @@
 \section*{\huge\textbf{\textcolor{castletongreen}{Informazioni generali}}}
 
 \begin{usecase}
-    \uc{Gestire i compiti della cucina}
+    \uc{Gestire i turni}
     \portata{Sistema}
     \livello{Obiettivo utente}
     \attoreprimario{Organizzatore}
@@ -37,11 +37,9 @@
         
         & \textit{Se vuole lavorare su altri eventi torna al punto 2} & \\\hline
 
-        \centering\textbf{5} & Opzionalmente, si segna lo schema. & Registra lo schema dei turni per i servizi dell'evento selezionato.\\\hline
+        \centering\textbf{5} & Opzionalmente, modifica la scadenza. & Registra la modifica della scadenza.\\\hline
 
-        \centering\textbf{6} & Opzionalmente, modifica la scadenza. & Registra la modifica della scadenza.\\\hline
-
-        \centering\textbf{7} & Opzionalmente, cambia l'orario del turno di servizio, modificando tutte le ricorrenze. & Registra le modifiche.\\\hline
+        \centering\textbf{6} & Opzionalmente, cambia l'orario del turno di servizio. & Registra le modifiche.\\\hline
 
         & \textit{Se vuole lavorare su altri eventi torna al passo 2, altrimenti termina il Caso d'Uso} & \\\hline
 
@@ -115,7 +113,7 @@
             \rowcolor{mintgreen}
             \multicolumn{1}{|>{\centering\arraybackslash}m{13mm}|}{\textbf{\huge\textcolor{castletongreen}{\texttt{\#}}}} & \multicolumn{1}{|>{\centering\arraybackslash}m{75mm}|}{\huge\textcolor{castletongreen}{\textbf{Attore}}} &\multicolumn{1}{|>{\centering\arraybackslash}m{75mm}|}{\huge\textcolor{castletongreen}{\textbf{Sistema}}} \\ \hline
 
-            \centering\textbf{1c.1} & Raggruppa i turni consecutivi. & Unisce i turni specificati.\\\hline
+            \centering\textbf{1c.1} & Modifica tutti i turni di cucina in un determinato giorno, settimana. & Registra le modifiche di tutti i turni di cucina aventi determinate caratteristiche.\\\hline
 
             \hline
             \end{longtable}
@@ -123,45 +121,7 @@
     \end{center}
 \end{flushleft}
 
-\section*{\huge\textbf{\textcolor{2}{Eccezione 1c.1a}}}
-
-\begin{flushleft}
-    \begin{center}
-
-        \begin{longtable}{ | p{1.3cm} | p{7.5cm} | p{7.5cm} |}
-            \hline\hline
-            \rowcolor{mintgreen}
-            \multicolumn{1}{|>{\centering\arraybackslash}m{13mm}|}{\textbf{\huge\textcolor{castletongreen}{\texttt{\#}}}} & \multicolumn{1}{|>{\centering\arraybackslash}m{75mm}|}{\huge\textcolor{castletongreen}{\textbf{Attore}}} &\multicolumn{1}{|>{\centering\arraybackslash}m{75mm}|}{\huge\textcolor{castletongreen}{\textbf{Sistema}}} \\ \hline
-
-            \centering\textbf{\textcolor{2}{1c.1a.1}} &  Raggruppa i turni consecutivi. & \cellcolor{RedPastel} I turni selezionati non sono consecutivi.\\\hline
-
-            & \textit{Termina il Caso d'Uso} & \\\hline
-
-            \hline
-            \end{longtable}
-          
-    \end{center}
-\end{flushleft}
-\pagebreak
 \section*{\huge\textbf{\textcolor{castletongreen}{Estensione 1d}}}
-
-\begin{flushleft}
-    \begin{center}
-
-        \begin{longtable}{ | p{1.3cm} | p{7.5cm} | p{7.5cm} |}
-            \hline\hline
-            \rowcolor{mintgreen}
-            \multicolumn{1}{|>{\centering\arraybackslash}m{13mm}|}{\textbf{\huge\textcolor{castletongreen}{\texttt{\#}}}} & \multicolumn{1}{|>{\centering\arraybackslash}m{75mm}|}{\huge\textcolor{castletongreen}{\textbf{Attore}}} &\multicolumn{1}{|>{\centering\arraybackslash}m{75mm}|}{\huge\textcolor{castletongreen}{\textbf{Sistema}}} \\ \hline
-
-            \centering\textbf{1d.1} & Modifica tutti i turni di cucina in un determinato giorno, settimana. & Registra le modifiche di tutti i turni di cucina aventi determinate caratteristiche.\\\hline
-
-            \hline
-            \end{longtable}
-          
-    \end{center}
-\end{flushleft}
-
-\section*{\huge\textbf{\textcolor{castletongreen}{Estensione 1e}}}
 
 \begin{flushleft}
     \begin{center}
@@ -179,7 +139,7 @@
     \end{center}
 \end{flushleft}
 
-\section*{\huge\textbf{\textcolor{castletongreen}{Estensione 6a}}}
+\section*{\huge\textbf{\textcolor{castletongreen}{Estensione 5a}}}
 
 \begin{flushleft}
     \begin{center}
@@ -197,7 +157,7 @@
     \end{center}
 \end{flushleft}
 
-\section*{\huge\textbf{\textcolor{2}{Eccezione 6a}}}
+\section*{\huge\textbf{\textcolor{2}{Eccezione 5a}}}
 
 \begin{flushleft}
     \begin{center}
@@ -217,7 +177,7 @@
     \end{center}
 \end{flushleft}
 
-\section*{\huge\textbf{\textcolor{castletongreen}{Estensione 6b}}}
+\section*{\huge\textbf{\textcolor{castletongreen}{Estensione 5b}}}
 
 \begin{flushleft}
     \begin{center}
@@ -235,7 +195,7 @@
     \end{center}
 \end{flushleft}
 
-\section*{\huge\textbf{\textcolor{castletongreen}{Estensione 7a}}}
+\section*{\huge\textbf{\textcolor{castletongreen}{Estensione 6a}}}
 
 \begin{flushleft}
     \begin{center}
@@ -245,7 +205,7 @@
             \rowcolor{mintgreen}
             \multicolumn{1}{|>{\centering\arraybackslash}m{13mm}|}{\textbf{\huge\textcolor{castletongreen}{\texttt{\#}}}} & \multicolumn{1}{|>{\centering\arraybackslash}m{75mm}|}{\huge\textcolor{castletongreen}{\textbf{Attore}}} &\multicolumn{1}{|>{\centering\arraybackslash}m{75mm}|}{\huge\textcolor{castletongreen}{\textbf{Sistema}}} \\ \hline
 
-            \centering\textbf{7a.1} & Cancella un turno di servizio, modificando tutte le ricorrenze. & Registra la cancellazione del turno di servizio e di tutte le sue ricorrenze.\\\hline
+            \centering\textbf{7a.1} & Cancella un turno di servizio. & Registra la cancellazione del turno di servizio..\\\hline
 
             \hline
             \end{longtable}

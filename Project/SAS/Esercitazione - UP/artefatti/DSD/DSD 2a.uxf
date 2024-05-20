@@ -4,8 +4,8 @@
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>42</x>
-      <y>238</y>
+      <x>77</x>
+      <y>210</y>
       <w>70</w>
       <h>42</h>
     </coordinates>
@@ -15,8 +15,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>154</x>
-      <y>252</y>
+      <x>189</x>
+      <y>224</y>
       <w>154</w>
       <h>28</h>
     </coordinates>
@@ -26,8 +26,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>364</x>
-      <y>252</y>
+      <x>399</x>
+      <y>224</y>
       <w>154</w>
       <h>28</h>
     </coordinates>
@@ -37,8 +37,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>567</x>
-      <y>252</y>
+      <x>602</x>
+      <y>224</y>
       <w>126</w>
       <h>28</h>
     </coordinates>
@@ -49,8 +49,8 @@ SummarySheet</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>882</x>
-      <y>252</y>
+      <x>917</x>
+      <y>224</y>
       <w>119</w>
       <h>28</h>
     </coordinates>
@@ -61,8 +61,8 @@ ArrayList&lt;Task&gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>70</x>
-      <y>273</y>
+      <x>105</x>
+      <y>245</y>
       <w>21</w>
       <h>469</h>
     </coordinates>
@@ -72,8 +72,8 @@ ArrayList&lt;Task&gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>217</x>
-      <y>273</y>
+      <x>252</x>
+      <y>245</y>
       <w>21</w>
       <h>469</h>
     </coordinates>
@@ -83,8 +83,8 @@ ArrayList&lt;Task&gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>427</x>
-      <y>273</y>
+      <x>462</x>
+      <y>245</y>
       <w>21</w>
       <h>469</h>
     </coordinates>
@@ -94,8 +94,8 @@ ArrayList&lt;Task&gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>623</x>
-      <y>273</y>
+      <x>658</x>
+      <y>245</y>
       <w>21</w>
       <h>469</h>
     </coordinates>
@@ -105,8 +105,8 @@ ArrayList&lt;Task&gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>931</x>
-      <y>273</y>
+      <x>966</x>
+      <y>245</y>
       <w>21</w>
       <h>469</h>
     </coordinates>
@@ -116,8 +116,8 @@ ArrayList&lt;Task&gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>70</x>
-      <y>280</y>
+      <x>105</x>
+      <y>252</y>
       <w>161</w>
       <h>28</h>
     </coordinates>
@@ -128,8 +128,8 @@ deleteProcedure(procedure)</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>0</x>
-      <y>322</y>
+      <x>35</x>
+      <y>294</y>
       <w>1029</w>
       <h>392</h>
     </coordinates>
@@ -146,8 +146,8 @@ lw=2
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>70</x>
-      <y>350</y>
+      <x>105</x>
+      <y>322</y>
       <w>161</w>
       <h>28</h>
     </coordinates>
@@ -159,8 +159,8 @@ fg=red</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>224</x>
-      <y>378</y>
+      <x>259</x>
+      <y>350</y>
       <w>413</w>
       <h>28</h>
     </coordinates>
@@ -171,8 +171,8 @@ deleteProcedure(procedure)</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>217</x>
-      <y>294</y>
+      <x>252</x>
+      <y>266</y>
       <w>14</w>
       <h>427</h>
     </coordinates>
@@ -182,8 +182,8 @@ deleteProcedure(procedure)</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>623</x>
-      <y>392</y>
+      <x>658</x>
+      <y>364</y>
       <w>14</w>
       <h>196</h>
     </coordinates>
@@ -193,8 +193,8 @@ deleteProcedure(procedure)</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>427</x>
-      <y>406</y>
+      <x>462</x>
+      <y>378</y>
       <w>574</w>
       <h>126</h>
     </coordinates>
@@ -207,8 +207,8 @@ fg=blue
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>462</x>
-      <y>455</y>
+      <x>497</x>
+      <y>427</y>
       <w>504</w>
       <h>63</h>
     </coordinates>
@@ -221,8 +221,8 @@ fg=#128C86
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>630</x>
-      <y>455</y>
+      <x>665</x>
+      <y>427</y>
       <w>315</w>
       <h>28</h>
     </coordinates>
@@ -233,8 +233,8 @@ remove(task)</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>931</x>
-      <y>469</y>
+      <x>966</x>
+      <y>441</y>
       <w>14</w>
       <h>42</h>
     </coordinates>
@@ -244,8 +244,8 @@ remove(task)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>224</x>
-      <y>567</y>
+      <x>259</x>
+      <y>539</y>
       <w>413</w>
       <h>28</h>
     </coordinates>
@@ -256,8 +256,8 @@ procedure</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>42</x>
-      <y>623</y>
+      <x>77</x>
+      <y>595</y>
       <w>434</w>
       <h>70</h>
     </coordinates>
@@ -271,8 +271,8 @@ fg=blue
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>224</x>
-      <y>581</y>
+      <x>259</x>
+      <y>553</y>
       <w>224</w>
       <h>49</h>
     </coordinates>
@@ -283,8 +283,8 @@ notifyRemoveProcedure(procedure)</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>224</x>
-      <y>616</y>
+      <x>259</x>
+      <y>588</y>
       <w>14</w>
       <h>63</h>
     </coordinates>
@@ -294,8 +294,8 @@ notifyRemoveProcedure(procedure)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>231</x>
-      <y>630</y>
+      <x>266</x>
+      <y>602</y>
       <w>210</w>
       <h>28</h>
     </coordinates>
@@ -306,8 +306,8 @@ updateRemoveProcedure(procedure)</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>427</x>
-      <y>644</y>
+      <x>462</x>
+      <y>616</y>
       <w>14</w>
       <h>21</h>
     </coordinates>
@@ -317,8 +317,8 @@ updateRemoveProcedure(procedure)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>70</x>
-      <y>693</y>
+      <x>105</x>
+      <y>665</y>
       <w>161</w>
       <h>28</h>
     </coordinates>
